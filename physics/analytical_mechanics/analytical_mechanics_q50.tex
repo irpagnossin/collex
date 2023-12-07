@@ -1,0 +1,27 @@
+\begin{question}
+    O elemento de comprimento $ds$ pode ser expresso, em coordenadas cilíndricas $(r, \theta, z)$, assim: $ds^2 = dr^2 + r^2 d\theta^2 + dz^2$.
+    Selecione a(s) alternativa(s) que representa(m) corretamente as componentes do tensor de métrica:
+    \begin{enumerate}
+      \item $g_{rr} = 1$ \rightanswer
+      \item $g_{r \theta} = 0$ \rightanswer
+      \item $g_{zz} = 1$ \rightanswer
+      \item $g_{\theta r} = r^2$
+      \item $g_{\theta z} = g_{z \theta}$ \rightanswer
+      \item $g_{zz} = dz^2$
+    \end{enumerate}
+
+    \begin{solution}
+      Uma maneira de resolver esse problema é reescrever $ds^2$ na forma matricial, como exposto na questão anterior.
+      Outra, mais fácil, é procurar os elementos do tensor de métrica diretamente da forma bilinear $ds^2 = dr^2 + r^2 d\theta^2 + dz^2$:
+      o fator que multiplica $dr^2$ é 1, então $g_{rr} = 1$; o fator que multiplica $d\theta^2$ é $r^2$, então $g_{\theta\theta} = r^2$; o fator que multiplica $dz^2$ é 1, então $g_{zz} = 1$.
+      E como não há termos cruzados do tipo $dr\,d\theta$, $d\theta\,dz$ \etc, os termos cruzados do tensor de métrica são todos nulos: $g_{ij} = 0$ para todos os $i \ne j$ (particularmente, $g_{\theta z} = g_{z \theta}$, que é uma das alternativas apresentadas).
+      Resumindo,
+      \begin{equation*}
+        g = \begin{pmatrix}
+          1 & 0   & 0 \\
+          0 & r^2 & 0 \\
+          0 & 0   & 1
+        \end{pmatrix}.
+      \end{equation*}
+    \end{solution}
+\end{question}

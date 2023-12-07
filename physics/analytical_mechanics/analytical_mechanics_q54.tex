@@ -1,0 +1,27 @@
+\begin{question}
+    O elemento de comprimento $ds$ pode ser expresso, em coordenadas esféricas $(q^1, q^2, q^3) \equiv (\rho, \phi, \theta)$, assim: $ds^2 = (dq^1)^2 + (q^1)^2 (dq^2)^2 + (q^1 \sin q^2)^2 (dq^3)^2$.
+    Selecione a(s) alternativa(s) que representa(m) corretamente as componentes do tensor de métrica:
+    \begin{enumerate}
+      \item $g_{13} = 0$ \rightanswer
+      \item $g_{22} = (q^1)^2$ \rightanswer
+      \item $g_{31} = 0$ \rightanswer
+      \item $g_{33} = q^1 \sin q^2$
+      \item $g_{22} = (q^1)^2 (dq^2)^2$
+      \item $g_{21} = (dq^3)^2$
+    \end{enumerate}
+
+    \begin{solution}
+      Procedamos como na questão anterior: o fator que multiplica $(dq^1)^2$ é 1, então $g_{11} = 1$;
+      o fator que multiplica $(dq^2)^2$ é $(q^1)^2$, então $g_{22} = (q^1)^2$;
+      o fator que multiplica $(dq^3)^2$ é $(q^1 \sin q^2)^2$, então $g_{33} = (q^1 \sin q^2)^2$.
+      E como não há termos cruzados do tipo $dq^1 dq^2$, $g_{ij} = 0$ para todos os $i \ne j$.
+      Resumindo,
+      \begin{equation*}
+        g = \begin{pmatrix}
+          1 &       0 & 0 \\
+          0 & (q^1)^2 & 0 \\
+          0 &       0 & (q^1 \sin q^2)^2
+        \end{pmatrix}.
+      \end{equation*}
+    \end{solution}
+\end{question}

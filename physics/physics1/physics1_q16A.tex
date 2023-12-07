@@ -1,0 +1,48 @@
+\begin{question}
+    Uma roda, partindo do repouso, é acelerada de tal forma que sua velocidade angular aumenta uniformemente até \measure{180}{rpm} em \measure{3}{min}.
+    Depois de girar com essa velocidade (constante) por algum tempo, a roda é freiada com aceleração constante, durante \measure{4}{min}, até parar.
+    Sabendo que a roda executou, ao todo, $1080$ rotações, determine o intervalo de tempo, \emph{em minutos}, entre o início e o fim do processo descrito.
+
+    \begin{answer}
+        \measure{9.5}{min} ou \measure{570}{s}
+    \end{answer}
+
+    \begin{solution}
+        Avaliando o enunciado da questão, vemos que há três regimes de movimento: no primeiro, a roda gira com aceleração constante $\alpha_1$ por $\Delta t_1 = \measure{3}{min}$; no segundo, ela gira com velocidade uniforme $\omega_2 = \measure{180}{rpm}$ por $\Delta t_2$, ainda desconhecido.
+        Finalmente, durante os $\Delta t_3 = \measure{4}{min}$ finais, ela (des)acelera com aceleração constante $\alpha_3$.
+        Além disso, podemos escrever $\Delta\theta_1 + \Delta\theta_2 + \Delta\theta_3 = \text{1080 rotações}$, onde $\Delta\theta_i$ é o deslocamento angular da roda durante o $i$-ésimo regime ($i$ pode assumir os valores $1$, $2$ ou $3$).
+
+        Como o primeiro regime ($i = 1$) é o do movimento angular uniformemente acelerado, podemos afirmar que $\Delta\theta_1 = \frac{1}{2} \alpha_1 \Delta t_1^2$.
+        O terceiro regime ($i = 3$) é similar: $\Delta\theta_3 = \omega_2 \Delta t_2 - \frac{1}{2} \alpha_3 \Delta t_3^2$.
+        Mas note que, nesse caso, precisamos adicionar a parcela $\omega_2 \Delta t_2$ por que, no início desse regime, a velocidade angular era de $\omega_2$.
+        Finalmente, o segundo regime ($i = 2$) é o do movimento angular uniforme e, por conseguinte, $\Delta\theta_2 = \omega_2 \Delta t_3$.
+
+        Então, podemos escrever:
+        \begin{equation}\label{eq:dt2}
+            \Delta\theta_1 + \Delta\theta_2 + \Delta\theta_3 = \text{1080 rotações}
+                \Rightarrow
+            \Delta t_2 = \frac{1}{\omega_2}\left(1080 - \frac{1}{2} \alpha_1 \Delta t_1^2 - \omega_2 \Delta t_3 + \frac{1}{2} \alpha_3 \Delta t_3^2\right).
+        \end{equation}
+
+        As acelerações $\alpha_1$ e $\alpha_3$ podem ser facilmente obtidas:
+        \begin{equation*}
+            \alpha_1 = \frac{\measure{180}{\text{rotações}/min}}{\measure{3}{min}} = \measure{60}{\text{rotações}/min^2}
+            \qquad\text{e}\qquad
+            \alpha_3 = \frac{\measure{180}{\text{rotações}/min}}{\measure{4}{min}} = \measure{45}{\text{rotações}/min^2}
+        \end{equation*}
+
+        E, usando esses valores na equação~\eqref{eq:dt2}, obtemos $\Delta t_2 = \measure{2.5}{min}$.
+        Assim, o intervalo de tempo total é $\Delta t_1 + \Delta t_2 + \Delta t_3 = \measure{9.5}{min}$.
+
+        \begin{compactdesc}
+            \item[Observação 1:] note que escolhemos expressar os $\Delta\theta_i$ em ``rotações'' e os $\Delta t_i$, em minutos.
+            Consequentemente, os $\alpha_i$ foram expressos em \unit{\text{rotações}/min^2}.
+            Isso simplificou as contas, mas caso lhe cause confusão, prefira utilizar o Sistema Internacional de Unidades.
+            Nesse caso você teria de (i) converter $\omega_2$ para \unit{rad/s}, (ii) determinar $\alpha_1$ e $\alpha_3$ em \unit{rad/s^2} e substituir as 1080 rotações por $1080\cdot 2\pi$ radianos em \eqref{eq:dt2}.
+            Finalmente, você precisaria converter $\Delta t_2$, advindo de \eqref{eq:dt2}, de volta para minutos.
+            \item[Observação 2:] experimente resolver essa questão utilizando a equação de Torricelli para o movimento angular.
+            Você notará que as expressões serão mais simples.
+            De fato, é possível mostrar que $\Delta t_2 = \frac{1080}{\omega_2} - \frac{\Delta t_1 + \Delta t_3}{2}$.
+        \end{compactdesc}
+    \end{solution}
+\end{question}

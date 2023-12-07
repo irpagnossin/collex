@@ -1,0 +1,55 @@
+\begin{question}\label{q:atwood}%
+  	Determine a equação de movimento da \emph{máquina de Atwood}, ilustrada abaixo, em termos da coordenada $z_1$.
+  	Considere que apenas movimentos verticais sejam possíveis e ignore a rotação da polia.
+  	Nesse caso, note que, apesar de haver dois objetos, há apenas um grau de liberdade, graças à equação de vínculo $z_1 + z_2 = C$, onde $C$ é uma constante (essa equação ilustra o fato de que o comprimento do cabo entre os pontos $A$ e $B$ permanece inalterado durante o movimento).
+
+		\begin{center}
+      \includegraphics[width=0.4\textwidth]{20180720_225340}
+    \end{center}
+
+  	\begin{enumerate}
+  		\item $(m_1 + m_2) \ddot z_1 - (m_1 - m_2)g = 0$ \rightanswer
+  		\item $(m_1 + m_2) \ddot z_1 + (m_1 - m_2)g = 0$
+  		\item $m_1 \ddot z_1 - m_1 g = 0$
+  		\item $m_2 \ddot z_2 - m_2 g = 0$
+  		\item $m_1 \ddot z_1 + m_1 g = 0$
+  	\end{enumerate}
+
+  	\bigskip
+  	\begin{compactdesc}
+  		\item[Observação:] rigorosamente, há 5 equações de vínculo para o movimento de translação.
+  		São elas: $x_1 = 0$, $y_1 = 0$, $x_2 = 0$, $y_2 = 0$ e $z_1 + z_2 = l$, onde $(x_i, y_i, z_i)$ são coordenadas cartesianas.
+  		Deste modo, temos $6 - 5 = 1$ graus de liberdade (e note que mesmo aqui estamos desconsiderando o movimento de rotação dos objetos).
+  		\item[Atenção:] ao atribuirmos ao eixo $z$ a mesma orientação da gravidade, é necessário utilizar um sinal negativo na expressão da energia potencial gravitacional: $U = -mgz$, onde $m$ é a massa e $g$ é a aceleração da gravidade.
+  		Isso acontece porque $U(\vec r) := -\int_{\text{ref}}^{\vec r} \vec F \cdot d\vec\ell$.
+  		No nosso caso, especificamente, $U(z) = -\int_0^z (mg\hat k)\cdot (dz\hat k) = -\int_0^z mg\, dz = -mgz$ (aqui, $\hat k$ aponta para baixo).
+  	\end{compactdesc}
+
+    \begin{solution}
+      Inicialmente, escrevemos a energia cinética como $T = \half m_1 \dot z_1^2 + \half m_2 \dot z_2^2$.
+      Mas $z_1 + z_2 = C \Rightarrow \dot z_1 + \dot z_2 = 0 \Rightarrow \dot z_2 = - \dot z_1$.
+      Então, $T = \half (m_1 + m_2) \dot z_1^2$.
+
+      Agora, a energia potencial: apenas a gravidade atua nas massas $m_1$ e $m_2$ de modo a lhes movimentar.
+      A tensão no cabo, que também é necessário considerar na abordagem tradicional da mecânica newtoniana, aqui podemos ignorar, pois seu papel é apenas o de garantir o vínculo.
+      Então, $U = -m_1gz_1 - m_2gz_2 = -m_1gz_1 - m_2g(C-z_1) = (m_2 - m_1)gz_1 - m_2gC$.
+      Note que o último termo, constante, não sobreviverá a nenhuma das derivadas relevantes de $L$.
+
+      Assim, obtemos a função lagrangeana:
+      \begin{equation*}
+        L := T - U = \half (m_1 + m_2) \dot z_1^2 + (m_1 - m_2)gz_1 + m_2gC.
+      \end{equation*}
+
+      Em seguida calculamos as derivadas relevantes de $L$:
+      \begin{equation*}
+        \pd{L}{z_1} = (m_1 - m_2) g,
+        \qquad
+        \pd{L}{\dot z_1} = (m_1 + m_2)\dot z_1
+        \qquad\text{e}\qquad
+        \frac{d}{dt}\pd{L}{\dot z_1} = (m_1 + m_2)\ddot z_1.
+      \end{equation*}
+
+      Finalmente, aplicando essas expressões na equação de Euler-Lagrange associada à variável $z_1$, obtemos a equação do movimento: $(m_1 + m_2) \ddot z_1 - (m_1 - m_2)g = 0$, cuja solução é imediata: $\ddot z_1 = \frac{m_1 - m_2}{m_1 + m_2}g$.
+      Ou seja, se $m_1 > m_2$, $m_1$ desce ($\ddot z_1 > 0$) com aceleração constante de $\frac{m_1 - m_2}{m_1 + m_2}g$; se $m_1 < m_2$, $m_1$ sobe ($\ddot z_1 < 0$) também com aceleração constante.
+    \end{solution}
+\end{question}

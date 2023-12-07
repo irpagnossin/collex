@@ -1,0 +1,22 @@
+\begin{question}
+    Ainda sobre o cenário da conta presa a um arame parabólico, qual é a expressão da energia cinética, escrita em termos do único grau de liberdade?
+    Represente a massa da conta por $m$.
+    \begin{enumerate}
+      \item $T = \half m \dot x^2 (1 + 4a^2 x^2)$ \rightanswer
+      \item $T = \half m (\dot x^2 + \dot y^2 + \dot z^2)$
+      \item $T = \half m (\dot x^2 + \dot z^2)$
+      \item $T = \half m \dot x^2 (1 + a^2)$
+    \end{enumerate}
+
+    \begin{solution}
+      Geralmente é mais fácil começar pelas coordenadas cartesianas $(x,y,z)$.
+      Nesse caso, a energia cinética da conta já é bem conhecida: $T = \half m (\dot x^2 + \dot y^2 + \dot z^2)$.
+      Porém, vimos na questão anterior que $y = 0$ e $z = ax^2$, e daí decorre que $\dot y = 0$ e $\dot z = 2ax \dot x$.
+      Usando essas expressões em $T$, obtemos:
+      \begin{equation*}
+        T = \half m \left[\dot x^2 + 0^2 + (2ax\dot x)^2\right] =  \half m \dot x^2 (1 + 4a^2 x^2).
+      \end{equation*}
+
+      Seria igualmente válido escrever $T$ em termos apenas de $z$ ao invés de $x$, mas nesse caso a expressão seria mais complexa.
+    \end{solution}
+\end{question}

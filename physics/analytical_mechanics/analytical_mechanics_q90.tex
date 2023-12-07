@@ -1,0 +1,30 @@
+\begin{question}\label{q:Fx}
+    Ainda sobre o cenário da conta presa a um arame parabólico, considere agora que, além de estar sujeita à gravidade, puxamos a conta com um fio, mantendo sempre a mesma tensão $\vec f = f_x\hat i + f_z\hat k$.
+    Determine $F_x$ nesse caso.
+
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{20180719_181922}
+    \end{center}
+
+    \begin{enumerate}
+      \item $F_x = 2ax(f_z - mg) + f_x$ \rightanswer
+      \item $F_x = 2ax(f_z + mg) + f_x$
+      \item $F_x = f_x$
+      \item $F_x = 2axf_z + f_x$
+    \end{enumerate}
+    
+    \bigskip
+    \begin{compactdesc}
+      \item[Dica:] determine o trabalho virtual associado aos deslocamentos $\delta x$ (apenas a força $f_x$) e $\delta z$ ($f_z$ e a força gravitacional), utilize as equações de vínculo e compare esse resultado com a expressão $\delta W = F_x\,\delta x + F_z\,\delta z$ (aqui ignoramos a coordenada $y$, que não contribui).
+      Atenção para o sinal de $F_x$.
+    \end{compactdesc}
+
+    \begin{solution}
+      O único deslocamento que precisamos considerar é $\delta x$ (pois $\delta z$ depende de $\delta x$).
+      Há duas forças atuando: a da gravidade e $\vec f$.
+      Ao longo do deslocamento $\delta x$, apenas $f_x$ realiza trabalho, de modo que essa contribuição para o trabalho é $f_x\,\delta x$.
+      Porém, o deslocamento $\delta x$ causa um deslocamento $\delta z$, ao longo do qual então tanto a força da gravidade quanto $f_z$ realizam trabalho: $-mg\,\delta z$ é a contribuição da gravidade (a mesma que na questão anterior) e $+f_z\,\delta z$ é a contribuição de $\vec f$.
+      Então, o trabalho total é $\delta W = f_x\,\delta x + (f_z - mg)\,\delta z$.
+      Mas como $\delta z = 2ax\,\delta x$, concluímos que $\delta W = \left[2ax(f_z - mg) + f_x\right]\,\delta x$ e, por comparação com \eqref{eq:work}, concluímos que $F_x = 2ax(f_z - mg) + f_x$.
+    \end{solution}
+\end{question}

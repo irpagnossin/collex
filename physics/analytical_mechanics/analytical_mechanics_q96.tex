@@ -1,0 +1,28 @@
+\begin{question}
+    Uma conta de massa $m$ encontra-se presa a um arame em formato hiperbólico: $xy = C$, onde $C$ é uma constante.
+    Determine a força generalizada conjugada à coordenada $x$ supondo que a gravidade (aceleração $g$) aja no sentido oposto à orientação do eixo $y$ (em outras palavras, o eixo $y$ aponta para cima).
+    \begin{enumerate}
+      \item $F_x = mgC/x^2$ \rightanswer
+      \item $F_x = -mgC/x^2$
+      \item $F_z = mgC/x^2$
+      \item $F_z = mg$
+      \item $F_z = -mg$
+    \end{enumerate}
+
+     \bigskip
+    \begin{compactdesc}
+      \item[Observação:] você pode resolver essa questão de duas formas: utilizando a técnica dos deslocamentos virtuais ou escrevendo a energia potencial gravitacional em termos de $x$ e utilizando a relação $F_x = -\pd{U}{x}$ (que só vale porque a força gravitacional é conservativa).
+    \end{compactdesc}
+
+    \begin{solution}
+      Precisamos considerar apenas um deslocamento $\delta x$ (pois $\delta y$ depende de $\delta x$ e $\delta z = 0$ devido à equação de vínculo).
+      A única força presente é a da gravidade, de modo que não há contribuição dela diretamente para o deslocamento $\delta x$ (haja vista que ela age perpendicularmente a $\delta x$).
+      Porém, $\delta x$ implica em $\delta y = \frac{dy}{dx}\,\delta x = -\frac{C}{x^2}\,\delta x$.
+      Desse modo, o trabalho da força gravitacional associado a esse deslocamento é $\delta W = -mg\,\delta z = mgC/x^2\,\delta x$.
+      Consequentemente, $F_x = mgC/x^2$.
+
+      Outra forma de obter o mesmo resultado é escrever a energia potencial gravitacional: $U = mgy$.
+      Mas como $y = C/x$, então também é verdade que $U = mgC/x$.
+      Finalmente, usando a relação $F_x = -\pd{U}{x}$, obtemos $F_x = mgC/x^2$.
+    \end{solution}
+\end{question}

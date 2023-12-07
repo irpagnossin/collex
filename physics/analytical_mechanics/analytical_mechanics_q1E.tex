@@ -1,0 +1,21 @@
+\begin{question}
+	Considere o conjunto de cinco objetos puntiformes ilustrados abaixo, unidos por hastes rígidas de massa desprezível e comprimento $d = \measure{1.10}{m}$.
+	Cada objeto periférico tem massa igual a \measure{2.20}{kg}, enquanto o objeto central tem massa \measure{4.40}{kg}.
+	Determine o momento de inércia desse sistema com relação ao eixo que passa pelo ponto $M$, perpendicularmente ao plano da figura.
+
+	\centeredfigure{0.4\textwidth}{20180804_185334}
+
+	\begin{answer}
+		\measure{18.6}{kg.m^2}
+	\end{answer}
+
+	\begin{solution}
+		O momento de inércia é dado por $I = \sum_i m_i r_i^2$, onde $m_i$ é uma massa puntual situada à distância $r_i$ do eixo com relação ao qual se quer calcular $I$.
+		É bem fácil determinar o momento de inércia com relação ao centro de massa: $I_{CM} = 4md^2$, onde $m$ é a massa de cada objeto, de 1 a 4 (o objeto 5, no centro, não aparece nessa expressão porque sua distância até o centro é zero: $r_5 = 0$).
+		Por isso, é mais fácil determinar o momento de inércia com relação ao eixo solicitado por meio do teorema dos eixos paralelos: $I_M = I_{CM} + MD^2$, onde $M = 6m$ é a massa do sistema todo (pois o objeto no centro tem o dobro da massa dos demais) e $D = \sqrt{2}d/2$ é a distância do centro até o ponto $M$.
+		Então,
+		\begin{equation*}
+			I_M = 4md^2 + (6m)\left(\sqrt{2}d/2\right)^2 = 7md^2 = \measure{18.6}{kg.m^2}.
+		\end{equation*}
+	\end{solution}
+\end{question}

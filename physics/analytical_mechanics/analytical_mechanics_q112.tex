@@ -1,0 +1,50 @@
+\begin{question}
+  	Ainda considerando o cenário do malabaris, utilize a ``forma 1'' ou a ``forma 2'' das equações de Lagrange para determinar as equações de movimento em termos das variáveis $(x_1, y_1, \theta)$.
+
+  	\begin{enumerate}
+  		\item $(m_1 + m_2) \ddot x_1 - m_2 \ell \ddot\theta \sin\theta - m_2 \ell \dot\theta^2 \cos\theta = 0$ \rightanswer
+  		\item $(m_1 + m_2) \ddot y_1 + m_2 \ell \ddot\theta \cos\theta - m_2 \ell \dot\theta^2 \sin\theta + (m_1 + m_2)g = 0$ \rightanswer
+  		\item $\ell \ddot\theta - \ddot x_1 \sin\theta + \ddot y_1 \cos\theta + g \cos\theta = 0$ \rightanswer
+  		\item $(m_1 + m_2) \ddot x_1 - m_2 \ell \ddot\theta \sin\theta + m_2 \ell \dot\theta^2 \cos\theta = 0$
+  		\item $(m_1 + m_2) \ddot y_1 + m_2 \ell \ddot\theta \cos\theta - m_2 \ell \dot\theta^2 \sin\theta - (m_1 + m_2)g = 0$
+  	\end{enumerate}
+
+    \begin{solution}
+      Se você escolheu utilizar a ``forma 2'', você deve primeiramente derivadas relevantes de $T$ (não de $L$):
+      \begin{align*}
+        \pd{T}{x_1} &= 0
+          & \pd{T}{y_1} &= 0 \\
+        \pd{T}{\dot x_1} &= M\dot x_1 - m_2 \ell \dot\theta \sin\theta
+          & \pd{T}{\dot y_1} &= M\dot y_1 + m_2\ell\dot\theta \cos\theta \\
+        \frac{d}{dt}\pd{T}{\dot x_1} &= M\ddot x_1 + m_2\ell\ddot\theta\sin\theta - m_2\ell\dot\theta^2\cos\theta
+          & \frac{d}{dt}\pd{T}{\dot y_1} &= M\ddot y_1 + m_2\ell\ddot\theta\cos\theta - m_2\ell\dot\theta^2\sin\theta
+      \end{align*}
+
+      \begin{align*}
+        \pd{T}{\theta} &= -m_2\ell \dot\theta (\dot x_1 \cos\theta + \dot y_1 \sin\theta)\\
+        \pd{T}{\dot \theta} &= m_2\ell^2 \dot\theta + m_2\ell (\dot y_1 \cos\theta - \dot x_1 \sin\theta) \\
+        \frac{d}{dt}\pd{T}{\dot \theta} &= m_2\ell^2\ddot\theta + m_2\ell(\ddot y_1 \cos\theta - \dot y_1\dot \theta \sin\theta - \ddot x_1\sin\theta - \dot x_1\dot \theta \cos\theta).
+      \end{align*}
+
+      Em seguida, use essas expressões na ``forma 2'' da equação de Euler-Lagrange, para $x_1$, $y_1$ e $\theta$, juntamente com as expressões de $F_{x_1}$, $F_{y_1}$ e $F_{\theta}$ obtidas na questão anterior, para obter as equações de movimento.
+
+      Para $x_1$:
+      \begin{align*}
+        \frac{d}{dt}\pd{T}{\dot x_1} - \pd{T}{x_1} &= F_{x_1}\\
+        M\ddot x_1 + m_2\ell\ddot\theta\sin\theta - m_2\ell\dot\theta^2\cos\theta &= 0
+      \end{align*}
+
+      Para $y_1$:
+      \begin{align*}
+        \frac{d}{dt}\pd{T}{\dot y_1} - \pd{T}{y_1} &= F_{y_1}\\
+        M\ddot y_1 + m_2\ell\ddot\theta\cos\theta - m_2\ell\dot\theta^2\sin\theta &= -Mg
+      \end{align*}
+
+      Para $\theta$:
+      \begin{align*}
+        \frac{d}{dt}\pd{T}{\dot \theta} - \pd{T}{\theta} &= F_{\theta} \\
+        m_2\ell^2\ddot\theta + m_2\ell(\ddot y_1 \cos\theta - \dot y_1\dot \theta \sin\theta - \ddot x_1\sin\theta - \dot x_1\dot \theta \cos\theta) + m_2\ell \dot\theta (\dot x_1 \cos\theta + \dot y_1 \sin\theta) &= -m_2g\ell\cos\theta \\
+        m_2\ell^2\ddot\theta + m_2\ell(\ddot y_1 \cos\theta - \ddot x_1\sin\theta) &= -m_2g\ell\cos\theta
+      \end{align*}
+    \end{solution}
+\end{question}

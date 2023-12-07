@@ -1,0 +1,41 @@
+\begin{question}
+  	Determine novamente a equação de movimento da máquina de Atwood em termos das coordenadas $(z_1, \theta)$, mas desta vez considere que a polia tem massa $M$ e raio $R$, e que o cabo não desliza (isso significa que, além do vínculo já conhecido entre $z_1$ e $z_2$, há ainda este: $z_1 = R\theta$).
+
+  	\begin{center}
+      \includegraphics[width=0.4\textwidth]{20180720_231409}
+    \end{center}
+
+  	\begin{enumerate}
+  		\item $(m_1 + m_2 + \half M) \ddot z_1 - (m_1 - m_2)g = 0$ \rightanswer
+  		\item $(m_1 + m_2 ) \ddot z_1 - (m_1 - m_2)g = 0$
+  		\item $(m_1 + m_2 + \half M) \ddot z_1 + (m_1 - m_2)g = 0$
+  		\item $m_1 \ddot z_1 - m_1 z_1 = 0$
+  		\item $m_1 \ddot z_1 + m_1 z_1 = 0$
+  	\end{enumerate}
+
+    \begin{solution}
+      Esse problema é similar ao anterior, mas agora precisamos considerar também a rotação da polia.
+      Dito de outra forma, precisamos acrescentar a energia cinética de rotação da polia à expressão de $T$ que encontramos na questão: $T = \half (m_1 + m_2) \dot z_1^2 + \half I \dot\theta^2$, onde $I = \half MR^2$ é o momento de inércia da polia (um disco).
+      Como não há deslizamento entre o cabo e a polia, $\theta$ e $z_1$ estão relacionados: $z_1 = R\theta \Rightarrow \dot z_1 = R\dot \theta$.
+      Usando essa condição e simplificando, podemos reescrever $T$ assim: $T = \half (m_1 + m_2) \dot z_1^2 + \half I \left(\frac{z_1}{R}\right)^2 = \half (m_1 + m_2 + \half M) \dot z_1^2$.
+
+      Não precisamos alterar a energia potencial porque o centro de massa da polia não se move.
+      Então, a função lagrangeana fica assim:
+      \begin{equation*}
+        L := T - U = \half (m_1 + m_2 + \half M) \dot z_1^2 + (m_1 - m_2)gz_1 + m_2gC.
+      \end{equation*}
+
+      Em seguida calculamos as derivadas relevantes de $L$:
+      \begin{equation*}
+        \pd{L}{z_1} = (m_1 - m_2) g,
+        \qquad
+        \pd{L}{\dot z_1} = (m_1 + m_2 + \half M)\dot z_1
+        \qquad\text{e}\qquad
+        \frac{d}{dt}\pd{L}{\dot z_1} = (m_1 + m_2 + \half M)\ddot z_1.
+      \end{equation*}
+      
+      Finalmente, aplicando essas expressões na equação de Euler-Lagrange associada à variável $z_1$, obtemos a equação do movimento: $(m_1 + m_2 + \half M) \ddot z_1 - (m_1 - m_2)g = 0$, cuja solução é imediata: $\ddot z_1 = \frac{m_1 - m_2}{m_1 + m_2 + M/2}g$.
+      Ou seja, se $m_1 > m_2$, $m_1$ desce ($\ddot z_1 > 0$) com aceleração constante de $\frac{m_1 - m_2}{m_1 + m_2 + M/2}g$.
+      Essa aceleração é menor que no caso da questão anterior, porque parte da energia potencial gravitacional é usada para fazer girar a polia.
+    \end{solution}
+\end{question}

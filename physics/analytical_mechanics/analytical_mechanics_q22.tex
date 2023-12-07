@@ -1,0 +1,46 @@
+\begin{question}
+    Considere um balde cilíndrico, cheio de água, girando com velocidade angular constante em torno do eixo vertical, na situação de equilíbrio em que a água gira juntamente com o balde.
+    Nesse caso, a superfície da água assume a forma de um \href{https://en.wikipedia.org/wiki/Paraboloid}{parabolóide de revolução}, caracterizado pelo fato de que a altura $z$ da superfície é proporcional ao quadrado da distância radial $\rho$ desde o centro do balde.
+    Ou seja, $z \propto \rho^2$.
+    Você pode demonstrar isso usando o fato de que um fluido em equilíbrio não pode suportar forças tangenciais à sua superfície (ou seja, no referencial \emph{não-inercial} do balde, as forças atuantes na superfície tem de ser normais a ela).
+    Faça esse cálculo e determine a diferença de altura entre a superfície da água no centro do balde ($\rho = 0$), onde ela está mais baixa, e nas paredes dele ($\rho = R$).
+    Ou seja, determine $z(R) - z(0)$.
+    Para isso, considere que o raio do balde é de $R = \measure{15.0}{cm}$, que sua velocidade angular é de \measure{6.00}{rad/s} e que a aceleração da gravidade é de \measure{9.81}{m/s^2}.
+  
+    \begin{answer}
+      \measure{4.13}{cm}
+    \end{answer}
+
+    \begin{solution}
+      No sistema de referência (não-inercial) do balde, cada ponto da superfície da água está em equilíbrio:
+
+      \centeredfigure{0.4\textwidth}{20180816_205246}
+
+      Podemos, então, escrever a segunda lei de Newton para as direções horizontal ($\rho$) e vertical ($z$):
+      \begin{equation*}
+        F_i - N \sin\theta = 0
+        \text{ (em $\rho$)}
+        \qquad\text{e}\qquad
+        N \cos\theta - P = 0
+        \text{ (em $z$)},
+      \end{equation*}
+      onde $F_i$ é a força de inércia que, nesse caso, é a força centrífuga: $F_i = m \omega^2 \rho$, onde $m$ é a massa de um pequeno volume de água posicionado à distância $\rho$ do eixo de rotação, ao redor do qual o balde gira com velocidade angular $\omega$.
+      $N$ é a força normal e $P = mg$ é o peso desse pequeno volume d'água.
+
+      A equação para $z$ nos permite escrever $N = P/\cos\theta$, e usando esse resultando, bem como a expressão de $F_i$, na equação para $\rho$, e manipulando, concluimos que $\tan\theta = \omega^2\rho/g$.
+
+      Considere agora que $z(\rho)$ é a curva que caracteriza o perfil da superfície da água.
+      Então,
+      \begin{equation*}
+        \frac{dz}{d\rho} = \tan\theta = \frac{\omega^2}{g}\rho
+          \Rightarrow
+        \int_0^{\rho} \frac{dz}{d\rho'}\, d\rho' = \frac{\omega^2}{g} \int_0^{\rho} \rho'\,d\rho'
+          \Rightarrow
+        \int_{z(0)}^{z(\rho)}dz = \frac{\omega^2}{2g}\rho^2
+          \Rightarrow
+        z(R) - z(0) = \frac{(\omega R)^2}{2g}
+      \end{equation*}
+
+      Usando os valores apresentados no enunciado, obtemos $z(R) - z(0) \approx \measure{4.13}{cm}$.
+    \end{solution}
+\end{question}

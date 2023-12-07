@@ -1,0 +1,23 @@
+\begin{question}
+    Considere uma massa de ar em rotação em torno de um centro de alta pressão (esse fenômeno é chamado \href{https://en.wikipedia.org/wiki/Anticyclone}{anti-ciclone}) na latitude $\measure{23.5}{\degree}$ sul, com velocidade horizontal $\measure{100}{km/h}$.
+    Calcule a magnitude da força de Coriolis que age sobre um volume de \measure{1.00}{m^3} dessa massa de ar, cuja densidade é \measure{1.30}{kg/m^3}, no ponto da trajetória em que a massa de ar desloca-se no sentido sul.
+    Considere que a Terra dá uma volta em torno do seu próprio eixo em 23 horas, 56 minutos e 4 segundos (esse é o chamado ``dia sideral'').
+    
+    \begin{answer}
+      $\measure{2.10e-3}{N}$.
+    \end{answer}
+
+    \begin{solution}
+      A expressão para a força de Coriolis é $F_c = 2mv'\omega \sin\theta$, onde $m$ é a massa de ar envolvida, $v'$ é a magnitude da velocidade dessa massa de ar, medida no referencial da Terra, que gira com velocidade angular $\omega$.
+      $\theta$ é o ângulo entre os vetores $\vec v'$ e $\vec\omega$.
+
+      A figura abaixo ilustra as orientações de $\vec v'$ e de $\vec\omega$, da qual podemos deduzir que $\theta = \pi - \varphi$, onde $\varphi = \measure{23.5}{\degree}$ é a latitude (o ângulo entre o equador e o paralelo em questão).
+      Note que $\sin(\pi - \varphi) = \sin\varphi$.
+
+      \centeredfigure{0.4\textwidth}{20180816_210054}
+
+      A massa $m$ pode ser escrita em termos do volume $V$ e da densidade $\rho$: $m = \rho V$.
+      Assim, temos $F_c = 2\rho V v'\omega \sin\theta$.
+      Resta inserir aí os valores $\rho = \measure{1.30}{kg/m^3}$, $V = \measure{1.00}{m^3}$, $v' = \measure{100}{km/h} \approx \measure{27.8}{m/s}$, $\omega = 2\pi/86164 \approx \measure{7.29e-5}{rad/s}$ e $\theta = \measure{23.5}{\degree}$ para obter a intensidade da força de Coriolis: $F_c = \measure{2.10e-3}{N}$.
+    \end{solution}
+\end{question}

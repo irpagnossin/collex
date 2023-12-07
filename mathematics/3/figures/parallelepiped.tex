@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=0.8]
+
+	\newcommand\angleA{-5}
+	\newcommand\angleB{+30}
+	\newcommand\angleC{+70}
+	\newcommand\sideA{3}
+	\newcommand\sideB{2}
+	\newcommand\sideC{3}
+
+	\clip (-0.5,-1) rectangle (7,5);
+	
+	\draw [->, very thick] (0,0) -- (\angleA:\sideA);
+	\draw[dashed, very thick] [->] (0,0) -- (\angleB:\sideB);
+	\draw [->, very thick] (0,0) -- (\angleC:\sideC);
+	\draw [-] (\angleC:\sideC) -- ++(\angleB:\sideB) -- ++(\angleA:\sideA);
+	\draw [-] (\angleC:\sideC) -- ++(\angleA:\sideA) -- ++(\angleB:\sideB);
+	\draw[dashed] [-] (\angleB:\sideB) -- ++(\angleC:\sideC);
+	\draw[dashed] [-] (\angleB:\sideB) -- ++(\angleA:\sideA);
+	\draw (0,0) ++(\angleA:\sideA) ++(\angleB:\sideB) -- ++(\angleC:\sideC);
+	\draw (0,0) ++(\angleA:\sideA) -- ++(\angleC:\sideC);
+	\draw (0,0) ++(\angleA:\sideA) -- ++(\angleB:\sideB);
+
+	\draw (0,0) node[anchor=north east] {$A$};
+	\draw (\angleA:\sideA) node[anchor=north west] {$B$};
+	\draw (\angleA:\sideA) ++(\angleB:\sideB) node[anchor=north west] {$C$};
+	\draw (\angleB:\sideB) node[anchor=south east] {$D$};
+	\draw   (\angleC:\sideC) node[anchor=south east] {$E$}
+	      ++(\angleA:\sideA) node[anchor=south] {$F$}
+	      ++(\angleB:\sideB) node[anchor=south west] {$G$};
+	\draw (\angleC:\sideC) ++(\angleB:\sideB) node[anchor=south east] {$H$};
+	\draw (\angleA:\sideA) ++(\angleC:\sideC/2) node[anchor=west] {$I$};
+	\draw (\angleA:\sideA) ++(\angleB:\sideB) ++(\angleC:2/3*\sideC) node[anchor=west] {$J$};
+	\draw[fill=black] (0,0) ++ (\angleA:\sideA) ++(\angleC:\sideC/2) circle (0.05);
+	\draw[fill=black] (0,0) ++ (\angleA:\sideA) ++(\angleB:\sideB) ++(\angleC:2/3*\sideC) circle (0.05);
+
+	\draw (0,0) ++(\angleA:\sideA/2) node[anchor=north] {$\vec u_1$};
+	\draw (0,0) ++(\angleB:3/4*\sideB) node[anchor=north west] {$\vec u_2$};
+	\draw (0,0) ++(\angleC:\sideC/2) node[anchor=east] {$\vec u_3$};
+
+\end{tikzpicture}

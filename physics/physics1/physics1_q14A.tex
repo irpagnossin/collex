@@ -1,0 +1,54 @@
+\begin{question}
+    Considere a situação ilustrada abaixo, em que dois blocos estão ligados por um cabo de massa desprezível.
+    O coeficiente de atrito cinético entre o bloco mais leve e o plano é de $0,25$, e o coeficiente de atrito cinético entre o bloco mais pesado e o plano é de $0,35$.
+    Determine a tensão no cabo, considerando que a aceleração da gravidade é de \measure{9.8}{m/s^2}.
+
+    \centeredfigure{0.4\textwidth}{20181015_214838}
+
+    \begin{compactdesc}
+      \item[Dica:] para que haja tensão no cabo, os dois blocos devem mover-se conjuntamente, com a mesma aceleração.
+    \end{compactdesc}
+
+    \begin{answer}
+      \measure{2.27}{N}
+    \end{answer}
+
+    \begin{solution}
+      A figura abaixo ilustra o diagrama de corpo livre (DCL) de cada um dos blocos, em que $\vec A_1$ e $\vec A_2$ são as forças de atrito entre o plano inclinado e os blocos 1 e 2, respectivamente.
+      $T$ é a tensão no cabo, comum aos dois DLC, $\vec N_1$ e $\vec N_2$ são as forças normais e $\vec P_1$ e $\vec P_2$ são as forças-peso.
+      $\theta = \measure{30}{\degree}$ é a inclinação do plano.
+
+      \centeredfigure{0.7\textwidth}{20181015_214705}
+
+      Considerando esses diagramas, escrevemos a segunda lei de Newton para as direções $x$ (paralela ao plano inclinado) e $y$ (perpendicular a ele) para cada um dos blocos:
+
+      \begin{minipage}[t]{0.45\textwidth}
+        Bloco 1 ($m_1 = \measure{4}{kg}$, $\mu_1 = 0,25$):
+        \begin{align}
+          \text{Em $x$:}&\quad P_1\sin\theta - A_1 - T = m_1a \label{eq:1x}\\
+          \text{Em $y$:}&\quad N_1 = P_1\cos\theta = m_1 g \cos\theta \label{eq:1y}\\
+                        &\quad A_1 = \mu_1 N_1 \label{eq:A1}
+        \end{align}
+      \end{minipage}\hfill
+      \begin{minipage}[t]{0.45\textwidth}
+        Bloco 2 ($m_2 = \measure{8}{kg}$, $\mu_2 = 0,35$):
+        \begin{align}
+          \text{Em $x$:}&\quad P_2\sin\theta - A_2 + T = m_2a \label{eq:2x}\\
+          \text{Em $y$:}&\quad N_2 = P_2\cos\theta = m_2 g \cos\theta \label{eq:1y}\\
+                        &\quad A_2 = \mu_2 N_2 \label{eq:A2}
+        \end{align}
+      \end{minipage}
+
+      Somando as equações \eqref{eq:1x} e \eqref{eq:2x} membro a membro e utilizando as expressões para $A_1$ e $A_2$, equações \eqref{eq:A1} e \eqref{eq:A2}, obtemos:
+      \begin{equation*}
+        P_1\sin\theta - A_1 + P_2\sin\theta - A_2 = (m_1 + m_2) a
+        \Rightarrow
+        a = \frac{(m_1 + m_2)g\sin\theta - (\mu_1 m_1 + \mu_2 m_2)g\cos\theta}{m_1+m_2},
+      \end{equation*}
+      que dá $a = \measure{2.21}{m/s^2}$.
+      Finalmente, utilizando esse resultado na equação \eqref{eq:1x}, obtemos a tensão no cabo:
+      \begin{equation*}
+        T = m_1 g \sin\theta - \mu_1 m_1 g \cos\theta - m_1 a = \measure{2.27}{N}
+      \end{equation*}
+    \end{solution}
+  \end{question}

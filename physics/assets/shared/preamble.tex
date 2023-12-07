@@ -1,0 +1,98 @@
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+%\usepackage{tikz}\usetikzlibrary{calc,arrows}
+
+\usepackage{icomma}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xspace}
+%\usepackage{amsfonts}
+\usepackage[locale=FR]{siunitx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}\graphicspath{{assets/}}
+\usepackage{icomma}
+\usepackage{lastpage}
+\usepackage{comment}
+
+\usepackage{irpagnossin-basic}
+%\usepackage[answer,solution]{irpagnossin-exam}
+\usepackage{irpagnossin-exam}
+
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\lfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+
+\rhead{\footnotesize Prof. Dr. Ivan Pagnossin, Univesp, \today}
+\rfoot{\footnotesize página \thepage\ de \pageref{LastPage}}
+
+\title{Mecânica Geral}
+\subtitle{Lista de exercícios}
+\author{Prof. Dr. Ivan Ramos Pagnossin}
+\date{\today}
+
+% Comandos comuns
+\let\emph=\textbf
+%\let\vec=\mathbf
+%\let\hat=\mathbf
+\newcommand\rightanswer{\textcolor{magenta}{$\leftarrow$(resposta correta)}}
+\newcommand\vmeasure[2]{\ensuremath{#1}~\unit{#2}}
+
+\newcommand\ava[1]{``\texttt{#1}''}
+\newcommand\pd[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+
+\newcommand\half{\ensuremath{\frac{1}{2}}}
+
+\NewEnviron{production}[1][]{%
+	\color{blue!50!black}
+  \vspace{\questionskip}
+  \noindent
+  \begingroup
+    \bfseries\upshape\selectfont
+    \color{blue!50!black}
+    \MakeUppercase{orientações para produção}%
+  \endgroup
+  \begingroup
+  	\footnotesize
+    \ifthenelse{\equal{#1}{}}{}{~(#1)}%
+  \endgroup
+  \par
+  \addpenalty{+300}%
+  \footnotesize
+  \noindent\BODY
+  \par
+}{%
+  \addpenalty{-300}%
+}
+
+\NewEnviron{choices}[1][]{%
+  \vspace{\questionskip}
+  \color{blue!50!black}
+  \noindent
+  \begingroup
+    \footnotesize
+    \bfseries\upshape\selectfont
+    \color{blue!50!black}
+    \MakeUppercase{alternativas}%
+  \endgroup
+  \begingroup
+    \footnotesize
+    \ifthenelse{\equal{#1}{}}{}{~(#1)}%
+  \endgroup
+  \par
+  \addpenalty{+300}%
+  \footnotesize
+  \noindent\BODY
+  \par
+}{%
+  \addpenalty{-300}%
+}
+
+
+\newcommand\centeredfigure[2]{\begin{center}{\includegraphics[width=#1]{#2}}\end{center}}

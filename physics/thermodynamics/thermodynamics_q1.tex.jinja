@@ -1,0 +1,53 @@
+\begin{question}
+	No último domingo eu coloquei \measure{\VAR{format(V)}}{l} de água para ferver, para preparar um café.
+	Por falta de algo melhor para fazer, eu decidi cronometar o tempo até que ela começasse a ferver: \measure{\VAR{dt}}{min}.
+
+	Suponha que, naquela ocasião, a temperatura ambiente era de \measure{\VAR{T}}{K} e a pressão atmosférica, de \measure{1013}{hPa}.
+	Considere ainda que todo o calor fornecido pelo fogão foi utilizado para aquecer a água, que por sua vez não cedeu calor para o meio ambiente.
+	Nessas condições, responda:
+
+	\begin{enumerate}
+		\item Qual é a potência de aquecimento do meu fogão?
+		Em outras palavras, qual é a taxa de energia, na forma de calor, que meu fogão fornece para a água?
+		\item Quanto tempo levaria para ferver toda a água, caso eu esquecesse o fogão aceso?
+	\end{enumerate}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item \measure{\VAR{answer_item_1}}{J/min}
+			\item \measure{\VAR{answer_item_2}}{min}
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item O calor fornecido pelo fogão foi responsável por alterar a temperatura da água, de \measure{\VAR{T}}{K} até \measure{\VAR{Te}}{K} (temperatura de ebulição), o que corresponde a uma variação de $\Delta T = \measure{\VAR{format(Te-T)}}{K}$.
+
+			O calor necessário para isso é dado por $\Delta Q_1 = mc\Delta T$, onde $m$ é a massa de água aquecida e $c$, seu calor específico a pressão constante (a pressão atmosférica).
+			A massa pode ser obtida a partir da densidade $\rho$ e do volume $V$ da água: $m = \rho V$.
+			Nas condições de temperatura e pressão apresentadas no enunciado, sabemos que $c = \measure{\VAR{format(c)}}{J/kg.K}$ e que a densidade da água é de $\rho = \measure{\VAR{format(ρ)}}{kg/l}$ (consulte, por exemplo, \href{https://www.engineeringtoolbox.com/}{engineeringtoolbox.com}).
+			Assim, $\Delta Q_1 = \measure{\VAR{heat_item_1}}{J}$.
+
+			Essa energia toda foi fornecida ao longo de $\Delta t = \measure{\VAR{dt}}{min}$, o que significa que a taxa média com que o fogão cedeu calor para a água foi de
+			\begin{equation*}
+				\dot Q \approx \frac{\Delta Q_1}{\Delta t} = \measure{\VAR{answer_item_1}}{J/min}.
+			\end{equation*}
+
+			\emph{Observações:} na realidade, $c$ varia com a temperatura, de sorte que o correto seria determinarmos $\Delta Q_1$ por integração: $\Delta Q_1 = m \int_{T_1}^{T_2} c(T)\,dT$.
+			Contudo, essa variação é muito pequena, o que nos permite realizar a aproximação acima.
+			Além disso, a densidade da água também varia com a temperatura, mas isso é irrelevante, pois só a utilizamos para determinar a massa de água presente, que não se altera (obviamente estamos considerando, com isso, que a massa de água não varia ou, pelo menos, que essa variação é pequena)
+
+			\item O calor necessário para ebulir toda a água é dado por:
+			\begin{equation*}
+				\Delta Q_2 = mL = \measure{\VAR{vaporization_heat}}{J},
+			\end{equation*}
+			onde $L = \measure{\VAR{format(L)}}{J/kg}$ é o calor de vaporização da água.
+			Como o fogão fornece $\dot Q \approx \measure{\VAR{answer_item_1}}{J/min}$, então ele levará
+			\begin{equation*}
+				\frac{\Delta Q_2}{\dot Q} \approx \measure{\VAR{answer_item_2}}{min}
+			\end{equation*}
+			para ebulir toda a água.
+			Faça o teste!
+		\end{enumerate}
+	\end{solution}
+\end{question}

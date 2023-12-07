@@ -1,0 +1,67 @@
+\begin{question}
+    Considere o corpo extenso homogêneo abaixo, de massa $M = \measure{2.00}{kg}$ e dimensões $R = \measure{5.00}{cm}$ e $H = \measure{10.0}{cm}$.
+    
+    \begin{center}
+      \includegraphics[width=0.3\textwidth]{cone}
+    \end{center}
+    
+    \begin{enumerate}
+      \item Determine o momento de inércia com relação ao eixo $z$.
+      Dica: divida o objeto em fatias circulares e some-os todos (\ie, integre os elementos de momento de inércia compostos por cilíndros de alturas infinitezimais).
+      \item Determine o momento de inércia com relação ao eixo $z'$.
+    \end{enumerate}
+
+    \begin{answer}
+      \begin{enumerate}
+        \item \measure{1.50e-3}{kg.m^2}
+        \item \measure{6.50e-3}{kg.m^2}
+      \end{enumerate}
+    \end{answer}
+
+    \begin{solution}
+      \begin{enumerate}
+        \item Podemos imaginar esse objeto como uma sobreposição de discos de raio $r$ (que varia com $z$) e altura $dz$, como ilustrado abaixo.
+        Deste modo, cada disco tem um momento de inércia $dI = \frac{1}{2}dm\, r^2$.
+        Note que a massa do disco é uma pequena parcela $dm$ da massa do objeto todo, que podemos escrever como $dm = \rho\, dV$, onde $\rho$ é a densidade (constante) do objeto e $dV$ é o volume do disco, que por sua vez é dado por $dV = \pi r^2\, dz$.
+        Assim, se somarmos o momento de inércia de cada disco, fazendo $dz \to 0$, teremos:
+        \begin{equation*}
+        I_z = \int dI = \int\frac{1}{2}dm\, r^2 = \frac{1}{2}\rho \int r^2\, dV = \frac{1}{2}\rho\pi \int r^4\, dz
+        \end{equation*}
+        
+        \centeredfigure{0.3\textwidth}{cone_resolucao}
+        
+        Como o objeto é simétrico com relação ao plano $xy$, podemos calcular a integral acima desde $z = 0$ até $H/2$ e multiplicá-la por dois:
+        \begin{equation*}
+        I_z = \rho\pi \int_{0}^{H/2} r^4\, dz.
+        \end{equation*}
+        
+        Falta determinar a relação entre $r$ (distância até o eixo de rotação) e $z$.
+        Observando a figura acima, vemos que em $z = 0$, $r = R$; e em $z = H/2$, $r = 0$. Usando esses dois pontos para definir a geratriz do cone, concluímos que $r(z) = 2Rz/H$.
+        Assim, a integral acima fica:
+        \begin{equation*}
+        I_z = \left(\frac{2R}{H}\right)^4\rho\pi \int_{0}^{H/2} z^4\, dz
+          = \left(\frac{2R}{H}\right)^4\rho\pi \left[\frac{z^5}{5}\right]_0^{H/2}
+          = \frac{1}{10}\rho\pi HR^4 
+          = \frac{1}{10}\frac{M}{V}\pi HR^4,
+        \end{equation*}
+        lembrando que $\rho = M/V$, onde $V$ é o volume do objeto, que por sua vez é igual ao dobro do volume do cone de altura $H/2$ e área da base $\pi R^2$:
+        \begin{equation*}
+        V = 2 \left(\frac{1}{3}\pi R^2 \frac{H}{2}\right) = \frac{1}{3}\pi H R^2.
+        \end{equation*}
+        
+        Assim,
+        \begin{equation*}
+        I_z = \frac{1}{10}\frac{M}{\frac{1}{3}\pi H R^2}\pi HR^4 = \frac{3}{10}MR^2.
+        \end{equation*}
+
+        Usando $M = \measure{2.00}{kg}$ e $R = \measure{0.0500}{m}$ (enunciado), obtemos $I = \measure{1.50e-3}{kg.m^2}$.
+        
+        \item Como o objeto é homogêneo, o centro de massa coincide com o centro geométrico, por onde passa o eixo $z$.
+        Ou seja, $I_z$ calculado acima é o momento de inércia com relação ao eixo que passa pelo centro de massa.
+        E como o eixo $z'$ é paralelo ao $z$, podemos utilizar o teorema dos eixos paralelos, bastando para isso observar que a distância entre eles é $R$:
+        \begin{equation*}
+        I_{z'} = I_z + MR^2 = \frac{13}{10}MR^2 = \measure{6.50e-3}{kg.m^2}.
+        \end{equation*}
+      \end{enumerate}
+    \end{solution}
+\end{question}

@@ -1,0 +1,31 @@
+\begin{question}
+    O avião de caça F-16 \foreign{Fighting Falcon} é um dos mais ágeis do mundo.
+    Ele é capaz de realizar uma curva de raio \measure{50.0}{m} a \measure{200}{m/s}.
+    Usando o avião como sistema de referência não-inercial, responda:
+    \begin{enumerate}
+      \item Qual é a intensidade da força centrífuga sentida pelo piloto, sabendo que sua massa é de \measure{90.0}{kg}?
+      \item Qual é a intensidade da força de Coriolis sentida pelo piloto?
+      \item Ao mover o braço para para alcançar o painel, à velocidade de \measure{1.00}{m/s} com relação ao avião, ele sente a ação da força de Coriolis, impedindo-o de fazer isso: ao mover o braço no sentido do centro de curvatura de sua trajetória, a força de Coriolis é tangencial à trajetória do voo e opõe-se a ela.
+      Qual é a intensidade dessa força, sabendo que seu braço tem massa de \measure{5.00}{kg}?
+    \end{enumerate}
+
+    \begin{answer}
+      \begin{enumerate}
+        \item \measure{7.20e3}{N}
+        \item \measure{0}{N}
+        \item \measure{40}{N}
+      \end{enumerate}
+    \end{answer}
+
+    \begin{solution}
+      \begin{enumerate}
+        \item A força centrífuga é dada pela expressão $mv^2/r$, onde $m = \measure{90}{kg}$ é a massa do piloto, $v = \measure{200}{m/s}$ é a velocidade do avião e $r = \measure{50}{m}$ é o raio da trajetória.
+        Então, a intensidade da força centrífuga é de \measure{7.20e3}{N}.
+        \item A força de Coriolis sobre o piloto é nula, já que, no referencial do avião, ele está em repouso (\ie, $v' = 0$).
+        \item A força de Coriolis é dada pela expressão $2mv'\omega\sin\theta$, onde $m$ é a massa do braço do piloto, $v'$ é a velocidade com que ele move o braço, $\omega$ é a velocidade angular do avião em sua trajetória circular e $\theta$ é o ângulo entre $\vec v'$ e $\vec\omega$.
+        $\theta = \measure{90}{\degree}$, pois o enunciado afirma que o movimento ocorre rumo ao centro; no plano da trajetória ($\omega$, por outro lado, é perpendicular a esse plano).
+        Além disso, $\omega = v/r = \measure{4}{rad/s}$.
+        Então, usando os valores $m = \measure{5}{kg}$, $v' = \measure{1}{m/s}$ e $\theta = \measure{90}{\degree}$, concluímos que a intensidade da força de Coriolis é de \measure{40}{N}.
+      \end{enumerate}
+    \end{solution}
+\end{question}

@@ -1,0 +1,19 @@
+\begin{question}
+    Uma conta de massa $m$ encontra-se presa a um arame de formato hiperbólico: $xy = C$, onde $C$ é uma constante.
+    Determine a energia cinética dessa conta.
+    \begin{enumerate}
+      \item $T = \half m \dot x^2 \left(1 + \frac{C^2}{x^4}\right)$ \rightanswer
+      \item $T = \half m \left(\dot x^2 + \frac{C^2}{\dot x^2}\right)$
+      \item $T = \half m (\dot x^2 + \dot y^2)$
+      \item $T = \half m \dot x^2 \left(1 + \frac{y^2}{x^2}\right)$
+    \end{enumerate}
+
+    \begin{solution}
+      Começamos com $T = \half m \left(\dot x^2 + \dot y^2 + \dot z^2\right)$.
+      Podemos ignorar $z$ (ou, se preferir, considerar a equação de vínculo $z = \text{constante}$, da qual $\dot z = 0$).
+      Devido à equação de vínculo $xy = C$, $\dot y$ depende de $\dot x$.
+      Para determinar essa relação, uma forma é derivar implicitamente a equação de vínculo: $\frac{d}{dt}(xy) = \frac{dC}{dt} \Rightarrow \dot x y + x \dot y = 0$.
+      Daí decorre que $\dot y = -\dot x y/x = -\dot x C/x^2$.
+      Usando essas informações na expressão inicial de $T$ e simplificando, obtemos $T = \half m \dot x^2 \left(1 + \frac{C^2}{x^4}\right)$.
+    \end{solution}
+\end{question}

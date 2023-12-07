@@ -1,0 +1,21 @@
+\begin{question}
+    Determine o comprimento da curva $(q^1, q^2) = (1, \tau)$, parametrizada por $\tau \in \mathbb{R}$, quando $\tau$ varia continuamente de 1 até 2.
+    Considere que $ds^2 = \left(\frac{dq^1}{q^2}\right)^2 + \left(\frac{dq^2}{q^2}\right)^2$.
+
+    \begin{answer}
+      0,693
+    \end{answer}
+
+    \begin{solution}
+      $q^1 = 1 \Rightarrow dq^1/d\tau = 0$ e $q^2 = \tau \Rightarrow dq^2/d\tau = 1$.
+      $g_{11} = g_{22} = (q^2)^{-2} = \tau^{-2}$ e $g_{ij} = 0$ para $i \ne j$.
+      Então,
+      \begin{equation*}
+        \sum_{i=1}^2\sum_{j=1}^2 g_{ij} \frac{dx^i}{d\tau} \frac{dx^i}{d\tau} =
+          g_{11} \left(\frac{dq^1}{d\tau}\right)^2 + g_{22} \left(\frac{dx^2}{d\tau}\right)^2 =
+          \frac{1}{\tau^2}
+        \Rightarrow
+        L = \int_1^2 \frac{d\tau}{\tau} = \ln (2).
+      \end{equation*}
+    \end{solution}
+\end{question}

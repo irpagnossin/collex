@@ -1,0 +1,84 @@
+% -----------------------------------------------------------------------------------------
+% Encoding: UTF-8
+% -----------------------------------------------------------------------------------------
+% Autor:    Ivan Ramos Pagnossin
+% Idioma:   pt-BR
+% Licença:  Creative Commons BY-SA International 4.0
+% -----------------------------------------------------------------------------------------
+\documentclass[a4paper,10pt,oneside]{scrartcl}
+	
+	\input{shared/preamble}
+
+	\title{Formulário de Física}
+	\author{Prof. Dr. Ivan Ramos Pagnossin}
+	\date{\today}
+
+	\lhead{\footnotesize Formulário de Física}
+	\rhead{\footnotesize Prof. Dr. Ivan Pagnossin, \today}
+
+\begin{document}
+
+	\section*{Rotações}
+	\begin{gather*}
+		\measure{180}{\degree} = \measure{\pi}{rad},
+			\quad
+		\omega = 2\pi/T \\
+		s = \theta r, \quad v = \omega r, \quad a = \alpha r \\
+		\text{$\alpha$ constante: }\omega(t) = \theta_0 + \alpha t, \quad \theta(t) = \theta_0 + \omega_0 t + \frac{1}{2} \alpha t^2 \quad\text{e}\quad \omega^2 = \omega_0^2 + 2\alpha \Delta\theta \\
+		I = \sum_i m_i r_i^2 \quad\text{e}\quad dI = r^2\, dm\\
+		\text{Teorema dos eixos paralelos: } I = I_\text{CM} + md^2 \\
+		\text{Momento angular: }\vec L = I \vec\omega = m \vec r \times \vec v,
+			\quad
+		|\vec L| = mrv\sin\theta \\
+		\text{Torque} = \vec\tau = \frac{d\vec L}{dt} = \vec F \times \vec r,
+			\qquad
+		|\vec \tau| = F r \sin\theta = I\alpha \\
+		T_\text{rotação} = \frac{1}{2} I \omega^2, \quad T_\text{translação} = \frac{1}{2} m v^2
+	\end{gather*}
+
+	\section*{Forças inerciais}
+	\begin{gather*}
+		\vec F - m \vec A = m \vec a \\
+		\vec F_\text{centrífuga} = -m \vec\omega \times \left(\vec\omega \times \vec{r'}\right), \qquad
+			F_\text{centrífuga} = m r' \omega^2 \sin\theta \\
+		\vec F_\text{Coriolis} = - 2 m \vec\omega \times \vec{v'}, \qquad F_\text{Coriolis} = 2 m v' \omega \sin\phi
+	\end{gather*}
+
+	\section*{Coordenadas curvilíneas}
+	\begin{gather*}
+		\text{Coordenadas retangulares: } ds^2 = dx^2 + dy^2 + dz^2 \\
+		\text{Coordenadas polares: } ds^2 = dr^2 + r^2\, d\theta^2 \\
+		\text{Coordenadas cilíndricas: } ds^2 = dr^2 + r^2\, d\theta^2 + dz^2 \\
+		\text{Coordenadas esféricas: } ds^2 = d\rho^2 + \rho^2 \, d\phi^2 + \rho^2 \sin^2\theta\, d\theta^2 \\
+		L = \int_0^\lambda d\tau\, \sqrt{\left|\sum_{i}\sum_{j} g_{ij} \frac{dq^i}{d\tau} \frac{dq^i}{d\tau}\right|} \\
+		\vec b_i = \vec\nabla q^i \text{ (contra-variante) e } 
+		\vec b_i^{\star} = \partial\vec r/\partial q^i \text{ (covariante)}\\
+		g_{ij} = \vec b_i^{\star} \cdot \vec b_j^{\star}
+			\quad\text{e}\quad
+		\delta_{ij} = \vec b_i \cdot \vec b_j^{\star} \\
+		v^i = \frac{dq^i}{dt} = \dot q^i,
+			\quad
+		v_i = \sum_j g_{ij} v^j
+			\quad\text{e}\quad
+		|\vec v| = \sqrt{\sum_{i} v^i v_i}
+	\end{gather*}
+
+	\section*{Formalismo lagrangeano}
+	\begin{gather*}
+		T = \frac{1}{2} mv^2 = \frac{1}{2} m \left(\dot x^2 + \dot y^2 + \dot z^2 \right),
+			\quad
+		U(\vec r) := \int_{\text{ref}}^{\vec r} \vec F \cdot d\vec\ell \\
+		L = T - U \\
+		\frac{d}{dt}\frac{\partial T}{\partial \dot q^i} - \frac{\partial T}{\partial q^i} = F_i 
+			\quad\text{ou}\quad
+		\frac{d}{dt}\frac{\partial L}{\partial \dot q^i} - \frac{\partial L}{\partial q^i} = 0
+			\text{ com }
+		F_i = \frac{\partial U}{\partial q^i}
+	\end{gather*}
+
+\end{document}
+
+\frac{d}{dt}\frac{\partial T}{\partial \dot q^i} - \frac{\partial T}{\partial q^i} = \sum_{j = 1}^n \lambda_j \frac{\partial f_j}{\
+		partial q^i} \\
+		\frac{d}{dt}\frac{\partial T}{\partial \dot q^i} - \frac{\partial T}{\partial q^i} = F_i + \sum_{j = 1}^n \lambda_j \frac{\partial f_j}{\partial q^i}\\
+		\delta W = F_x\, \delta x + F_y\, \delta y + F_z\, \delta z, \qquad \delta W = \sum_i F_i\, \delta q^i \\

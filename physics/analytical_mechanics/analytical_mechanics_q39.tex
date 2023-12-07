@@ -1,0 +1,30 @@
+\begin{question}
+    Dois patinadores de massa \measure{60.0}{kg}, deslizando sobre uma pista de gelo com atrito desprezível, aproximam-se com velocidades iguais e opostas de \measure{5.00}{m/s} (com relação ao centro de massa), seguindo retas paralelas separadas por uma distância de \measure{1.40}{m}.
+    Quando os patinadores ficam lado a lado, eles dão os braços e passam a girar em conjunto.
+    Determine a velocidade angular dessa rotação.
+
+    \paragraph{Dica:} o torque com relação ao centro de massa dos dois patinadores é nulo, de modo que o momento angular é conservado.
+    Antes da colisão, podemos escrevê-lo mais convenientemente por meio da expressão $\vec L = m \vec r \times \vec v$;
+    após a colisão, a expressão $\vec L = I\vec \omega$ é mais conveniente.
+
+    \begin{answer}
+      \measure{7.14}{rad/s}
+    \end{answer}
+    
+    \begin{solution}
+      Imagine que os patinadores movem-se na direção $x$, de tal maneira que não há movimento na direção $y$, e que o centro de massa define a origem do sistema de coordenadas.
+
+      \centeredfigure{0.4\textwidth}{20180821_224527}
+
+      Então, imediatamente antes de os patinadores darem os braços, o patinador que vem da esquerda estará na posição $y = \measure{0,7}{m}$ (ou, se preferir, $\vec r_1 = y\hat j$) com velocidade $v = \measure{5}{m/s}$ para a direita (ou, se preferir, de $\vec v_1 = v\hat i$).
+      Logo, o momento angular desse patinador será de $\vec L_1 = (y\hat j) \times (mv\hat i) = -myv \hat k$.
+      Similarmente, o patinador que vem da esquerda estará na posição $-y$ (\ie, $\vec r_2 = -y\hat j$) com velocidade $v$ para a direita ($\vec v_2 = -v\hat i$).
+      Logo, o momento angular desse patinador será de $\vec L_2 = (-y\hat j) \times (-mv\hat i) = -myv \hat k$.
+      Assim, o momento angular total anteriormente à colisão (\ie, a eles darem os braços) será $\vec L = \vec L_1 + \vec L_2 = -2myv\hat k \Rightarrow L = 2myv$.
+
+      Logo após a colisão, os patinadores giram como um só objeto, cujo momento de inércia é $I = 2my^2$ (cada um deles, com massa $m$, está à distância $y$ do eixo de rotação).
+      Nessa nova situação, o momento angular pode ser expresso por $\vec L = I\vec\omega \Rightarrow L = I\omega$.
+      Mas como não há torques externos (pois não há forças externas, já que não há atrito entre os patins e o gelo), o momento angular com relação ao centro de massa (esse que acabamos de calcular) é conservado.
+      Em outras palavras, podemos afirmar que $2myv = I\omega \Rightarrow \omega = v/y = \measure{7.14}{rad/s}$.
+    \end{solution}
+\end{question}

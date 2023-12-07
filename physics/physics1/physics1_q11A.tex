@@ -1,0 +1,45 @@
+\begin{question}
+    Uma barra rígida, homogênea, de comprimento $2L$ e massa \measure{6}{kg} está apoiada em dois pontos, conforme ilustra a figura abaixo.
+    \begin{enumerate}
+      \item Determine a intensidade \emph{mínima} que a força $\vec F$ deve ter para que a força exercida pelo apoio $A$ sobre a barra seja nula.
+      Considere que a aceleração da gravidade é de \measure{10}{m/s^2}
+      \item Determine a intensidade da força aplicada pelo apoio $B$ sobre a barra na situação do item anterior.
+    \end{enumerate}
+
+    \centeredfigure{0.6\textwidth}{20181016_204227}
+
+    \begin{answer}
+      \begin{enumerate}
+        \item \measure{600}{N}
+        \item \measure{1200}{N}
+      \end{enumerate}
+    \end{answer}
+
+    \begin{solution}
+      \begin{enumerate}
+        \item A situação descrita no enunciado é aquela em que a barra está em equilíbrio, de rotação e de translação.
+        Analisando a situação, podemos argumentar que as forças presentes são: a força-peso $\vec P$, que atua no centro de massa da barra, apontando para baixo, a própria força $\vec F$ e, finalmente, a reação $\vec R_B$ do apoio $B$, que aponta para cima.
+        Não queremos que haja contato com o apoio $A$, de modo que $\vec R_A = \vec 0$ (veja a figura abaixo).
+
+        \centeredfigure{0.6\textwidth}{20181016_204445}
+
+        Assim, para garantirmos o equilíbrio de rotação, o torque total com relação ao ponto de apoio deve ser nulo.
+        Considere o sentido anti-horário como positivo para medidas de rotação da barra em torno do apoio $B$.
+        Então, a força-peso contribui com o torque $+PL/2$, onde usamos o fato de que o braço de alavanca $\overline{BD}$ tem comprimento $L/2$ (veja a figura).
+        Similarmente, a força $\vec F$ contribui com $-FL/2$, pois a distância $\overline{BC}$ também é $L/2$
+        (note o sinal negativo: se apenas $\vec F$ estivesse presente, ela faria a barra girar no sentido horário; negativo).
+        Finalmente, $\vec R_B$ não contribui para o torque, pois é aplicado no próprio ponto de apoio (o braço de alavanca é zero).
+        Então, o torque total é simplesmente $PL/2-FL/2$, que deve ser nulo.
+        Ou seja, $PL/2-FL/2 = 0 \Rightarrow F = P$.
+        Mas $P = mg = \measure{6}{kg} \cdot \measure{10}{m/s^2} = \measure{600}{N}$.
+        Consequentemente, $F = \measure{600}{N}$.
+        Se a intensidade de $F$ fosse maior, a barra começaria a girar em torno do ponto de apoio $B$ e também nesse caso $\vec R_A = \vec 0$, mas o enunciado solicitou a mínima intensidade de $F$ capaz de garantir $\vec R_A = \vec 0$, o que acontece quando $F = \measure{600}{N}$.
+
+        \item A intensidade da reação $\vec R_B$ pode ser obtida da condição de equilíbrio de translação.
+        Em outras palavras, como a barra está em repouso, a resultante de forças sobre ela deve ser nula.
+        Considere ``para cima'' como sendo o sentido positivo para medir as forças.
+        Nesse caso, a resultante de forças é $R_B - F - P$, que deve ser nulo.
+        Ou seja, $R_B - F - P = 0 \Rightarrow R_B = F + P = 2F = \measure{1200}{N}$, em que usamos o fato de que $F = P$, obtido no item anterior.
+      \end{enumerate}
+    \end{solution}
+  \end{question}

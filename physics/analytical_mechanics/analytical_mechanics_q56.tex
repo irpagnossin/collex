@@ -1,0 +1,30 @@
+\begin{question}
+    Uma circunferência de raio $R = 2$ pode ser representada, em coordenadas polares, pela curva $(q^1, q^2) \equiv (r, \theta) = (2, \tau)$, com $0 \le \tau \le 2\pi$.
+    Determine o comprimento dessa curva.
+    Para isso, proceda assim: 
+    \begin{compactenum}
+      \item Determine a derivada de cada componente da curva com relação ao parâmetro $\tau$.
+      \item Identifique as componentes do tensor de métrica associado às coordenadas polares (veja os exercícios anteriores).
+      \item Monte a expressão $L = \int_0^{2\pi} d\tau\, \sqrt{\left|\sum_{i=1}^3\sum_{j=1}^3 g_{ij} \frac{dx^i}{d\tau} \frac{dx^i}{d\tau}\right|}$, onde $L$ é o comprimento procurado.
+      Note que $g_{ij} = 0$ quando $i \ne j$, o que simplifica bastante essa expressão.
+      \item Resolva a expressão anterior para determinar $L$.
+      \item Compare o resultado com aquele que você esperaria se resolvesse o problema utilizando seus conhecimentos de geometria.
+    \end{compactenum}
+
+    \begin{answer}
+      12,6
+    \end{answer}
+
+    \begin{solution}
+      \begin{compactenum}
+        \item $\frac{dq^1}{d\tau} = \frac{d}{d\tau}(2) = 0$ e $\frac{dq^2}{d\tau} = \frac{d\tau}{d\tau} = 1$.
+        \item $g_{11} = 1$, $g_{12} = g_{21} = 0$ e $g_{22} = (q^1)^2$.
+        \item A soma $\sum_{i=1}^3\sum_{j=1}^3 g_{ij} \frac{dx^i}{d\tau} \frac{dx^i}{d\tau}$ pode se simplificada, antes de a escrevermos, observando que $g_{12} = g_{21} = 0$, de sorte que a somatória fica $g_{11}\left(\frac{dx^1}{d\tau}\right)^2 + g_{22}\left(\frac{dx^2}{d\tau}\right)^2 = 2 + (q^1)^2$.
+        Mas como o cálculo é todo feito sobre a curva, sabemos que $q^1 = 2$.
+        Então, a somatória fica simplesmente $2 + 2 = 4$.
+        Assim, podemos escrever $L = \int_{0}^{2\pi} 2\, d\tau$.
+        \item A integral é imediata: $L = \int_{0}^{2\pi} 2\, d\tau = 4\pi$
+        \item O resultado acima coincide com aquele que obtemos da geometria: $2\pi r$, onde $r = 2$ é o raio.
+       \end{compactenum}
+    \end{solution}
+\end{question}

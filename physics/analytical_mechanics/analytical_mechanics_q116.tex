@@ -1,0 +1,62 @@
+\begin{question}
+  	Considere novamente o cenário da máquina de Atwood, desta vez com rolamento sem deslizamento.
+  	Como vimos, nesse caso temos duas equações de vínculo: $f_1(z_1, z_2, \theta) = z_1 + z_2 = C$ e $f_2(z_1, z_2, \theta) = z_1 - R\theta = 0$.
+  	Determine as equações de movimento, incluindo as forças de vínculo (``forma 3'' das equações de Euler-Lagrange).
+
+  	\begin{enumerate}
+  		\item $m_1 \ddot z_1 - m_1 g = \lambda_1 - \lambda_2$ \rightanswer
+  		\item $m_2 \ddot z_2 - m_2 g = \lambda_1$ \rightanswer
+  		\item $I\ddot\theta = \lambda_2 R$ \rightanswer
+  		\item $(m_1 + m_2 + \half M) \ddot z_1 - (m_1 - m_2)g = \lambda_1 - \lambda_2$
+  		\item $m_2 \ddot z_2 + m_2 g = \lambda_1$
+  		\item $I\ddot\theta = \lambda_2$
+  	\end{enumerate}
+
+    \begin{solution}
+      Precisamos escrever a lagrangeana novamente, mas desta vez não usaremos as equações de vínculo.
+      Vejamos: a energia cinética fica $T = \half m_1 \dot z_1^2 + \half m_2 \dot z_2 + \half I \dot\theta^2$ e a energia potencial, $U = -m_1gz_1 - m_2gz_2$.
+      Então, $L := T - U = \half m_1 \dot z_1^2 + \half m_2 \dot z_2 + \half I \dot\theta^2 + m_1gz_1 + m_2gz_2$.
+      Em seguida, calculamos as derivadas relevantes,
+      \begin{align*}
+        \pd{L}{z_1} &= m_1g
+          & \pd{L}{z_2} &= m_2g
+            & \pd{L}{\theta} &= 0 \\
+        \pd{L}{\dot z_1} &= m_1\dot z_1
+          & \pd{L}{\dot z_2} &= m_2\dot z_2
+            & \pd{L}{\dot \theta} &= I \dot\theta \\
+        \frac{d}{dt}\pd{L}{\dot z_1} &=m_1\ddot z_1
+          & \frac{d}{dt}\pd{L}{\dot z_2} &=m_2\ddot z_2
+            & \frac{d}{dt}\pd{L}{\dot \theta} &=I \ddot\theta
+      \end{align*}
+
+      Agora precisamos determinar as derivadas das duas equações de vínculo:
+      \begin{align*}
+        \pd{f_1}{z_1} &= 1
+          & \pd{f_1}{z_2} &= 1
+            & \pd{f_1}{\theta} &= 0\\
+        \pd{f_2}{z_1} &= -1
+          & \pd{f_2}{z_2} &= 0
+            & \pd{f_2}{\theta} &= R
+      \end{align*}
+
+      Agora podemos montar as equações de movimento usando a ``forma 3''.
+
+      Para $z_1$:
+      \begin{align*}
+        \frac{d}{dt}\pd{L}{\dot z_1} - \pd{L}{z_1} &= \lambda_1 \pd{f_1}{z_1} + \lambda_2 \pd{f_2}{z_1} \\
+        m_1\ddot z_1 - m_1g &= \lambda_1 - \lambda_2
+      \end{align*}
+
+      Para $z_2$:
+      \begin{align*}
+        \frac{d}{dt}\pd{L}{\dot z_2} - \pd{L}{z_2} &= \lambda_1 \pd{f_1}{z_2} + \lambda_2 \pd{f_2}{z_2} \\
+        m_2\ddot z_2 - m_2g &= \lambda_1
+      \end{align*}
+
+      Para $\theta$:
+      \begin{align*}
+        \frac{d}{dt}\pd{L}{\dot \theta} - \pd{L}{\theta} &= \lambda_1 \pd{f_1}{\theta} + \lambda_2 \pd{f_2}{\theta} \\
+        I\ddot \theta &= \lambda_2R
+      \end{align*}
+    \end{solution}
+\end{question}

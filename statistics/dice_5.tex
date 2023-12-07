@@ -1,0 +1,143 @@
+% UTF-8
+% pt-BR
+
+\newcommand\qsection[1]{\bigskip\noindent\begingroup\sffamily\bfseries#1\endgroup\par\smallskip}
+
+\begin{question}
+  Considere o seguinte jogo (experimento):
+  tenho em mãos, e fora do alcance dos seus olhos, 5 dados no formato dos poliedros regulares.
+  Ou seja, tenho um dado de 4 faces (tetraedro), um dado de 6 faces (cubo), um dado de 8 faces (octaedro), um dado de 12 faces (dodecaedro) e um dado de 20 faces (icosaedro).
+  Eu sorteio um dos dados e, em seguida, um dos números do dado obtido.
+  Finalmente, digo a você o número que obtive.
+
+  Agora suponha que eu tenha lhe dito que o número sorteado tenha sido o 8.
+  Qual é a probabilidade de eu ter obtido um dado de 12 faces?
+
+  \begin{answer}
+    Aproximadamente 32,26\%.
+  \end{answer}
+
+  \begin{solution}
+    Supondo que a probabilidade de obter um dado qualquer é igual à de obter qualquer outro (distribuição uniforme), bem como são iguais as probabilidades de obter qualquer um dos números do dado sorteado, podemos escrever:
+    \begin{equation}\label{eq:probabilidades}
+      P(D) = \frac{1}{5} \qquad\text{e}\qquad
+      P(X|D) = \begin{cases}
+        1/D & X \le D \\
+        0   & X > D,
+      \end{cases}
+    \end{equation}
+    onde $D \in \{4, 6, 8, 12, 20\}$ representa o dado sorteado (o número indica a quantidade de faces) e $X \in \{1, 2, \ldots, D\}$ representa a face sorteada.
+    Por exemplo, o dado de 12 faces é representado por $D = 12$ e, ao jogá-lo, podemos obter qualquer número de 1 a 12.
+    Isto é, $X \in \{1, 2, \ldots, 12\}$.
+
+    Note que se $X > D$, a probabilidade condicional é zero.
+    Em palavras, isso significa que se tirarmos $X = 8$, por exemplo, não há nenhuma chance de que o dado seja $D = 4$, pois esse dado tem apenas quatro faces!
+
+    Desse modo, a questão pede que calculemos $P(D=12|X=8)$.
+    Podemos fazer isso de duas formas: primeiramente, pela regra de Bayes;
+    segundo, avaliando a distribuição combinada de $X$ e $D$.
+
+    \qsection{Pela regra de Bayes}
+    De modo geral, $P(D|X) = P(X|D)P(D)/P(X)$.
+    Essa equação, aplicada à questão proposta, fica assim:
+    \begin{align*}
+      P(D=12|X=8) &= \frac{P(X=8|D=12)P(D=12)}{P(X=8)}\\
+                  &= \frac{P(X=8|D=12)P(D=12)}{\sum_{D} P(X=8|D)P(D)}.
+    \end{align*}
+
+    O denominador foi expandido com o auxílio do conceito de \emph{probabilidade marginal} e a somatória varre todos os valores possíveis de $D$.
+
+    Antes de efetuarmos as contas, note que $P(D)$ é constante, qualquer que seja $D$.
+    Consequentemente, podemos cancelar todos eles:
+    \begin{equation*}
+      P(D=12|X=8) = \frac{P(X=8|D=12)P(D)}{P(D)\sum_{D} P(X=8|D)} = \frac{P(X=8|D=12)}{\sum_{D} P(X=8|D)}.
+    \end{equation*}
+
+    O numerador é facilmente obtido da \eqref{eq:probabilidades}: $P(X=8|D=12) = 1/12$, pois $X < D$.
+    Quanto ao denominador:
+    \begin{align*}
+      \sum_{D} P(X=8|D) &= P(8|4) + P(8|6) + P(8|8) + P(8|12) + P(8|20) \\
+                        &= 0 + 0 + \frac{1}{8} + \frac{1}{12} + \frac{1}{20} = \frac{31}{120}.
+    \end{align*}
+
+    Assim, $P(D=12|X=8) = (1/12)/(31/120) = 10/31 \approx 0,3226$, que é a resposta procurada.
+    Ou seja, se o número 8 for obtido, existe aproximadamente 32\% de probabilidade de o dado sorteado ter sido o de doze faces.
+
+    Em tempo, podemos determinar facilmente a probabilidade de obter os demais dados:
+    \begin{align*}
+      P(D=4|X=8) &= \frac{P(X=8|D=4)}{\sum_{D} P(X=8|D)} = \frac{0}{31/120} = 0 \\
+      P(D=6|X=8) &= \frac{P(X=8|D=6)}{\sum_{D} P(X=8|D)} = \frac{0}{31/120} = 0 \\
+      P(D=8|X=8) &= \frac{P(X=8|D=8)}{\sum_{D} P(X=8|D)} = \frac{1/8}{31/120} = \frac{15}{31} \approx 0,4839 \\
+      P(D=20|X=8) &= \frac{P(X=8|D=20)}{\sum_{D} P(X=8|D)} = \frac{1/20}{31/120} = \frac{6}{31} \approx 0,1935.
+    \end{align*}
+
+    Note que a somatória dessas probabilidades condicionais resultam em um.
+    Ou seja, são eventos \emph{coletivamente exaustivos}, como deveríamos esperar.
+
+    \qsection{Pela distribuição de probabilidaes}
+    Podemos descrever o resultado do jogo proposto por uma distribuição de probabilidade das variáveis aleatórias $X$ e $D$: $f(X,D)$.
+    Se fizermos isso, poderemos ``enxergar'' os eventos de interesse, bem como suas probabilidades.
+
+    Para montarmos essa distribuição, notamos primeiramente que a probabilidade distribui-se uniformemente em $D$.
+    E como temos cinco dados, $\sum_X f(X,d) = 1/5$, qualquer que seja o valor particular $D = d \in \{4,6,8,12,20\}$.
+    Ou seja, a probabilidade marginal de $d$ é de um quinto.
+
+    Agora, suponha que se tenha fixado esse $D = d$.
+    Nessa situação, a probabilidade de obter algum $X = x$ depende da quantidade de faces do dado sorteado (ou seja, depende de $d$).
+    Mais especificamente, sabemos que vale $1/d$ se $x \le d$, ou é zero no caso contrário.
+    Mas como a probabilidade de $D = d$ acontecer é de $1/5$, a probabilidade de $X = x$ \emph{e} $D = d$ ocorrerem é de $\frac{1}{5}\cdot\frac{1}{d}$.\footnote{Esse resultado vem de $P(X \cap D) = P(X|D)P(D)$, que também pode ser entendida como se estivéssemos distribuindo os $1/5$ entre os $d$ resultados possíveis.}
+
+    Por exemplo, se tivermos selecionado $D = 4$ (dado de quatro faces), a probabilidade de obter $X = 3$ é de $1/4$.
+    Mas como a probabilidade de $D = 4$ ocorrer é de $1/5$, a probabilidade de $D = 4$ \emph{e} $X = 3$ ocorrerem simultaneamente é de $\frac{1}{5}\cdot\frac{1}{4}$.
+    Por outro lado, a probabilidade de obter $X = 5$ é zero, pois esse dado tem apenas quatro faces.
+
+    Essa construção pode ser repetida para todos os $X$ e todos os $D$ (é mais fácil do que parece), e o resultado é a tabela \ref{tab:dist}.
+
+    Agora podemos analisar o que foi pedido: $P(D=12|X=8$).
+    Isso significa que o espaço amostral original foi reduzido ao subconjunto dos eventos que têm $X = 8$, destacados em \textcolor{blue}{azul} na tabela \ref{tab:dist}.
+    Dentre esses eventos, estamos interessados naquele que tem $D = 12$, destacado com \fbox{uma caixa} na tabela.
+    Assim, a probabilidade procurada é:
+    \begin{equation*}
+      P(D=12|X=8) = \frac{\frac{1/5}{12}}{\frac{1/5}{8} + \frac{1/5}{12} + \frac{1/5}{20}}
+        = \frac{\frac{1}{12}}{\frac{1}{8} + \frac{1}{12} + \frac{1}{20}} = \frac{\frac{1}{12}}{\frac{31}{120}}
+        = \frac{10}{31},
+    \end{equation*}
+    como havíamos obtido anterioremente com a regra de Bayes.
+
+    \begin{table}[]
+      \small
+      \newcommand\cell[1]{$\frac{1/5}{#1}$}
+      \newcolumntype{Y}{>{\centering\arraybackslash}X}
+      \def\arraystretch{1.2}
+      \centering
+      \caption{distribuição de probabilidades do problema proposto. $D$ representa o dado sorteado e $X$, o número (face) desse dado, também sorteado. Células vazias têm valor zero.}
+      \label{tab:dist}
+      \begin{tabularx}{0.8\textwidth}{YYYYYY}
+          \toprule
+                  & $D = 4 $ & 6         & 8        & 12        & 20\\
+          \midrule
+          $X = 1$ & \cell{4} & \cell {6} & \cell{8} & \cell{12} & \cell{20}\\
+          2       & \cell{4} & \cell {6} & \cell{8} & \cell{12} & \cell{20}\\
+          3       & \cell{4} & \cell {6} & \cell{8} & \cell{12} & \cell{20}\\
+          4       & \cell{4} & \cell {6} & \cell{8} & \cell{12} & \cell{20}\\
+          5       &          & \cell {6} & \cell{8} & \cell{12} & \cell{20}\\
+          6       &          & \cell {6} & \cell{8} & \cell{12} & \cell{20}\\
+          7       &          &           & \cell{8} & \cell{12} & \cell{20}\\
+          8       &          &           & \textcolor{blue}{\cell{8}} & \textcolor{blue}{\fbox{\cell{12}}} & \textcolor{blue}{\cell{20}}\\
+          9       &          &           &          & \cell{12} & \cell{20}\\
+          10      &          &           &          & \cell{12} & \cell{20}\\
+          11      &          &           &          & \cell{12} & \cell{20}\\
+          12      &          &           &          & \cell{12} & \cell{20}\\
+          13      &          &           &          &           & \cell{20}\\
+          14      &          &           &          &           & \cell{20}\\
+          15      &          &           &          &           & \cell{20}\\
+          16      &          &           &          &           & \cell{20}\\
+          17      &          &           &          &           & \cell{20}\\
+          18      &          &           &          &           & \cell{20}\\
+          19      &          &           &          &           & \cell{20}\\
+          20      &          &           &          &           & \cell{20}\\
+          \bottomrule
+      \end{tabularx}
+    \end{table}
+  \end{solution}
+\end{question}

@@ -1,0 +1,33 @@
+\begin{question}
+    Duas crianças, de massas \measure{40.0}{kg} e \measure{50.0}{kg}, penduram-se nas duas extremidades de uma corda, que passa por uma polia de ferro pendurada no teto.
+    Determine a intensidade da aceleração vertical sofrida pelas crianças.
+    Para isso, considere que a polia pode ser aproximada por um cilindro sólido de raio \measure{7.50}{cm} e altura \measure{3.00}{cm}, que o atrito entre a corda e a polia é suficiente para que não haja deslizamento entre eles e que não haja atrito no eixo da polia.
+    A densidade do ferro é de \measure{7.87e3}{kg/m^3} (cf. \href{https://www.webelements.com/aluminium/}{webelements.com}) e a aceleração da gravidade é de \measure{9.81}{m/s^2}.
+
+    \paragraph{Observação:} se não levássemos em consideração a dinâmica da polia, obteríamos \measure{1.09}{m/s^2} como resposta para esse problema.
+    Compare esse valor com o que você obteve.
+
+    \begin{answer}
+      \measure{1.06}{m/s^2}
+    \end{answer}
+    
+    \begin{solution}
+      A figura abaixo ilustra as forças presentes, em que $m_1 = \measure{50.0}{kg}$ e $m_2 = \measure{40.0}{kg}$ são as massas das crianças.
+      A segunda lei de Newton, aplicada em cada uma das crianças e na polia, resulta:
+      \begin{align}
+        \text{Criança 1:}&\qquad P_1 - T_1 = m_1 a \label{eq:A}\\
+        \text{Criança 2:}&\qquad T_2 - P_2 = m_2 a \label{eq:B}\\
+        \text{Polia:}&\qquad (T_1 - T_2)R = I\alpha, \label{eq:C}
+      \end{align}
+      onde $m_i$ e $P_i = m_i g$ são as massas e os pesos, respectivamente, de cada criança, $T_i$ são as tensões no cabo, $a$ é a aceleração sofrida pelas crianças (é a mesma para as duas devido á condição de que o cabo não estica ou contrai), $R$ é o raio da polia e $I$, seu momento de inércia.
+
+      Usando a condição de não deslizamento entre o cabo e a polia, relação $\alpha = a/R$, na equação \eqref{eq:C}, obtemos $T_1 - T_2 = Ia/R^2$.
+      Em seguida, somando \eqref{eq:A} e \eqref{eq:B}, usando essa última relação e resolvendo para $a$, obtemos
+      \begin{equation*}
+        a = \frac{m_1 - m_2}{m_1 + m_2 + I/R^2}g = \frac{m_1 - m_2}{m_1 + m_2 + M/2}g,
+      \end{equation*}
+      em que usamos $I = \half MR^2$, sendo $M$ a massa da polia.
+      Mas $M = \pi R^2 h \rho = \measure{4.17}{kg}$, onde $h$ e $\rho$ são a altura e a densidade da polia, respectivamente.
+      Então, $a = \measure{1.06}{m/s^2}$.
+    \end{solution}
+\end{question}

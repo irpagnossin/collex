@@ -1,0 +1,46 @@
+% UTF-8
+% pt-BR
+\def\mypath{mathematics/2}
+
+\newcommand\inlinebox[2][-0.5]{\raisebox{#1\height}{#2}}
+
+\begin{question}
+	\newcommand\mycoloneqq{\ensuremath{\mathrel{\mathop:}=}} % Thanks to The Comprehensive LaTeX Symbol List, p.48, 2015.
+
+	Considere os vetores geométricos $\vec u$ e $\vec v$ ilustrados abaixo.
+	Desenhe o vetores
+	\begin{inlineenum}
+		\inlineitem $\vec u + \vec v$,
+		\inlineitem $\vec u - \vec v$ e
+		\inlineitem $\frac{3}{2}\vec u$
+	\end{inlineenum}
+
+	\begin{center}
+		\input{mathematics/2/figures/u_v.tex}
+	\end{center}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item \inlinebox{\input{\mypath/figures/u_v_item_a_head_to_tail}} ou \inlinebox{\input{\mypath/figures/u_v_item_a_parallelogram}}
+
+			\item \inlinebox{\input{\mypath/figures/u_v_item_b}}
+
+			\item \inlinebox{\input{\mypath/figures/u_v_item_c}}
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item
+			Pela definição, \inlinebox{\input{\mypath/figures/u_v_item_a_head_to_tail}}, ou pela regra do paralelogramo: \inlinebox{\input{\mypath/figures/u_v_item_a_parallelogram}}
+
+			\item
+			Pela definição da subtração de vetores, isto é, $\vec u - \vec v \mycoloneqq \vec u + (-\vec u)$:
+			\inlinebox{\input{\mypath/figures/u_v_item_b}}
+
+			\item
+			$\frac{3}{2}\vec u \parallel \vec u$ e seu comprimento é $3/2$ vezes o de $\vec u$:
+			\inlinebox{\input{\mypath/figures/u_v_item_c}}
+		\end{enumerate}
+	\end{solution}
+\end{question}

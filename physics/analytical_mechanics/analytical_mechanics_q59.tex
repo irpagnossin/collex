@@ -1,0 +1,21 @@
+\begin{question}
+    Determine o comprimento da curva $(q^1, q^2) = (3\tau, e^{\tau})$, com $\tau \in [0,2]$, sabendo que $g_{11} = 2$, $g_{12} = g_{21} = (q^2)^{-1}$ e $g_{22} = (q^2)^{-2}$.
+
+    \begin{answer}
+      10.0
+    \end{answer}
+
+    \begin{solution}
+      $q^1 = 3\tau \Rightarrow dq^1/d\tau = 3$ e $q^2 = e^\tau \Rightarrow dq^2/d\tau = e^\tau$.
+      $g_{11} = 2$, $g_{12} = g_{21} = e^{-\tau}$ e $g_{22} = e^{-2\tau}$ sobre a curva.
+      Então,
+      \begin{align*}
+        \sum_{i=1}^2\sum_{j=1}^2 g_{ij} \frac{dx^i}{d\tau} \frac{dx^i}{d\tau} &=
+          g_{11} \left(\frac{dq^1}{d\tau}\right)^2 + g_{12} \frac{dx^1}{d\tau} \frac{dx^2}{d\tau} + g_{21} \frac{dx^2}{d\tau} \frac{dx^1}{d\tau} +  g_{22} \left(\frac{dx^2}{d\tau}\right)^2 \\
+          &= 2 \cdot (3)^2 + e^{-\tau} \cdot 3 \cdot e^\tau + e^{-\tau} \cdot e^\tau \cdot 3 + e^{-2\tau} \left(e^{\tau}\right)^2
+           = 18 + 6 + 1 = 25.
+      \end{align*}
+
+      Assim, $L = 5 \int_0^2 d\tau  =10$.
+    \end{solution}
+\end{question}

@@ -1,0 +1,25 @@
+\begin{question}
+    Um objeto esférico homogêneo, de raio \measure{10}{cm} e massa \measure{12}{kg}, parte do repouso e rola pelo telhado de uma casa, cuja inclinação é igual a \measure{30}{\degree}, sem deslizar.
+    Determine a intensidade da força de atrito responsável por fazer esse objeto girar.
+
+    \begin{answer}
+      \measure{16.8}{N}
+    \end{answer}
+    
+    \begin{solution}
+      O problema apresentado aqui é o mesmo da questão \ref{q:cilindro-desce-plano}, exceto pelo formato do objeto, que aqui é esférico.
+      Isso significa que podemos reutilizar os resultados obtidos lá, desde que o façamos sem considerar a expressão do momento de inércia naquele caso, já que aqui a expressão é outra.
+      Especificamente, na questão \ref{q:cilindro-desce-plano} o momento de inércia era o de um cilindro; aqui, é o de uma esfera: $I = \frac{2}{5}mr^2$.
+      Então vejamos: naquele problema havíamos obtido que
+      \begin{equation*}
+        a = \frac{mg\sin\theta}{m + I/r^2}
+        \qquad\text{e}\qquad
+        F = \frac{I\alpha}{r},
+      \end{equation*}
+      onde $a$ e $\alpha$ são as acelerações linear e angular do objeto.
+      $F$ é a força de atrito, $m$ é a massa do objeto, $I$ é seu momento de inércia, $r$ é seu raio e $g$ é a aceleração da gravidade.
+      Perceba que recuperamos daquela questão as expressões nas quais ainda não havíamos substituído $I$ por alguma expressão de $m$ e $r^2$.
+      
+      Usando essas duas expressões, mais a condição de não deslizamento, $a = \alpha r$, concluimos que $F = \frac{2}{7}mg\sin\theta = \measure{16.8}{N}$.
+    \end{solution}
+\end{question}

@@ -1,0 +1,31 @@
+\begin{question}
+    A matriz abaixo representa uma rotação em torno de qual eixo?
+    \begin{equation*}
+      \begin{pmatrix}
+               1/2 & \sqrt{3}/2 & 0 \\
+        \sqrt{3}/2 &        1/2 & 0 \\
+                 0 &          0 & 1
+      \end{pmatrix}
+    \end{equation*}
+
+    \begin{enumerate}
+      \item $x$
+      \item $y$
+      \item $z$
+      \item\label{item:not-rotation} Não representa uma rotação
+    \end{enumerate}
+
+    \begin{answer}
+      Item (\ref{item:not-rotation}).
+    \end{answer}
+
+    \begin{solution}
+      A matriz não pode ser escrita na forma
+      $R = \begin{pmatrix}
+        \cos\theta  & \sin\theta & 0\\
+        -\sin\theta & \cos\theta & 0\\
+        0           & 0          & 1
+      \end{pmatrix}$, devido à incompatibilidade de sinais entre os elementos $R_{21}$ e $R_{12}$.
+      Por isso, essa matriz não representa uma rotação.
+    \end{solution}
+\end{question}

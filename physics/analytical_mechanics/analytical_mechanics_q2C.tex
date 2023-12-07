@@ -1,0 +1,49 @@
+\begin{question}
+	Considere o caso de uma conta livre para deslizar ao longo de um arame espiral, conforme ilustrado abaixo.
+	Em coordenadas cilíndricas $(\rho, \phi, z)$, essa espiral pode ser descrita por $\rho = \frac{1}{2}z$ e $\phi = -3z$. % <---
+	Utilize as equações de Euler-Lagrange para mostrar que essa conta, quando sujeita à ação da gravidade, tem seu movimento regido pela equação $(5 + 9z^2)\ddot z + 9z\dot z^2 + 40 = 0$. % <---
+	Considere que a aceleração da gravidade é de \measure{10}{m/s^2}.
+
+	\centeredfigure{0.4\textwidth}{20180804_193231}
+
+	\begin{compactdesc}
+		\item[Dado:] em coordenadas cilíndricas, $ds^2 = d\rho^2 + \rho^2 d\phi^2 + dz^2$.
+		Isso implica que $\dot s^2 = \dot\rho^2 + \rho^2 \dot\phi^2 + \dot z^2$.
+	\end{compactdesc}
+
+	\begin{solution}
+		Em coordenadas cilíndricas, a energia cinética da conta é $T = \half m (\dot\rho^2 + \rho^2\dot\phi^2 + \dot z^2)$ e a energia potencial gravitacional, medida a partir da origem do sistema de coordenadas ilustrado, é $U = mgz$.
+		Assim, $L = \half m (\dot\rho^2 + \rho^2\dot\phi^2 + \dot z^2) - mgz$.
+		Mas, do enunciado, $\rho = az$ e $\phi = -bz$ (com $a = \frac{1}{2}$ e $b = 3$). % <---
+		Consequentemente, $\dot\rho = a\dot z$ e $\dot \phi = -b\dot z$, respectivamente.
+		Usando isso na expressão da lagrangeana, obtemos:
+		\begin{equation*}
+			L = \half m (a^2 + a^2 b^2 z^2 + 1) \dot z^2 - mgz
+		\end{equation*}
+
+		Com a lagrangeana, podemos determinar a equação de Euler-Lagrange para $z$:
+		\begin{equation*}
+			\frac{d}{dt}\pd{L}{\dot z} - \pd{L}{z} = 0.
+		\end{equation*}
+
+		Para isso, calculamos as devidas derivadas de $L$:
+		\begin{align*}
+			\pd{L}{\dot z} &= m (a^2 + a^2 b^2 z^2 + 1) \dot z \quad\Rightarrow\quad
+				\frac{d}{dt}\pd{L}{\dot z} = m (a^2 + a^2 b^2 z^2 + 1) \ddot z + 2ma^2b^2z\dot z^2 \\
+			\pd{L}{z} &= ma^2b^2z\dot z^2 - mg
+		\end{align*}
+
+		Assim, a equação de Euler-Lagrange fica:
+		\begin{equation*}
+			m (a^2 + a^2 b^2 z^2 + 1) \ddot z + 2ma^2b^2z\dot z^2 - ma^2b^2z\dot z^2 + mg = 0
+			\quad\Rightarrow\quad
+			(a^2 + a^2 b^2 z^2 + 1) \ddot z + a^2b^2z\dot z^2 + g = 0
+		\end{equation*}
+
+		Usando os valores $a = \frac{1}{2}$, $b = 3$ e $g = 10$, obtemos a equação do movimento desejada: % <---
+		$(5 + 9z^2)\ddot z + 9z\dot z^2 + 40 = 0$. % <---
+
+		Observação: outra maneira de determinar a energia cinética é partir da expressão para coordenadas cartesianas: $T = \half m (\dot x^2 + \dot y^2 + \dot z^2)$.
+		Como, para o sistema cilíndrico, valem $x = \rho\cos\phi$, $y = \rho\sin\phi$ e $z = z$, podemos determinar $\dot x = \dot\rho \cos\phi - \rho\sin\phi \dot \phi$, $\dot y = \dot\rho \sin\phi + \rho\cos\phi \dot \phi$ e $\dot z = \dot z$ e substituir esses resultados na expressão de $T$. Após algumas manipulações algébricas, obtemos que $T = \half m (\dot\rho^2 + \rho^2\dot\phi^2 + \dot z^2)$. 
+	\end{solution}
+\end{question}

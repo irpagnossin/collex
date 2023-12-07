@@ -1,0 +1,50 @@
+\begin{question}
+    Um garoto levado, ao avistar um macaco numa árvore, aponta seu estilingue e atira uma manona nele.
+    O macaco esperto, que já havia sido alvo em ocasião similar no passado, desta vez deixa-se cair até o próximo galho no exato momento em que o menino atira, na esperança de livrar-se do tiro.
+    Só que não: a gravidade, atuando tanto nele como na mamona, faz com que ele seja atingido durante a queda (mais um dia de aprendizagem para o macaco).
+    Lembrando que a trajetória da mamona é parabólica no referencial do garoto, analise o problema a partir do referencial do macaco e responda: qual é a trajetória que o macaco observa?
+    Escolha uma das opções abaixo.
+    \begin{enumerate}
+      \item\label{item:reta} Reta
+      \item Parábola
+      \item Curva
+      \item Catenária
+      \item Hipérbole
+    \end{enumerate}
+
+    \begin{answer}
+      Item (\ref{item:reta})
+    \end{answer}
+
+    \begin{solution}
+      Vamos resolver esse problema de duas formas: primeiramente, a partir do referencial (inercial) do garoto e, depois, a partir do referencial do macaco.
+
+      \paragraph{Referencial do garoto:} considere a figura abaixo, que ilustra o cenário apresentado.
+      Nela, $\vec R(t)$ é o vetor de posição do macaco, medido a partir do referencial do garoto, $\vec r(t)$ é o vetor de posição da mamona, também com relação ao garoto, e $\vec r'(t)$ é o vetor de posição da mamona, desta vez medido a partir do macaco.
+      Observe que $\vec r'(t) = \vec r(t) - \vec R(t)$.
+
+      \centeredfigure{0.4\textwidth}{20180816_200214}
+
+      Sabemos que o macaco cai verticalmente, de modo que $\vec R(t) = \vec R_0 - \half gt^2 \hat j$ (movimento uniformemente variado), onde $R_0$ é a posição inicial (no instante em que o garoto atira a mamona), $g$ é a aceleração da gravidade, $t$ representa o tempo e $\hat j$ é um versor vertical.
+      Além disso, podemos também afirmar que $\vec r(t) = v_0 \cos\theta \hat i + (v_0 \sin\theta t - \half gt^2) \hat j$ (movimento uniforme na horizontal e uniformemente variado na vertical), onde $v_0$ é a velocidade com que a mamona é atirada.
+      Perceba que não conhecemos nem $\vec R_0$ nem $v_0$, mas logo ficará claro que eles são desnecessários para o nosso propósito.
+
+      Usando as expressões de $\vec R(t)$ e $\vec r(t)$ na de $\vec r'(t)$, obtemos:
+      \begin{equation*}
+        \vec r'(t) = (-x_0 + v_0 t \cos\theta) \hat i + (-y_0 + v_0 t \sin\theta) \hat j = x'(t) \hat i + y'(t) \hat j,
+      \end{equation*}
+      onde $x'$ e $y'$ são as coordenadas da mamona, conforme observada pelo macaco, e $x_0$ e $y_0$ são as componentes de $\vec R_0$ (ou seja, $\vec R_0 = x_0 \hat i + y_0 \hat j$).
+
+      Agora, isolando $t$ a partir de $x'(t)$, encontramos que $t = (x' + x_0)/(v_0 \cos\theta)$.
+      Levando essa expressão em $y'(t)$ e simplificando, concluimos que $y' = (y_0/x_0) x'$.
+      No sistema de referência cartesiano do macaco, essa é a equação de uma reta com coeficiente angular $y_0/x_0$ e coeficiente linear nulo.
+      Dito de outra forma, a mamona passa pela origem desse sistema de coordenadas, que é justamente onde está o macaco.
+      Ou seja, ele é atingido.
+      Assim, o macaco vê a mamona aproximando-se dele em linha reta, até atingí-lo.
+
+      \paragraph{Referencial do macaco:} a única força presente sobre a mamona é o peso, \ie, $P = mg$, onde $m$ é a massa da mamona.
+      Como o macaco sofre aceleração $g$, a força de inércia que precisamos considerar é $F_i = -mg$ (atenção: $m$ é a massa da mamona).
+      Assim, a resultante de forças sobre a mamona é $P + F_i = mg - mg = 0$.
+      Ou seja, o macaco não dececta uma aceleração sobre a mamona e, deste modo, ela segue uma trajetória retilínea.
+    \end{solution}
+\end{question}

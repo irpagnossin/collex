@@ -1,0 +1,26 @@
+\begin{question}
+  	As duas equações de movimento, $m_1\ddot z_1 - m_1 g = \lambda_1$ e $m_2\ddot z_2 - m_2 g = \lambda_1$, podem agora ser utilizadas para determinar $\lambda_1$ em função de $\ddot z_1$ e $\ddot z_2$, que já determinamos no passo (i).
+  	Nesse caso esse procedimento é imediato.
+  	Finalmente, interpretamos o termo $Q_i = \sum_j \pd{f_j}{q^i}$ como a força generalizada de vínculo conjugada à coordenada $q^i$.
+  	Quais são essas \emph{duas} forças?
+
+  	\begin{enumerate}
+  		\item $Q_1 \equiv Q_{z_1} = m_2\ddot z_1 - m_1 g$ \rightanswer
+  		\item $Q_2 \equiv Q_{z_2} = m_2\ddot z_2 - m_2 g$ \rightanswer
+  		\item $Q_1 \equiv Q_{z_1} = (m_1 + m_2) \ddot z_1 - (m_1 - m_2)g$
+  		\item $Q_1 \equiv Q_{z_1} = m_1\ddot z_2 + m_2 g$
+  		\item $Q_2 \equiv Q_{z_2} = m_2\ddot z_2 + m_2 g$
+  	\end{enumerate}
+
+  	\bigskip
+  	\begin{compactdesc}
+  		\item[Observação:] utilize o resultado da questão \ref{q:atwood}, $\ddot z_1 = \frac{m_1 - m_2}{m_1 + m_2}g$ e $\ddot z_2 = - \ddot z_1$, nas expressões de $Q_{z_1}$ e $Q_{z_2}$ para obter o valor dessas forças.
+  		Compare com a solução tradicional da máquina de Atwood e perceba como $Q_1 = Q_2$ é a tensão no cabo, que é justamente a força responsável por manter o vínculo $z_1 + z_2 = C$.
+  	\end{compactdesc}
+
+    \begin{solution}
+      Partindo do resultado da questão anterior, $\sum_{j} \lambda_1 \pd{f_j}{z_i} = \lambda_1 \pd{f_1}{z_1} = m_1\ddot z_1 - m_1g = Q_1$.
+      Analogamente, $Q_2 = m_2\ddot z_2 - m_2g$.
+      Note que $\ddot z_1$ e $\ddot z_2$ já foram determinados anterioremente (questão \ref{q:atwood}): $\ddot z_1 = \frac{m_1 - m_2}{m_1 + m_2}g = -z_2$, o que significa que $Q_1 = Q_2 = -2\frac{m_1m_2}{m_1 + m_2}g$.
+    \end{solution}
+\end{question}

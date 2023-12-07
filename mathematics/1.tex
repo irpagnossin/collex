@@ -1,0 +1,35 @@
+% UTF-8
+% pt-BR
+\tikzset{>=stealth',every on chain/.append style={join},every join/.style={->}}
+
+\begin{question}
+	Identifique se o conjunto $\{\vec u + \vec v, \vec u - \vec v\}$ é linearmente dependente (LD) ou independente (LI), sabendo que $\{\vec u, \vec v\}$ é LI.
+	Explique sua conclusão.
+
+	\begin{answer}
+		O conjunto é LI.
+	\end{answer}
+
+	\begin{solution}
+		Para determinar se $\{\vec u + \vec v, \vec u - \vec v\}$ é linearmente dependente (LD) ou independente (LI), precisamos identificar quais combinações lineares desses vetores resultam no vetor nulo.
+		Isto é, precisamos analisar a solução da equação
+		\begin{equation*}
+			\alpha \left(\vec u + \vec v\right) + \beta \left(\vec u - \vec v\right) = \vec 0,
+			\quad \alpha, \beta \in \mathbb{R}.
+		\end{equation*}
+
+		Se essa combinação linear só for possível para $\alpha = \beta = 0$ (combinação linear trivial), o conjunto será LI; caso contrário, será LD.
+
+		Então vejamos:
+		\begin{equation*}
+			\alpha (\vec u + \vec v) + \beta (\vec u - \vec v) = \vec 0 \Rightarrow
+			\alpha\vec u + \alpha\vec v + \beta\vec u - \beta\vec v = \vec 0 \Rightarrow
+			(\alpha+\beta)\vec u + (\alpha-\beta)\vec v = \vec 0.
+		\end{equation*}
+
+		Mas $\{\vec u,\vec v\}$ é LI, de onde podemos afirmar que $\alpha + \beta = 0$ e $\alpha - \beta = 0$.
+		Esse sistema de equações só pode ser resolvido se $\alpha = \beta = 0$.
+		Logo, apenas a combinação linear trivial desses vetores resulta no vetor nulo e, por conseguinte, $\{\vec u + \vec v, \vec u - \vec v\}$ é LI.
+	\end{solution}
+\end{question}
+

@@ -1,0 +1,35 @@
+\begin{question}
+    Use o teorema dos eixos paralelos para determinar o momento de inércia de uma placa metálica fina, de massa \measure{3.00}{kg} e arestas $\measure{0.300}{m}\times \measure{0.400}{m}$, com relação a um eixo perpendicular à placa e que passe por um de seus vértices.
+
+    \begin{answer}
+      \measure{0.250}{kg.m^2}
+    \end{answer}
+
+    \begin{solution}
+      O momento de inércia de uma placa fina de dimensões $a$ e $b$, perpendiculares ao eixo que passa pelo centro de massa (e que coincide com o centro geométrico, supondo que a densidade da placa seja uniforme), é dado por $I_{\text{CM}} = \frac{1}{12} m (a^2 + b^2)$, onde $m$ é a massa da placa.
+      Você pode consultar essa expressão em tabelas como \href{https://en.wikipedia.org/wiki/List_of_moments_of_inertia}{esta}, mas vamos determiná-la ao invés disso.
+
+      Para isso, primeiramente imaginamos um plano cartesiano com origem no centro da placa e alinhado com suas arestas.
+      Na figura abaixo, à esquerda, por exemplo, fizemos isso de tal maneira que a placa ocupa a região retangular dada por $-a/2 \le x \le a/2$ e $-b/2 \le y \le b/2$.
+
+      \centeredfigure{0.7\textwidth}{20180817_212118}
+
+      Em seguida, imaginamos um elemento de área $dx\,dy$ na posição $(x,y)$, e associamos a ele o elemento de massa $dm = \rho\, dx\,dy$, onde $\rho = m/(ab)$ é a densidade da placa, supostamente uniforme.
+      Esse elemento de área está à distância $\sqrt{x^2 + y^2}$ do eixo que passa pelo centro de massa, perpendicularmente ao plano da placa.
+      Com essas informações, podemos escrever um elemento de momento de inércia: $dI_{\text{CM}} = r^2\, dm = \rho (x^2 + y^2)\, dx\, dy$.
+      E dessa maneira resta-nos integrar $dI_{\text{CM}}$ para obter a expressão do momento de inércia:
+      \begin{equation*}
+        I_{\text{CM}} = \int dI = \rho \int_{-b/2}^{b/2} dy \int_{-a/2}^{a/2} dx\, (x^2 + y^2) = \cdots = \frac{1}{12} m (a^2 + b^2).
+      \end{equation*}
+
+      Mas estamos interessados no momento de inércia com relação ao eixo paralelo a esse, mas que passa por uma das arestas.
+      Para resolver essa questão, precisamos utilizar o teorema dos eixos paralelos, que estabelece $I = I_{\text{CM}} + ml^2$, onde $I$ é o momento de inércia procurado e $l$ é a distância do eixo de interesse até o eixo que passa, paralelamente a esse, pelo centro de massa.
+      Mas $l^2 = (a^2 + b^2)/4$ (distância do centro até um vértice), então, $I = \frac{1}{12} m (a^2 + b^2) + \frac{1}{4} m(a^2 + b^2) = \frac{1}{3} m (a^2 + b^2)$.
+      Usando $a = \measure{0.300}{m}$, $b = \measure{0.400}{m}$ e $m = \measure{3.00}{kg}$, concluimos que $I = \measure{0.250}{kg.m^2}$.
+
+      Sugestão: experimente calcular novamente o momento de inércia, mas desta vez posicione a origem do plano cartesiano diretamente numa das arestas da placa, como ilustrado acima, à direita (a integral é bem mais simples, aliás).
+      Nesse caso, como as distâncias são medidas a partir da aresta, o resultado será diretamente a expressão $I = \frac{1}{3} m (a^2 + b^2)$ e você não precisará do teorema dos eixos paralelos.
+      Contudo, esse não é um método muito útil, pois é trabalhoso.
+      Ao invés dele, prefira utilizar uma expressão tabelada e corrigí-la com o teorema dos eixos paralelos.
+    \end{solution}
+\end{question}

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=1, help lines/.style={black!30,very thin}]
+	\clip (-1.1,-1.1) rectangle (4.1,4.01);
+
+	% Grid
+	\draw[help lines] (-1,-1) grid +(5,5);
+
+	% \vec u
+	\draw[very thick] [->] (0,0) -- (3,3);
+	\draw (1.5,1.5) node[anchor=north west] {$\vec u$};
+
+	% \vec a_1
+	\draw[thick] [->] (0,0) -- (1,-1);
+	\draw (0.5,-0.5) node[anchor=north east] {$\vec a_1$};
+
+	% \vec a_2
+	\draw[thick] [->] (0,0) -- (1,2);
+	\draw (0.5,1) node[anchor=south east] {$\vec a_2$};
+\end{tikzpicture}

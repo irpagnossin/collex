@@ -1,0 +1,37 @@
+% UTF-8
+% pt-BR
+
+\begin{question}
+  Considere o paralelepípedo ilustrado ao lado.
+  \begin{enumerate}
+    \item Escreva o segmento de reta orientado $\overrightarrow{AJ}$ como uma combinação linear dos vetores $\vec u_1$, $\vec u_2$ e/ou $\vec u_3$, sabendo que o comprimento do segmento $\overline{CJ}$ é o dobro de $\overline{JG}$.
+    \item Escreva o ponto $I$ como a soma do ponto $H$ com uma combinação linear dos vetores $\vec u_1$, $\vec u_2$ e/ou $\vec u_3$, sabendo que $I$ é o ponto médio do segmento $\overline{BF}$.
+  \end{enumerate}
+
+  \begin{center}
+    \input{\path/figures/parallelepiped}
+  \end{center}
+
+  %-------------------
+  \begin{answer}
+    \begin{enumerate}
+        \item $\overrightarrow{AJ} = \vec u_1 + \vec u_2 + \frac{2}{3}\vec u_3$.
+        \item $I = H + \vec u_1 - \vec u_2 - \frac{1}{2} \vec u_3$.
+    \end{enumerate}
+  \end{answer}
+
+  %-------------------
+  \begin{solution}
+    \begin{enumerate}
+      \item $\overrightarrow{AJ} = \overrightarrow{AB} + \overrightarrow{BC} + \overrightarrow{CJ}
+                                 = \vec u_1 + \vec u_2 + \frac{2}{3}\vec u_3$.
+
+      \item
+      $
+        I = H + \overrightarrow{HG} + \overrightarrow{GF} + \overrightarrow{FI}
+          = H + \vec u_1 + \left(-\vec u_2\right) + \left(-\frac{1}{2}\vec u_3\right)
+          = H + \vec u_1 - \vec u_2 - \frac{1}{2} \vec u_3
+      $.
+    \end{enumerate}
+  \end{solution}
+\end{question}

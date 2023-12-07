@@ -1,0 +1,18 @@
+\begin{question}
+  	Considere novamente o cenário do malabaris.
+  	Determine a energia cinética em termos das coordendadas $(x_1,y_1,\theta)$.
+
+  	\begin{enumerate}
+  		\item $T = \half(m_1 + m_2)(\dot x_1^2 + \dot y_1^2) + \half m_2 (\ell^2 \dot\theta^2 - 2\ell \dot x_1 \dot\theta \sin\theta + 2\ell \dot y_1 \dot\theta \cos\theta)$ \rightanswer
+  		\item $T = \half(m_1 + m_2)(\ddot x_1^2 + \ddot y_1^2) + \half m_2 (\ell^2 \dot\theta^2 - 2\ell \dot x_1 \dot\theta \sin\theta + 2\ell \dot y_1 \dot\theta \cos\theta)$
+  		\item $T = \half m_1(\dot x_1^2 + \dot y_1^2) + \half m_2 (\dot x_2^2 + \dot y_2^2)$
+  		\item $T = \half(m_1 + m_2)(\dot x_1^2 + \dot y_1^2)$
+  		\item $T = \half(m_1 + m_2)(\dot x_1^2 + \dot y_1^2) + \half m_2 (\ell^2 \dot\theta^2 - 2\ell \dot x_1 \dot\theta \sin\theta + 2\ell \dot y_1 \dot\theta \cos\theta) + \half I \dot\theta^2$
+  	\end{enumerate}
+
+    \begin{solution}
+      Comece escrevendo a energia cinética em termos de $(x_1, y_1)$ e $(x_2, y_2)$: $T = \half m_1 (\dot x_1^2 + \dot y_1^2) + \half m_2 (\dot x_2^2 + \dot y_2^2)$.
+      Em seguida, note que $x_2 = x_1 + \ell \cos \theta$ e $y_2 = y_1 + \ell \sin \theta$, o que nos permite escrever $\dot x_2 = \dot x_1 - \ell \sin \theta \dot \theta$ e $\dot y_2 = \dot y_1 + \ell \cos\theta \dot\theta$.
+      Usando isso na expressão de $T$, expandindo os quadrados e simplificando, obtemos o resultado desejado: $T = \half(m_1 + m_2)(\dot x_1^2 + \dot y_1^2) + \half m_2 (\ell^2 \dot\theta^2 - 2\ell \dot x_1 \dot\theta \sin\theta + 2\ell \dot y_1 \dot\theta \cos\theta)$.
+    \end{solution}
+\end{question}

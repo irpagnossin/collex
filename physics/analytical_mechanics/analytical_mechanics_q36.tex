@@ -1,0 +1,40 @@
+\begin{question}
+    O momento de inércia $I$ de um certo objeto, numa base ortonormal $(\hat i, \hat j, \hat k)$, é dado por
+    \begin{equation}
+      I =
+        \begin{pmatrix}
+          1 & 0 & 0 \\
+          0 & 1 & 0 \\
+          0 & 0 & 2
+        \end{pmatrix},
+    \end{equation}
+    em \unit{kg.m^2}.
+    Determine o momento angular $\vec L$ desse objeto, sabendo que sua velocidade angular é de $\vec \omega = \vmeasure{(\hat i + \hat j + \hat k)}{rad/s}$.
+
+    \paragraph{Observação:} note que $\vec L$ não é paralelo a $\vec \omega$ nesse caso.
+    Isso acontece porque $\vec\omega$ não é paralelo a qualquer um dos eixos principais ($\hat i$, $\hat j$ ou $\hat k$).
+
+    \begin{answer}
+      \vmeasure{(\hat i + \hat j + 2\hat k)}{J.s}. No AVA, \ava{(1,1,2)}, sem as aspas.
+    \end{answer}
+    
+    \begin{solution}
+      Primeiramente, escrevemos $\vec\omega$ na forma matricial: $\vec\omega = \begin{pmatrix}1\\1\\1\end{pmatrix}$.
+      Em seguida,
+      \begin{equation*}
+        \vec L = I \cdot \vec\omega =
+          \begin{pmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 2
+          \end{pmatrix}
+          \begin{pmatrix}
+            1 \\ 1 \\ 1
+          \end{pmatrix}
+        = \begin{pmatrix}
+            1 \\ 1 \\ 2
+          \end{pmatrix}.
+      \end{equation*}
+      Finalmente, interpretamos $\vec L = \begin{pmatrix}1\\1\\2\end{pmatrix}$ como o vetor $\vec L = \hat i + \hat j + 2\hat k$.
+    \end{solution}
+\end{question}

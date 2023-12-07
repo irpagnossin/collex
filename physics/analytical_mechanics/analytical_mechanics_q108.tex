@@ -1,0 +1,49 @@
+\begin{question}
+  	Considere novamente o cenário do malabaris: também podemos utilizar a ``forma 2'' da equação de Lagrange,
+  	\begin{equation*}
+  		\frac{d}{dt}\pd{T}{\dot q^i} - \pd{T}{q^i} = F_i,
+  	\end{equation*}
+  	para determinar as equações do movimento ($T$ é a energia cinética e $F_i$ é a força generalizada conjugada à coordenada $q^i$).
+
+  	Para isso, utilizamos a expressão da energia cinética para determinar o lado esquerdo da equação, similarmente ao modo como fizemos utilizando a ``forma 1'', mas com o cuidado de utilizar $T$ ao invés de $L$ (faça isso antes de continuar).
+  	Por outro lado, para determinar os $F_i$, precisamos avaliar o trabalho exercido pelas forças presentes (ignorando as de vínculo) como consequência de variações infinitesmais virtuais $\delta q^i$ nas coordenadas generalizadas (essas variações devem ser consistentes com os vínculos).
+
+  	No caso em questão, as variáveis são $(X, Y, \theta)$.
+  	Por isso, devemos avaliar o trabalho $\delta W_X := F_X \,\delta X$ realizado pela força gravitacional quando variamos $X$ de $\delta X$ e mantemos constantes $Y$ e $\theta$.
+  	Como $\delta X$ é perpendicular à força gravitacional, esse trabalho $\delta W_X = 0$.
+  	Logo, $F_X = 0$.
+
+  	Por outro lado, quando variamos $\theta$ de $\delta\theta$ (e mantemos $X$ e $Y$ inalterados), $m_1$ sofre um deslocamento vertical para cima, $\delta h_1 = \ell_1 \cos\theta\,\delta\theta$, enquanto $m_2$ sofre um deslocamento vertical para baixo, $\delta h_2 = \ell_2 \cos\theta\,\delta\theta$ (figura).
+  	Além disso, a força gravitacional sobre $m_1$ é $m_1g$ e essa força opõe-se ao deslocamento $\delta h_1$, conforme ilustrado.
+  	Então, o trabalho realizado pela força gravitacional sobre $m_1$ é $-m_1g\,\delta h_1 = -m_1g\ell_1 \cos\theta\,\delta\theta$.
+  	Analogamente, a força gravitacional sobre $m_2$ é $m_2g$, mas essa força tem a mesma orientação de $\delta h_2$.
+  	Então, o trabalho realizado por ela sobre $m_2$ é $+m_2g\,\delta h_2 = m_2g\ell_2 \cos\theta\,\delta\theta$.
+  	Consequentemente, o trabalho total da gravidade defronte uma variação $\delta\theta$ é:
+  	\begin{equation*}
+  		\delta W_\theta = (m_2\ell_2 - m_1\ell_1)g \cos\theta\,\delta\theta.
+  	\end{equation*}
+
+  	Mas $m_2\ell_2 - m_1\ell_1 = 0$, pois $\ell_1$ e $\ell_2$ são as coordenadas de $m_1$ e $m_2$ relativamente ao centro de massa (verifique).
+  	Portanto, $\delta W_\theta := F_\theta \,\delta\theta = 0$.
+  	Ou seja, $F_\theta = 0$.
+
+		\begin{center}
+    	\includegraphics[width=0.4\textwidth]{20180719_153104}
+    \end{center}
+
+  	Resta determinar $F_Y$.
+  	Selecione abaixo o resultado.
+
+  	\begin{enumerate}
+  		\item $F_Y = -(m_1 + m_2) g$ \rightanswer
+  		\item $F_Y = (m_1 + m_2) g$
+  		\item $F_Y = 0$
+  		\item $F_Y = -(m_1 + m_2) g\, \delta Y$
+  		\item $Y_Y = -mg$
+  	\end{enumerate}
+
+    \begin{solution}
+      Ao efeturamos um deslocamento $\delta Y > 0$ (para cima), a força da gravidade (magnitude $Mg$) executa o trabalho $-Mg\,\delta Y$ (o sinal negativo é devido ao fato de que a força da gravidade opõe-se ao deslocamento).
+      Usando o que já foi exposto no enunciado, concluímos, então, que o trabalho total é $\delta W = -Mg\,\delta Y$, o que nos leva a afirmar que $F_Y = -Mg = -(m_1 + m_2)g$.
+    \end{solution}
+\end{question}

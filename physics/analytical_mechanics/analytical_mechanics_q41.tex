@@ -1,0 +1,34 @@
+\begin{question}
+    Uma bolinha presa a um fio de massa desprezível gira em torno de um eixo vertical com velocidade escalar constante, mantendo-se a uma distância de \measure{0.50}{m} do eixo (veja ilustração abaixo).
+    O ângulo $\theta$ entre o fio e a vertical é igual a \measure{30}{\degree}.
+    O fio passa sem atrito através de um orifício numa placa, e é puxado lentamente para cima até que o ângulo $\theta$ passe a ser de \measure{60}{\degree}.
+    Determine a razão entre as velocidades angulares nas duas situações.
+
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{20180710_230618}
+    \end{center}
+
+    \begin{answer}
+      2,08 ou 0,481
+    \end{answer}
+    
+    \begin{solution}
+      Considere o diagrama de força livre da bolinha abaixo (no centro):
+
+      \centeredfigure{0.4\textwidth}{20180820_220716}
+
+      Para qualquer ângulo $\theta$, valem $T \cos\theta = mg$ (na direção vertical) e $T \sin\theta = md\omega^2$ (horizontal), onde $md\omega^2$ é a expressão para a força centrípeta, exercida pela projeção horizontal da tensão no fio.
+      Dividindo essas duas expressões e simplificando, obtemos $\omega^2 d = g \tan\theta$.
+
+      Se descrevermos o movimento com relação ao centro da trajetória circular da bolinha (ponto $O$ na ilustração acima, à esquerda), o torque total será nulo, pois $T_{\perp}$ e $P$ se anulam e $T_{\parallel}$ é anti-paralelo ao vetor de posição (\ie, $\vec\tau = \vec r \times \vec T_{\parallel} = \vec 0$).
+      Nesse caso, o momento angular é conservado e vale $L = md^2\omega = mg^2\tan^2\theta/\omega^3$.
+
+      Agora, considere dois ângulos $\theta_1$ e $\theta_2$, aos quais estão associados $\omega_1$ e $\omega_2$, respectivamente.
+      Como $L$ é uma constante do movimento, podemos afirmar que
+      \begin{equation*}
+        \frac{mg^2\tan^2\theta_1}{\omega_1^3} = \frac{mg^2\tan^2\theta_2}{\omega_2^3} \Rightarrow \frac{\omega_2}{\omega_1} = \left(\frac{\tan\theta_1}{\tan\theta_2}\right)^{2/3}.
+      \end{equation*}
+
+      Finalmente, usando os dois ângulos dados no enunciado, concluímos que $\omega_2/\omega_1 = 2,08$ (ou $0,481$, caso tenha rotulado os ângulos de maneira inversa à daqui).
+    \end{solution}
+\end{question}

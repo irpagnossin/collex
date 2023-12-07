@@ -1,0 +1,21 @@
+\begin{question}
+    Um homem de \measure{80.0}{kg} resolve pesar-se com uma balança de molas num elevador, enquanto sobe até seu apartamento, e leu \measure{85.0}{kg} na escala da balança.
+    Qual é a aceleração do elevador?
+    Considere que a aceleração da gravidade é de \measure{9.81}{m/s^2}
+
+    \begin{answer}
+      \measure{0.613}{m/s^2}
+    \end{answer}
+
+    \begin{solution}
+      As forças que atuam sobre o homem são o peso ($P$) e a normal ($N$), e observa-se que sua aceleração ($a'$), medida no referencial elevador, é zero: $a' = 0$.
+      Se o elevador fosse um referencial inercial, a segunda lei de Newton ficaria assim: $N - P = ma' = 0$, onde $m$ é a massa do homem (isso é verdadeiro quando o elevador sobe ou desce com velocidade constante, ou quando está parado).
+      Entretanto, é sabido que o elevador sofre uma aceleração desconhecida $A$, de modo que é necessário corrigir o membro esquerdo da equação anterior, adicionando a ela a força de inércia $F_i$.
+      Obtemos: $N - P + F_i = 0$, onde $F_i = -mA$.
+      Portanto, $A = (N - P)/m$.
+      A força-peso é simplesmente $P = mg$, onde $g$ é a aceleração da gravidade.
+      Quanto à normal, ela é expressa pela balança em termos de uma massa $m'$, lida em seu visor: $N = m'g$ (nesse problema, $m' = \measure{85}{kg}$).
+      Assim, $A = (m'g - mg)/m = (m'/m - 1)g$.
+      Usando os valores apresentados no enunciado, concluímos que $A = \measure{0.613}{m/s^2}$.
+    \end{solution}
+\end{question}

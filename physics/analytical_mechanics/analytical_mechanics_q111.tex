@@ -1,0 +1,30 @@
+\begin{question}
+  	Ainda considerando o cenário do malabaris, utilize a técnica dos deslocamentos virtuais para determinar as forças generalizadas $F_{x_1}$, $F_{y_1}$ e $F_\theta$.
+
+  	\begin{enumerate}
+  		\item $F_{x_1} = 0$ \rightanswer
+  		\item $F_{y_1} = -(m_1 + m_2)g$ \rightanswer
+  		\item $F_\theta = -m_2 g \ell \cos\theta$ \rightanswer
+  		\item $F_{y_1} = 0$
+  		\item $F_{y_1} = -m_1g$
+  		\item $F_\theta = 0$
+  	\end{enumerate}
+
+  	\bigskip
+  	\begin{compactdesc}
+  		\item[Observação:] compare $F_{x_1}$, $F_{y_1}$ e $F_{\theta}$ com $-\pd{U}{x_1}$, $-\pd{U}{y_1}$ e $-\pd{U}{\theta}$, que obtemos ao utilizar a ``forma 1''.
+  		Essa relação só existe porque a força gravitacional é conservativa, e é por esse mesmo motivo que, nesse caso, não importa se usamos a ``forma 1'' ou a ``forma 2''.
+  	\end{compactdesc}
+
+    \begin{solution}
+      Primeiramente, consideremos um deslocamento $\delta x_1$.
+      Nesse caso, como a gravidade (a única força presente) atua perpendicularmente a esse deslocamento, então seu trabalho é nulo.
+      Em seguida, consideremos $\delta y_1 > 0$.
+      Nesse caso, tanto $m_1$ como $m_2$ são deslocados conjuntamente, de modo que o trabalho associado a esse deslocamento é $\delta W_{y_1} = -m_1g\,\delta y_1 - m_2g\,\delta y_1 = -Mg\,\delta y_1$.
+      Finalmente, vejamos o que acontece quando aplicamos um deslocamento $\delta\theta > 0$.
+      Nesse caso, o objeto $m_2$ sofre um deslocamento vertical $\delta y_2 \approx \frac{dy_2}{d\theta} \delta\theta$ (ele também sofre um deslocamento horizontal $\delta x_2$, mas ele não contribui porque é perpendicular à gravidade).
+      Como $y_2 = y_1 + \ell \sin \theta$, então $\frac{dy_2}{d\theta} = \ell\cos\theta$ e, por conseguinte, $\delta y_2 \approx \ell\cos\theta\, \delta\theta$.
+      Consequentemente, o trabalho realizado pela força gravitacional nesse deslocamento $\delta y_2$ é $\delta W_{\theta} = -m_2g\ell\cos\theta\, \delta\theta$.
+      Então, o trabalho total é $\delta W = -Mg\,\delta y_1 -m_2g\ell\cos\theta\, \delta\theta$ e, comparando com a expressão $\delta W = F_{x_1}\,\delta x_1 + F_{y_1}\,\delta y_1 + F_{\theta}\,\delta \theta$, concluímos que $F_{x_1} = 0$, $F_{y_1} = -Mg = -(m_1 + m_2)g$ e $F_{\theta} = -m_2g\ell\cos\theta$.
+    \end{solution}
+\end{question}

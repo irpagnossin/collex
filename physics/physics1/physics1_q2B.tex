@@ -1,0 +1,84 @@
+\begin{question}
+	Considere a situação ilustrada abaixo, em que os blocos $A$ e $B$ pesam \measure{500}{N} e \measure{100}{N}, respectivamente, e $\theta = \measure{45}{\degree}$.
+
+	\centeredfigure{0.4\textwidth}{20181027_205249}
+
+	\begin{enumerate}
+		\item Determine o valor mínimo do coeficiente de atrito estático entre o bloco $A$ e a mesa para que o sistema continue em equilíbrio.
+		\item Desenhe o diagrama de corpo livre do bloco $A$.
+	\end{enumerate}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item $0,200$.
+			\item Na figura abaixo, $\vec P$ é a força-peso, aplicada ao centro de massa do bloco $A$, $\vec N$ é a força normal, aplicada pela mesa, no contato com o bloco, $\vec F_a$ é a força de atrito, também aplicada na interface entre o bloco e a mesa, e $\vec T_B$ é a tensão (tração) no cabo.
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item As figuras abaixo ilustram os diagramas de corpo livre (DLC) dos blocos $A$ e $B$ e do ponto de encontro dos cabos, bem como as equações advindas da segunda lei de Newton, aplicada em cada um deles, nas direções horizontal e vertical.
+
+			\bigskip
+
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Bloco $A$:
+
+				\centeredfigure{0.6\textwidth}{20181027_205255}
+
+				\begin{align}
+					&\text{Horizontal:}& T_A - F_a &= 0 \label{eq:Ax}\\
+					&\text{Vertical:}& N &= P_A \label{eq:Ay}
+				\end{align}
+			\end{minipage}\hfill
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Bloco $B$:
+
+				\centeredfigure{0.4\textwidth}{20181027_205312}
+
+				\begin{align}
+					&\text{Vertical:}& T_B - P_B &= 0 \label{eq:By}
+				\end{align}
+			\end{minipage}\hfill
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Ponto de encontro:
+
+				\centeredfigure{0.6\textwidth}{20181027_205308}
+
+				\begin{align}
+					&\text{Horizontal:}& T \cos\theta - T_A &= 0 \label{eq:Cx} \\
+					&\text{Vertical:}& T \sin\theta - T_B &= 0 \label{eq:Cy}
+				\end{align}
+			\end{minipage}
+
+			\bigskip
+
+			No equilíbrio, todas essas equações acima são satisfeitas.
+			Então, vejamos o que podemos inferir, primeiramente, das equações do bloco $A$: começando com a \eqref{eq:Ax}, vemos que $T_A = F_a$.
+			Mas como $F_a = \mu N$, onde $\mu$ é o coeficiente de atrito estático, então $T_A = \mu N = \mu P_A$, em que usamos a \eqref{eq:Ay} na última passagem.
+
+			O caso do bloco $B$ é ainda mais simples: $T_B = P_B$.
+
+			Finalmente, as equações do ponto de encontro nos permitem afirmar que $T \sin\theta = T_B$ e que $T \cos\theta = T_A$.
+			E, dividindo a primeira equação pela segunda, podemos ainda verificar que $\tan\theta = T_B/T_A$, que é mais útil para nós, pois não estamos interessados em $T$ (tensão no segmento do cabo que conecta-se à parede).
+
+			Mas temos expressões para $T_A$ e $T_B$, que obtivemos há pouco, e, utilizando-as, obtemos $\tan\theta = P_B/(\mu P_A)$.
+			Dentre esses parâmetros, desconhecemos apenas $\mu$, que é justamente o que estamos interessados em determinar.
+			Então, reescrevendo essa expressão de modo a isolá-lo, obtemos $\mu = P_B/(P_A \tan\theta)$.
+
+			Para terminar, basta utilizar os valores dados no enunciado para determinar que $\mu = \frac{1}{5} = 0,200$.
+
+			Mas esse é o valor \emph{mínimo} de $\mu$?
+			Sim, pois se $\mu$ fosse menor, o valor \emph{máximo} da força de atrito, $F_a = \mu N_A$ (com $N_A = P_A$), seria menor do que é.
+			Consequentemente, $T_A$ teria de ser menor (equação \ref{eq:Ax}), o que requereria que $T$ fosse menor (equação \ref{eq:Cx}).
+			Isso implica que $T_B$ seria menor (equação \ref{eq:Cy}).
+			Mas nesse caso $T_B < P_B$, o que significa que a resultante sobre $B$ seria não nula (a equação \ref{eq:By} deixaria de valer e, com ela, as demais equações).
+
+			\item Veja o item anterior.
+		\end{enumerate}
+	\end{solution}
+\end{question}
+

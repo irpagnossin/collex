@@ -1,0 +1,62 @@
+\begin{question}
+    Determine as equações de movimento do pêndulo elástico, isto é, um pêndulo simples no qual o fio é substituído por uma mola.
+    Utilize $(r, \theta)$ como coordenadas (veja a ilustração abaixo) e represente a massa do objeto suspenso por $m$, a constante elástica da mola por $k$, seu comprimento natural por $r_0$ e a aceleração da gravidade por $g$.
+
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{20180718_231128}
+    \end{center}
+
+    \begin{enumerate}
+      \item $m\ddot r - m r \dot \theta^2 + k(r - r_0) - mg\cos\theta = 0$ \rightanswer
+      \item $mr^2\ddot\theta + 2 mr\dot r\dot \theta + mgr\sin\theta = 0$ \rightanswer
+      \item $m\ddot r - m (r - r_0) \dot \theta^2 + k(r - r_0) - mg\cos\theta = 0$
+      \item $mr^2\ddot\theta + mgr\sin\theta = 0$ 
+    \end{enumerate}
+
+    \bigskip
+    \begin{compactdesc}
+      \item[Uma palavra de esperança:] é provável que, ao longo desses exercícios, você tenha tido o sentimento de decepção ao perceber que, apesar de o formalismo Lagrangeano faciliar a determinação das equações de movimento, ele não ajuda em nada na \emph{solução} dessas equações.
+      Isso acontece porque não existe um procedimento único para isso.
+      Na verdade, pode nem ser possível encontrar uma forma fechada (\ie, uma fórmula) para as \emph{equações horárias} $q^i(t)$ (as soluções das equações de movimento).
+      Realmente, é comum precisar apelar para soluções numéricas, com o auxílio de computadores.
+      Caso você esteja curioso sobre isso, \href{http://people.duke.edu/~hpgavin/cee541/LagrangesEqns.pdf}{este artigo} pode ser bastante instrutivo.
+    \end{compactdesc}
+
+    \begin{solution}
+      Podemos obter as equações do movimento através da equação de Euler-Lagrange.
+      Para isso, primeiramente precisamos determinar a função lagrangeana: $L := T - U$.
+
+      Comecemos por $T$, a energia cinética: imaginando um sistema de coordenadas polares com origem no ponto de apoio do pêndulo (ponto $O$ na figura) e eixo polar na vertical, apontando para baixo (a linha traço-ponto na figura), podemos imediatamente escrever a energia cinética já em sua forma polar: $T = \half m (\dot r^2 + r^2 \dot \theta^2)$.
+      Alternativamente, caso não nos lembremos dessa expressão, podemos começar com a versão cartesiana: $T = \half m (\dot x^2 + \dot y^2)$.
+      Em seguida, usamos as equações que definem o sistema de coordenadas polares, $x = r \cos \theta$ e $y = r\sin \theta$ (nesse caso escolhemos $x$ apontando para baixo, paralelamente ao eixo polar, e $y$ apontando para a direita), para obter $\dot x = \dot r \cos \theta - r \sin \theta \dot \theta$ e $\dot y = \dot r \sin \theta + r \cos\theta \dot \theta$.
+      Substituindo essas duas expressões em $T$ e simplifando, obtemos novamente a versão polar para a energia cinética.
+
+      Agora, vejamos a energia potencial. Temos duas forças conservativas envolvidas no problema: a gravidade e a força elástica.
+      A energia potencial gravitacional, em termos das coordenadas cartesianas $(x,y)$, é $U_g = -mgx$.
+      Note: $x$ é vertical (por isso é ele que usamos na expressão) e aponta para baixo (por isso o sinal negativo).
+      Mas $x = r\cos \theta$, então $U_g = -mgr\cos \theta$.
+      Quanto à energia potencial elástica, podemos expressá-la imediatamente em termos da coordenada $r$: $U_e = \half k (r - r_0)^2$, onde $r_0 > 0$ é seu comprimento natural, isto é, aquele no qual a força elástica é nula.
+      Finalmente, $U = U_g + U_e = -mgr\cos \theta + \half k (r - r_0)^2$ e, desse modo, podemos escrever a função lagrangeana:
+      \begin{equation*}
+        L := T - U = \half m (\dot r^2 + r^2 \dot \theta^2) + mgr\cos \theta - \half k (r - r_0)^2.
+      \end{equation*}
+
+      Em seguida determinamos as derivadas relevantes de $L$:
+      \begin{align*}
+        \pd{L}{r} &= mr\dot \theta^2 + mg\cos \theta - k(r - r_0)
+          & \pd{L}{\theta} &= -mgr\sin\theta \\
+        \pd{L}{\dot r} &= m\dot r
+          & \pd{L}{\dot \theta} &= mr^2\dot \theta \\
+        \frac{d}{dt}\pd{L}{\dot r} &= m\ddot r
+          & \frac{d}{dt}\pd{L}{\dot \theta} &= 2mr\dot r\dot \theta + mr^2 \ddot \theta
+      \end{align*}
+
+      E finalmente escrevemos as equações de Euler-Lagrange para cada uma das coordenadas $r$ e $\theta$:
+      \begin{align*}
+        \frac{d}{dt}\pd{L}{\dot r} - \pd{L}{r} &= 0
+          & \frac{d}{dt}\pd{L}{\dot \theta} - \pd{L}{\theta} &= 0 \\
+        m\ddot r - mr\dot \theta^2 - mg\cos \theta + k(r - r_0) &= 0
+          & 2mr\dot r\dot \theta + mr^2 \ddot \theta + mgr\sin\theta &= 0.
+      \end{align*}
+    \end{solution}
+\end{question}

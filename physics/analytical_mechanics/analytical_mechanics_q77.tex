@@ -1,0 +1,45 @@
+\begin{question}
+    Considere os dois objetos ilustrados abaixo, conectados por uma mola e livres para mover apenas no sentido $y$ do sistema de coordenadas cartesiano ilustrado.
+    Devido a essa limitação, o sistema tem apenas 2 graus de liberdade.
+    Quais das \emph{três} alternativas abaixo representam pares de coordenadas possíveis?
+    Isto é, quais pares de coordenadas podem ser utilizados para especificar completamente a configuração (posição) dos dois objetos?
+
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{20180718_211911}
+    \end{center}
+
+    \begin{enumerate}
+      \item $(y_1, y_3)$ \rightanswer
+      \item $(y_2, y_3)$ \rightanswer
+      \item $(q^1, y_1)$ \rightanswer
+      \item $(x,y)$
+      \item $(q^1, q^2)$
+      \item $(q^1, y_3)$
+    \end{enumerate}
+
+    \bigskip
+    \begin{compactdesc}
+      \item[Obsevação:] nesse contexto é irrelevante se você coloca os índices em cima ou embaixo.
+      Ou seja, $q^i \equiv q_i$.
+    \end{compactdesc}
+
+    \begin{solution}
+      Procure imaginar quantas informações (números) você precisa para levar esse sistema de uma posição para a outra (a posição original pode ser chamada de ``referência'').
+      Vejamos item a item:
+      \begin{enumerate}
+        \item Esse item propõe que, primeiramente, posicionemos o objeto de massa $m_1$ especificando a coordenada $y_1$ e, em seguida, afastando ou aproximando $m_2$ ao especificar a coordenada $y_3$.
+        Essa é uma possibilidade, de modo que $(y_1,y_3)$ é um conjunto de coordenadas que especifica a configuração desse sistema.
+        \item Esse item propõe que, primeiramente, determinemos a distância entre os objetos $m_1$ e $m_2$ e, em seguida, a posição do objeto $m_2$ a partir da referência (eixo $x$).
+        Isso de fato especifica uma configuração do sistema, de modo que $(y_2, y_3)$ é um conjunto válido de coordenadas generalizadas para esse sistema.
+        \item Esse item propõe que, primeiramente, determinemos a distância entre $m_1$ e o centro de massa do sistema e, em seguida, a posição de $m_1$ a partir da referência (eixo $x$).
+        Essa escolha pode parecer não especificar a configuração do sistema, mas acontece que o centro de massa relaciona as posições de $m_1$ com $m_2$, de modo que, uma vez conhecida a distância $q^1$, a posição de $m_2$, seja via $y_2$ ou via $y_3$, fica especificada.
+        Portanto, $(q^1, y_1)$ é um conjunto válido de coordenadas generalizadas.
+        \item $x$ e $y$ sequer aparecem na figura (exceto por rotular os eixos horizontal e vertical).
+        Portanto, $(x,y)$ não é capaz de especificar uma configuração qualquer do sistema.
+        \item Embora $q^1$ e $q^2$ especifiquem as posições de $m_1$ e $m_2$ \emph{com relação ao centro de massa}, elas não especificam a posição do centro de massa no sistema de coordenadas $xy$, de modo que, de fato, não podemos, com essas coordenadas, especificar as posições de $m_1$ e $m_2$.
+        Logo, $(q^1, q^2)$ não é um conjunto válido de coordenadas generalizadas.
+        \item $q^1$ especifica a distância de $m_1$ até o centro de massa e $y_3$ especifica a posição de $m_2$, mas não conseguimos especificar a distância de $m_2$ até $m_1$.
+        Por isso, $(q^1, y_3)$ não é um conjunto generalizado de coordenadas generalizadas.
+      \end{enumerate}
+    \end{solution}
+\end{question}

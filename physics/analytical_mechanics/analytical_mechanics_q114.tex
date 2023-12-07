@@ -1,0 +1,35 @@
+\begin{question}
+  	O passo (iii) é utilizar as equações de Lagrange, \emph{sem a imposição dos vínculos}, para escrever novas equações de movimento (sem os vínculos).
+  	Em outras palavras, são as equações que obtemos ao escrever $L$ como função de $z_1$ \emph{e} $z_2$ (nós intencionalmente ignoramos os vínculos agora): $L = \half m_1 \dot z_1^2 + \half \dot z_2^2 + m_1 g z_1 + m_2 g z_2$.
+  	Além disso,
+  	\begin{equation*}
+  		f_1(z_1, z_2) = z_1 + z_2 \quad\Rightarrow\quad \pd{f_1}{z_1} = \pd{f_1}{z_2} = 1.
+  	\end{equation*}
+  	Quais são as \emph{duas} equações de movimento agora?
+
+  	\begin{enumerate}
+  		\item $m_1\ddot z_1 - m_1 g = \lambda_1$ \rightanswer
+  		\item $m_2\ddot z_2 - m_2 g = \lambda_1$ \rightanswer
+  		\item $m_1\ddot z_1 + m_1 g = \lambda_1$
+  		\item $m_2\ddot z_2 + m_2 g = \lambda_1$
+  		\item $m_1\ddot z_1 + m_1 g = 0$
+  	\end{enumerate}
+
+    \begin{solution}
+      Primeiramente determinamos as derivadas relevantes de $L$:
+      \begin{align*}
+        \pd{T}{z_1} &= m_1g
+          & \pd{T}{z_2} &= m_2g \\
+        \pd{T}{\dot z_1} &= m_1\dot z_1
+          & \pd{T}{\dot z_2} &= m_2\dot z_2\\
+        \frac{d}{dt}\pd{T}{\dot z_1} &= m_1\ddot z_1 
+          & \frac{d}{dt}\pd{T}{\dot z_2} &= m_2\ddot z_2
+      \end{align*}
+
+      Em seguida, usamos essas expressões na ``formar 3'' da equação de Euler-Lagrange (note que, como há apenas uma equação de víndulo, $f_1$, há apenas uma parcela no segundo membro da equação):
+      \begin{align*}
+        m_1\ddot z_1 - m_1g = \lambda_1 \pd{f_1}{z_1} = \lambda_1 \\
+        m_2\ddot z_1 - m_2g = \lambda_1 \pd{f_1}{z_2} = \lambda_2
+      \end{align*}
+    \end{solution}
+\end{question}

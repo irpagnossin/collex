@@ -1,0 +1,47 @@
+\begin{question}
+	Certa vez, ao chegar da faculdade tarde da noite, você arremessou seu livro de Física ``mesa acima'', e notou que ele viajou \measure{1.35}{m} antes de parar.
+	Você sabe que essa mesa é desnivelada (\measure{2.70}{\degree} com relação à horizontal, conforme você havia medido anteriormente com um nível de bolha) e que o coeficiente de atrito cinético entre o livro e a mesa é de \measure{0.320}{}.
+	Então, qual foi a velocidade com que você arremessou o livro?
+	Considere que a aceleração da gravidade é de \measure{9.81}{m/s^2}.
+
+	\begin{answer}
+		\measure{3.12}{m/s}
+	\end{answer}
+
+	\begin{solution}
+		Primeiramente identificamos as forças presentes: a força-peso $\vec P$, a força normal $\vec N$ e a força de atrito $\vec A$, que aponta para baixo, paralelamente ao plano inclinado, já que opõe-se ao movimento de subida do livro.
+		Em seguida, escolhemos uma base ortonormal conveniente para representar esses vetores.
+		Uma opção é definirmos $\hat i$ paralelamente ao plano inclinado, apontando para cima, e $\hat j$ perpendicularmente a $\hat i$, como ilustrado abaixo.
+
+		\centeredfigure{0.4\textwidth}{20181202_001511}
+
+		Desse modo podemos escrever as forças na base $(\hat i, \hat j)$:
+		\begin{align*}
+			\vec P &= -mg\sin\theta\hat i - mg\cos\theta\hat j \\
+			\vec N &= N\hat j \\
+			\vec A &= -\mu N \hat i,
+		\end{align*}
+		onde $N$ é a intensidade da força normal, que desconhecemos, $m$ é a massa do livro, $g$ é a aceleração da gravidade, $\theta$ é o ângulo entre o plano da mesa a horizontal e $\mu$, o coeficiente de atrito cinético.
+		Então, a segunda lei de Newton fica assim:
+		\begin{align*}
+			\vec P + \vec N + \vec A &= m \vec a \\
+			-mg\sin\theta\hat i - mg\cos\theta\hat j + N\hat j -\mu N \hat i &= m (a_x \hat i + a_y \hat j) \\
+			(-mg\sin\theta - \mu N) \hat i + (N  - mg\cos\theta)\hat j &= (m a_x)\hat i + (m a_y) \hat j
+		\end{align*}
+
+		Como não há aceleração na direção $\hat j$, podemos afirmar que $a_y = 0$.
+		Consequentemente, $N = mg\cos\theta$.
+		Por outro lado, há aceleração na direção $\hat i$, ou seja, $a_x \ne 0$.
+		Então, $ma_x = -mg\sin\theta - \mu N$.
+		Usando o valor de $N$ que obtivemos há pouco, concluimos que $a_x = -g(\sin\theta + \mu \cos\theta)$.
+		Esse valor é constante, pois depende apenas de constantes: $g = \measure{9.81}{m/s^2}$, $\theta = \measure{2.70}{\degree}$ e $\mu = \measure{0.320}{}$.
+		Ou seja, $a_x = \measure{-3.60}{m/s^2}$.
+
+		Como a aceleração é constante, o movimento é dito uniformemente variado, para o qual vale a equação de Torricelli: $v^2 = v_0^2 + 2 a_x \Delta x$.
+		No nosso caso, $v$ é a velocidade final, quando o livro pára (por isso, $v = 0$), $v_0$ é a velocidade inicial do movimento, que queremos saber, e $\Delta x = \measure{1.35}{m}$ é a distância percorrida.
+		Então,
+		\begin{equation*}
+		v_0 = \sqrt{-2a_x\Delta x} = \sqrt{-2 \cdot (-3,6) \cdot 1,35} = \measure{3.12}{m/s}.
+		\end{equation*}
+	\end{solution}
+\end{question}

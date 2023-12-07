@@ -1,0 +1,64 @@
+\begin{question}
+	O pêndulo balístico é um equipamento antigamente utilizado para aferir a velocidade de projéteis (atualmente, usa-se sensores eletrônicos).
+	Funciona assim: um bloco de madeira fica suspenso por longos fios, em repouso, quando é atingido pelo projétil, ficando ali cravado.
+	Imediatamente após a colisão, o sistema composto pelo bloco de madeira e o projétil passa a oscilar em conjunto, elevando seu centro de massa de uma altura $h$, onde então o conjunto pára antes de retornar (veja a figura).
+
+	\centeredfigure{0.8\textwidth}{20181028_224720}
+
+	Agora, suponha que num teste como esse você chegue à conclusão de que um projétil de \measure{10}{g} é disparado contra o bloco de madeira, de \measure{10}{kg}, com velocidade de \measure{200.2}{m/s}.
+	Nesse caso, qual foi a altura $h$ medida por você?
+	Para responder essa pergunta, considere que a aceleração da gravidade é de \measure{10}{m/s^2} e que a massa dos fios que suspendem o bloco de madeira são desprezíveis.
+
+	\begin{compactdesc}
+		\item[Atenção:] cuidado com as unidades.
+		\item[Dica:] as contas são simples: você deve ser capaz de fazê-las sem a necessidade de uma calculadora.
+	\end{compactdesc}
+
+	\begin{answer}
+		 \measure{2}{mm}
+	\end{answer}
+
+	\begin{solution}
+		Primeiramente, vamos escolher um sistema de referência fixo no laboratório.
+		Essa parece ser uma boa escolha (e é), mas não temos como saber disso \foreign{a priori}.
+		Vamos experimentá-lo e ver o que acontece.
+
+		Primeiramente, analisemos a situação anteriormente à colisão: designemos por $v_1$ a velocidade do projétil imediatamente antes dele atingir o bloco de madeira.
+		Como a velocidade do bloco de madeira é zero, o momento linear do conjunto (ou ``sistema'') projétil-bloco é simplesmente o momento linear do projétil apenas: $mv_1$, em que $m = \measure{10e-3}{kg}$ é a massa do projétil.
+
+		Após a colisão, o conjunto projétil-bloco move-se como um só corpo (\ie, sem velocidade relativa entre eles).
+		Então, se chamarmos de $v_2$ essa velocidade, o momento linear imediatamente após a colisão será $(M + m)v_2$, em que $M = \measure{10}{kg}$ é a massa do bloco (note que interpretamos o sistema projétil-bloco como um único corpo, de massa $M + m$).
+
+		Como a colisão dura apenas algumas frações de um segundo, podemos ignorar a ação da gravidade nesse intervalo.
+		Esse argumento nos permite afirmar que não há forças externas ao sistema projétil-bloco e que, por conseguinte, seu momento linear é conservado.
+		Em outras palavras, podemos impor a igualdade das duas expressões para o momento linear, que obtivemos há pouco:
+		\begin{equation}\label{eq:momentum}
+			mv_1 = (M + m)v_2.
+		\end{equation}
+
+		Embora não conheçamos $v_1$ nem $v_2$, se conseguirmos determinar um deles, conseguiremos determinar o outro.
+		Mas veja só: \emph{após} a colisão, o sistema projétil-bloco oscila sob a ação da gravidade.
+		Esse é um tipo de movimento que, conforme já vimos, conserva a energia mecânica desse sistema.
+
+		Então vejamos: imediatamente após a colisão, a energia cinética do sistema é $\half (M+m)v_2^2$ e a energia potencial gravitacional, $(M+m)gH$, onde $H$ é a altura do centro de massa do sistema (nós podemos escolher $H = 0$, mas não vamos fazer isso).
+		Assim, a energia mecânica do sistema imediatamente após a colisão é a soma das energias cinética e potencial: $\half (M + m) v_2^2 + (M + m) g H$.
+
+		Por outro lado, na situação em que o sistema está $h$ mais alto que imediatamente após a colisão, toda a energia está na forma potencial gravitacional (pois a velocidade é nula), ou seja, a energia potencial gravitacional do sistema ali é $(M+m)g(H+h)$.
+		E como há conservação de energia mecânica, podemos afirmar que
+		\begin{equation*}
+			\half (M + m) v_2^2 + (M + m) g H = (M+m)g(H+h)
+				\Rightarrow
+			\half (M + m) v_2^2 = (M+m)gh
+				\Rightarrow
+			v_2 = \sqrt{2gh}.
+		\end{equation*}
+
+		Levando esse resultado em \eqref{eq:momentum}, concluímos imediatamente que
+		\begin{equation*}
+			v_1 = \frac{M+m}{m}\sqrt{2gh}
+				\Rightarrow
+			h = \frac{1}{2g}\left(\frac{mv_1}{M + m}\right)^2.
+		\end{equation*}
+		Como $h$ agora está escrito apenas em termos de parâmetros conhecidos, basta utilizar os valores dados no enunciado para concluir que $h = \measure{2e-3}{m} = \measure{2}{mm}$.
+	\end{solution}
+\end{question}

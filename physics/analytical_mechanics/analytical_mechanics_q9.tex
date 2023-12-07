@@ -1,0 +1,31 @@
+\begin{question}
+    A matriz abaixo representa uma rotação em torno de qual eixo?
+    \begin{equation*}
+      \begin{pmatrix}
+                1/2 & \sqrt{3}/2 & 0 \\
+        -\sqrt{3}/2 &        1/2 & 0 \\
+                  0 &          0 & 1
+      \end{pmatrix}
+    \end{equation*}
+
+    \begin{enumerate}
+      \item $x$
+      \item $y$
+      \item\label{item:axis-z} $z$
+      \item Não representa uma rotação
+    \end{enumerate}
+
+    \begin{answer}
+      Item (\ref{item:axis-z}).
+    \end{answer}
+
+    \begin{solution}
+      A matriz pode ser escrita na forma
+      $\begin{pmatrix}
+        \cos\theta  & \sin\theta & 0\\
+        -\sin\theta & \cos\theta & 0\\
+        0           & 0          & 1
+      \end{pmatrix}$ com $\theta = \measure{60}{\degree}$.
+      Por isso representa uma rotação de \measure{60}{\degree} em torno do eixo $z$ (a linha/coluna que contém o elemento unitário).
+    \end{solution}
+\end{question}

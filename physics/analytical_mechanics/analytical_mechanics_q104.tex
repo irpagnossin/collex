@@ -1,0 +1,30 @@
+\begin{question}
+  	Determine a energia cinética do sistema de polias ilustrado abaixo em termos das coordenadas $(z_1, z_2)$.
+  	Considere que as polias têm massa nula.
+
+  	\begin{center}
+    	\includegraphics[width=0.4\textwidth]{20180719_131255}
+    \end{center}
+
+  	\begin{enumerate}
+  		\item $T = \half m_1 \dot z_1^2 + \half m_2 (\dot z_1 - \dot z_2)^2 + \half m_3 (\dot z_1 + \dot z_2)^2$ \rightanswer
+  		\item $T = \half m_1 \dot z_1^2 + \half m_2 \dot h_2^2 + \half m_3 \dot h_3^2$
+  		\item $T = \half m_1 \dot h_1^2 + \half m_2 \dot h_2^2 + \half m_3 \dot h_3^2$
+  		\item $T = \half m_1 (h_1 - \dot z_1)^2 + \half m_2 (\dot z_1 - \dot z_2)^2 + \half m_3 (\dot z_1 + \dot z_2)^2$
+  		\item $T = \half m_1 \dot z_1^2 + \half m_2 (\dot z_1^2 - \dot z_2^2) + \half m_3 (\dot z_1^2 - \dot z_2^2) = 0$
+  	\end{enumerate}
+
+    \begin{solution}
+      Chamemos de $y_1$ a distância vertical até o centro de massa de $m_1$, a partir do nível horizontal que passa pela polia superior.
+      Analogamente, chamemos de $y_2$ a distância até $m_2$ e $y_3$, a distância até $m_3$.
+      É útil fazer isso porque, com essas variáveis, a expressão da energia cinética é imediata: $T = \half \left(m_1 \dot y_1^2 + m_2 \dot y_2^2 + m_3 \dot y_3^2\right)$.
+      Agora vejamos como trocar os $y_i$ por $z_1$ e $z_2$.
+      Primeiramente, é fácil constatar que $y_1 = z_1 \Rightarrow \dot y_1 = \dot z_1$.
+      Além disso, podemos escrever $y_2 = s_1 + z_2 \Rightarrow \dot y_2 = \dot s_1 + \dot z_2$.
+      Mas $s_1$ e $z_1$ estão vinculados: $z_1 + s_1 = A \Rightarrow \dot z_1 + \dot s_1 = 0 \Rightarrow \dot s_1 = - \dot z_1$ ($A$ é uma constante), de modo que $\dot y_2 = \dot z_2 - \dot z_1$.
+      Finalmente, $y_3 = s_1 + z_3$, onde $z_3$ é a coordenada análoga a $z_1$ e $z_2$, mas para o objeto de massa $m_3$ (\ie, a distância vertical entre o eixo da polia mais abaixo e o centro de massa de $m_3$).
+      Mas $z_2 + z_3 = B \Rightarrow \dot z_3 = - \dot z_2$ ($B$ é uma constante).
+      Então, $\dot y_3 = \dot s_1 + \dot z_3 = -\dot z_1 - \dot z_3$.
+      Agora, resta apenas usar as expressões $\dot y_1 = \dot z_1$, $\dot y_2 = \dot z_2 - \dot z_1$ e $\dot y_3 = -\dot z_1 - \dot z_3$ em $T$ para obter a resposta procurada: $T = \half m_1 \dot z_1^2 + \half m_2 (\dot z_1 - \dot z_2)^2 + \half m_3 (\dot z_1 + \dot z_2)^2$.
+    \end{solution}
+\end{question}

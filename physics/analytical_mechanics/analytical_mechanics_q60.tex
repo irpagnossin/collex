@@ -1,0 +1,40 @@
+\begin{question}
+    Considere as coordenadas polares $(r,\theta)$, que relacionam-se com as coordenadas cartesianas $(x,y)$ por meio das equações:
+    \begin{equation}
+      \left\{
+      \begin{matrix}
+        x \equiv x(r, \theta) = r \cos\theta \\
+        y \equiv y(r, \theta) = r \sin\theta
+      \end{matrix}
+      \right.
+      \qquad\text{e}\qquad
+      \left\{
+      \begin{matrix}
+        r \equiv r(x,y) = \sqrt{x^2 + y^2} \\
+        \theta \equiv \theta(x,y) = \arctan\left(y/x\right)
+      \end{matrix}
+      \right.
+    \end{equation}
+
+    Note como escrevemos as coordenadas de um sistema como uma \emph{função} das coordenadas do outro.
+    Por exemplo, $x$ não é apenas um número; ao invés disso, ele depende da escolha de $r$ e $\theta$, de tal maneira que $x$ é, na verdade, uma função de $r$ e $\theta$.
+    Matematicamente, escrevemos assim: $x \equiv x(r,\theta)$.
+
+    Utilize as expressões acima para determinar os vetores da base contra-variante: $\vec b_r = \vec\nabla r$ e $\vec b_\theta = \vec\nabla \theta$.
+    Selecione as alternativas corretas:
+    \begin{enumerate}
+      \item $\vec b_r = \frac{x}{r}\hat i + \frac{y}{r}\hat j$ \rightanswer
+      \item $\vec b_\theta = -\frac{y}{r^2}\hat i + \frac{x}{r^2}\hat j$ \rightanswer
+      \item $\vec b_r = \cos\theta\hat i + \sin\theta\hat j$
+      \item $\vec b_\theta = -y\hat i + x\hat j$
+    \end{enumerate}
+
+    \begin{solution}
+      \begin{align*}
+        \vec b_r = \vec\nabla r &= \pd{r}{x}\hat i + \pd{r}{y}\hat j = \frac{x}{\sqrt{x^2 + y^2}}\hat i + \frac{x}{\sqrt{x^2 + y^2}}\hat i
+          = \frac{x}{r}\hat i + \frac{y}{r}\hat j\\
+        \vec b_\theta = \vec\nabla \theta &= \pd{\theta}{x}\hat i + \pd{\theta}{y}\hat j = \frac{-y/x^2}{1 + (y/x)^2}\hat i + \frac{1/x}{1 + (y/x)^2} \hat j
+          = -\frac{y}{r^2}\hat i + \frac{x}{r^2}\hat j.
+      \end{align*}
+    \end{solution}
+\end{question}

@@ -1,0 +1,29 @@
+\begin{question}
+    O elemento de comprimento $ds$ pode ser expresso, em coordenadas polares $(q^1, q^2) \equiv (r, \theta)$, assim: $ds^2 = (dq^1)^2 + (q^1)^2 (dq^2)^2$.
+    Selecione a(s) alternativa(s) que representa(m) corretamente as componentes do tensor de métrica:
+    \begin{enumerate}
+      \item $g_{11} = 1$ \rightanswer
+      \item $g_{12} = 0$ \rightanswer
+      \item $g_{22} = (q^1)^2$ \rightanswer
+      \item $g_{21} = q^2 q^1$
+      \item $g_{22} = 0$
+      \item $g_{11} = (q^1)^2$
+    \end{enumerate}
+
+    \paragraph{Observação:} é comum utilizar $q^i$ (ou $x^i$), com índice em cima, para representar coordenadas generalizadas quando é importante diferenciar vetores (``vetores contra-variantes'') de covetores (``vetores covariantes'').
+    Quando essa distinção é evidente ou desnecessária, podemos utilizar também $q_i$ (ou $x_i$), com índice embaixo.
+    Note ainda que, como consequência, passamos a identificar os elementos do tensor de métrica por índices numéricos, e eles foram colocados embaixo porque o tensor de métrica tem característica covariante, o que constuma ser indicado por índices inferiores.
+
+    \begin{solution}
+      Procedamos como na questão anterior: o fator que multiplica $(dq^1)^2$ é 1, então $g_{11} = 1$ (usamos o índice de $q^1$ para simplificar os índices de $g$);
+      o fator que multiplica $(dq^2)^2$ é $(q^1)^2$, então $g_{22} = (q^1)^2$ (cuidado para não confundir índices sobrescritos com expoentes).
+      E como não há termos cruzados do tipo $dq^1 dq^2$, $g_{ij} = 0$ para todos os $i \ne j$.
+      Resumindo,
+      \begin{equation*}
+        g = \begin{pmatrix}
+          1 & 0 \\
+          0 & (q^1)^2
+        \end{pmatrix}.
+      \end{equation*}
+    \end{solution}
+\end{question}

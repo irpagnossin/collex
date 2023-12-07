@@ -1,0 +1,24 @@
+\begin{question}
+    Considere o sistema de coordenadas $(q^1, q^2)$ assim relacionado com o sistema cartesiano $(x,y)$:
+    \begin{align*}
+      q^1 &= x^2 - xy \\
+      q^2 &= xy
+    \end{align*}
+
+    Determine os vetores da base contra-variante, $\vec b_i := \vec\nabla q^i$, como uma combinação linear dos vetores da base ortonormal $(\hat i, \hat j)$.
+    \begin{enumerate}
+      \item $\vec b_1 = (2x - y)\hat i - x\hat j$ e $\vec b_2 = y\hat i + x\hat j$ \rightanswer
+      \item $\vec b_1 = \frac{1}{2x}\hat i - \frac{y}{2q^2}\hat j$ e $\vec b_2 = \frac{1}{2x}\hat i + \left(\frac{1}{x} - \frac{y}{2q^2}\right)\hat j$
+      \item $\vec b_1 = (2x - y)\hat i - x\hat j$ e $\vec b_2 = \frac{1}{2x}\hat i + \left(\frac{1}{x} - \frac{y}{2q^2}\right)\hat j$
+      \item $\vec b_1 = \frac{1}{2x}\hat i - \frac{y}{2q^2}\hat j$ e $\vec b_2 = y\hat i + x\hat j$
+    \end{enumerate}
+
+    Finalmente, determine também os vetores da base covariante, $\vec b_i^{\star} := \partial\vec r/\partial q^i$, e verifique as identidades $\vec b_i \cdot \vec b_j^{\star} = \delta_{ij}$.
+
+    \begin{solution}
+      \begin{align*}
+        \vec b_1 = \pd{q^1}{x}\hat i + \pd{q^1}{y}\hat j &= (2x - y)\hat i - x\hat j \\
+        \vec b_2 = \pd{q^2}{x}\hat i + \pd{q^2}{y}\hat j &=  y \hat i + x \hat j
+      \end{align*}
+    \end{solution}
+\end{question}

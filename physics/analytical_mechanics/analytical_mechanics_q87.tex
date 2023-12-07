@@ -1,0 +1,34 @@
+\begin{question}
+    Até agora supusemos que as forças presentes, $\vec F$, são conservativas (continuamos ignorando as forças responsáveis por manter os vínculos válidos), o que significa que elas derivam de alguma função escalar: a energia potencial $U$.
+    Matematicamente, $\vec F = -\vec\nabla U$.
+    Mas esse nem sempre é o caso: forças dissipativas como o atrito, por exemplo, não derivam de um potencial.
+    Para dar conta dessas situações, usamos uma versão mais genérica da equação de Lagrange, que chamaremos de ``forma 2'':
+    \begin{equation}\label{eq:lagrange:2}
+      \frac{d}{dt}\pd{T}{\dot q^i} - \pd{T}{q^i} = F_{i},
+    \end{equation}
+    onde $T$ é a energia cinética e $F_i$ é a \emph{força generalizada} conjugada à coordenada $q^i$.
+
+    Verifique você mesmo: mostre que a ``forma 1'' da equação de Lagrange,
+    \begin{equation*}
+      \frac{d}{dt}\pd{L}{\dot q^i} - \pd{L}{q^i} = 0,
+    \end{equation*}
+    reduz-se à ``forma 2'', equação \eqref{eq:lagrange:2}, desde que assumamos que:
+    \begin{compactenum}
+      \item $F_i = -\pd{U}{q^i}$
+      \item $U \equiv U(q^i)$.
+      Ou seja, $U$ é uma função apenas das coordenadas (nesse caso, $\pd{U}{\dot q^i} = 0$).
+    \end{compactenum}
+
+    \begin{solution}
+      Comece com a ``forma 1'' e a definição de lagrangeana:
+      \begin{align*}
+        \frac{d}{dt}\pd{(T - U)}{\dot q^i} - \pd{(T - U)}{q^i} &= 0 \\
+        \frac{d}{dt}\pd{T}{\dot q^i} - \frac{d}{dt}\pd{U}{\dot q^i} - \pd{T}{q^i} + \pd{U}{q^i} &= 0 \\
+        \frac{d}{dt}\pd{T}{\dot q^i} - \pd{T}{q^i} &= -\pd{U}{q^i} \\
+        \frac{d}{dt}\pd{T}{\dot q^i} - \pd{T}{q^i} &= F_i.
+      \end{align*}
+
+      Entre a segunda e terceira equações usamos o fato de que $\pd{U}{\dot q^i} = 0$.
+      Entre a terceira e última equações usamos a substituição $F_i = -\pd{U}{q^i}$ (forças conservativas).
+    \end{solution}
+\end{question}

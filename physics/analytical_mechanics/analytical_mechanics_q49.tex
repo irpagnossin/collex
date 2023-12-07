@@ -1,0 +1,44 @@
+\begin{question}
+    O elemento de comprimento $ds$ pode ser expresso, em coordenadas polares $(r, \theta)$, assim: $ds^2 = dr^2 + r^2 d\theta^2$.
+    Selecione a(s) alternativa(s) que representa(m) componente(s) do tensor de métrica (não necessariamente todas).
+    Para isso, note que a expressão acima para $ds^2$ é uma forma compacta de:
+    \begin{equation*}
+      (ds)^2 = 
+      \begin{pmatrix}
+        dr & d\theta
+      \end{pmatrix}
+      \begin{pmatrix}
+        g_{rr} & g_{r\theta } \\
+        g_{\theta r} & g_{\theta \theta }
+      \end{pmatrix}
+      \begin{pmatrix}
+        dr \\
+        d\theta
+      \end{pmatrix} =
+      \begin{pmatrix}
+        dr & d\theta
+      \end{pmatrix}
+      \begin{pmatrix}
+        1 & 0 \\
+        0 & r^2
+      \end{pmatrix}
+      \begin{pmatrix}
+        dr \\
+        d\theta
+      \end{pmatrix}
+    \end{equation*}
+
+    \begin{enumerate}
+      \item $g_{rr} = 1$ \rightanswer
+      \item $g_{r \theta} = 0$ \rightanswer
+      \item $g_{\theta\theta} = r^2$ \rightanswer
+      \item $g_{\theta r} = r^2$
+      \item $g_{\theta\theta} = r^2d\theta^2$
+      \item $g_{rr} = dr^2$
+    \end{enumerate}
+
+    \begin{solution}
+      Basta comparar as duas expressões matriciais acima para concluir que $g_{rr} = 1$, $g_{r \theta} = g_{\theta r} = 0$ e $g_{\theta\theta} = r^2$.
+      Equivalentemente, podemos escrever $g_{11} = 1$, $g_{12} = g_{21} = 0$ e $g_{22} = r^2$.
+    \end{solution}
+\end{question}

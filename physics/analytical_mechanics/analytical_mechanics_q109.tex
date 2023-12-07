@@ -1,0 +1,32 @@
+\begin{question}
+  	Ainda considerando o cenário do malabaris, agora estamos em condições de utilizar a ``forma 2'' da equação de Lagrange para determinar as equações de movimento em termos das coordenadas $(X,Y,\theta)$.
+
+  	\begin{enumerate}
+  		\item $\ddot X = 0$ \rightanswer
+  		\item $\ddot Y = -g$ \rightanswer
+  		\item $\ddot\theta = 0$ \rightanswer
+  		\item $\ddot Y = 0$
+  		\item $\dot\theta = \text{constante}$
+  		\item $\dot X = \text{constante}$
+  	\end{enumerate}
+
+    \begin{solution}
+      A ``forma 2'' da equação de Euler-Lagrange requre apenas a energia cinética, $T = \half M (\dot X^2 + \dot Y^2) + \half I \dot\theta^2$.
+      Vamos calcular as derivadas relevantes, similarmente ao que fizemos com a ``forma 1'':
+      \begin{align*}
+        \pd{T}{X} &= 0
+          & \pd{T}{Y} &= 0
+            & \pd{T}{\theta} &= 0 \\
+        \pd{T}{\dot X} &= M\dot X
+          & \pd{T}{\dot Y} &= M\dot Y
+            & \pd{T}{\dot \theta} &= I\dot \theta \\
+        \frac{d}{dt}\pd{T}{\dot X} &= M\ddot X
+          & \frac{d}{dt}\pd{T}{\dot Y} &= M\ddot Y
+            & \frac{d}{dt}\pd{T}{\dot \theta} &= I\ddot \theta.
+      \end{align*}
+
+      Agora usamos essas expressões na ``forma 2'': $M\dot X = F_X$, $M\dot Y = F_Y$ e $I\dot\theta = F_\theta$.
+      Da questão anterior, sabemos que $F_X = F_\theta = 0$ (enunciado) e $F_Y = -Mg$.
+      Usando essas informações, obtemos novamente as mesmas equações de movimento que obtivemos utilizando a ``forma 1'' da equação de Euler-Lagrange: $\ddot X = 0$, $\ddot Y = -g$ e $\ddot \theta = 0$.
+    \end{solution}
+\end{question}

@@ -1,0 +1,46 @@
+\begin{question}
+  	Imagine que conectemos uma das extremidades de uma mola no chão, abaixo de uma mesa, e a outra extremidade a um fio, que por sua vez passa por um furo na mesa e está conectado a uma pequena bolinha de massa $m$ (veja a figura).
+  	O arranjo é tal que, quando $r = 0$, a mola, cuja constante elástica é $k$, não está nem esticada nem comprimida.
+    Determine as equações de movimento dessa bolinha em termos das variáveis $(r, \theta)$.
+
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{20180718_231449}
+    \end{center}
+
+    \begin{enumerate}
+      \item $m\ddot r - mr\dot\theta^2 = -kr$ \rightanswer
+      \item $2mr\dot r\dot\theta + mr^2\ddot \theta = 0$ \rightanswer
+      \item $L = \frac{1}{2}m\left(\dot r^2 + r^2\dot\theta^2\right) - \frac{1}{2}kr^2$
+      \item $m\ddot r - m\dot r - mr\dot\theta^2 + kr = 0$
+      \item $2mr\dot r\dot\theta + mr^2\ddot \theta  - mr^2\dot\theta= 0$
+    \end{enumerate}
+
+    \bigskip
+    \begin{compactdesc}
+    	\item[Observação:] este é um exemplo de movimento sob a ação de uma força central.
+    	\item[Observação:] este problema ilustra o fato de que sempre existe uma \emph{constante do movimento} associada à variável $q^i$ quando $\pd{L}{q^i} = 0$ para essa variável.
+    	Nesse caso, $\pd{L}{\theta} = 0$.
+    	Como consequência, $\frac{d}{dt}\left(mr^2\dot \theta\right) = 0$, ou seja, a quantidade $mr^2\dot \theta$ (momento angular) é constante; é, portanto, uma constante do movimento.
+    \end{compactdesc}
+
+    \begin{solution}
+      Primeiramente, precisamos determinar a função lagrangeana $L := T - U$.
+      Utilizando o sistema de coordenadas ilustrado, a energia cinética pode ser escrita diretamente como $T = \half m (\dot r^2 + r^2 \dot\theta^2)$.
+      A energia potencial, por outro lado, é totalmente devida à mola (a gravidade não afeta o movimento, pois ele ocorre no plano horizontal): $U = \half k r^2$, onde usamos o fato de que $r = 0$ é o comprimento natural da mola.
+      Assim, $L = \half m (\dot r^2 + r^2 \dot\theta^2) - \half k r^2$.
+      Em seguida determinamos as derivadas pertinentes:
+      \begin{align*}
+        \pd{L}{r} &= mr\dot\theta^2 - kr
+          & \pd{L}{\theta} &= 0 \\
+        \pd{L}{\dot r} &= m\dot r
+          & \pd{L}{\dot\theta} &= mr^2\dot\theta \\
+        \frac{d}{dt}\pd{L}{\dot r} &= m\ddot r
+          & \frac{d}{dt}\pd{L}{\dot \theta} &= 2mr\dot r\dot\theta + mr^2\ddot \theta
+      \end{align*}
+
+      Aplicando os resultados acima na equação de Euler-Lagrange associada à variável $r$, obtemos a equação de movimento associada a essa variável: $m\ddot r - mr\dot\theta^2 + kr = 0$.
+      No caso da variável $\theta$, embora possamos proceder da mesma maneira (obtemos $2mr\dot r\dot\theta + mr^2\ddot \theta = 0$ nesse caso), o fato de que $\pd{L}{\theta} = 0$ implica que também $\frac{d}{dt}\pd{L}{\dot \theta} = 0$, o que significa que $\pd{L}{\dot \theta}$ é uma constante.
+      Ou seja, $mr^2\dot\theta = C$ é uma \emph{constante do movimento} (nesse tipo de movimento, essa constante é o momento angular).
+      Podemos utilizar essa informação para eliminar $\dot\theta$ da equação de $r$, o que simplifica a solução da equação do movimento.
+    \end{solution}
+\end{question}

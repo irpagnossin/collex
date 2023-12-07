@@ -1,0 +1,36 @@
+\begin{question}
+    Um bloco de massa \measure{20.0}{kg} encontra-se em repouso sobre um plano com inclinação de \measure{30.0}{\degree} com relação à horizontal.
+    Esse plano inclinado, inicialmente em repouso, é colocado em movimento com aceleração de magnitude constante $a$.
+    Se o coeficiente de atrito estático entre o bloco e o plano inclinado é de 0,10, para que valor de $a$ o bloco começará a deslizar para cima?
+
+    \centeredfigure{0.4\textwidth}{20180816_185358}
+
+    \begin{answer}
+      \measure{7.05}{m/s^2}
+    \end{answer}
+
+    \begin{solution}
+      O sistema não-inercial em questão é o plano inclinado, que sofre aceleração $a$ horizontal.
+      Estamos interessados na situação em que a força de atrito estático assume seu valor máximo e que, ainda assim, haja equilíbrio de todas as forças presentes, de tal maneira que a aceleração do bloco, relativamente ao plano inclinado, seja nula: $a' = 0$.
+      As forças presentes são peso ($P$), normal ($N$), atrito ($F_a$) e a força de inércia $F_i$, conforme ilustradas na figura abaixo.
+      Com essas informações podemos escrever a segunda lei de Newton para as direções horizontal ($x$) e vertical ($y$):
+      \begin{equation*}
+        N \sin\theta + F_a \cos\theta + F_i = 0
+        \text{ (em $x$)}
+        \qquad\text{e}\qquad
+        N \sin\theta - P - F_a \sin\theta = 0.
+        \text{ (em $y$)}
+      \end{equation*}
+
+      \centeredfigure{0.4\textwidth}{20180816_185402}
+
+      A força de atrito estático máximo é dada por $F_i = \mu N$, onde $\mu$ é o coeficiente de atrito estático, e a força de inércia é $F_i = -ma$ (lembre-se: $a$ é a aceleração do \emph{plano inclinado} e $m$ é a massa do \emph{bloco}).
+      Usando essas informações na equação para $x$, obtemos $N = ma/(\sin\theta + \mu \cos\theta)$.
+      Em seguida, usamos essa expressão na equação para $y$ e, após alguma manipulação, encontramos:
+      \begin{equation*}
+        a = \frac{\mu - \tan\theta}{1 - \mu \tan\theta}g.
+      \end{equation*}
+
+      Finalmente, resta aplicar aí os valores $\mu = 0,10$, $\theta = \measure{30}{\degree}$ e $g = \measure{9.81}{m/s^2}$ para concluir que $a = \measure{7.05}{m/s^2}$ (note que esse resultado é independente da massa do bloco).
+    \end{solution}
+\end{question}

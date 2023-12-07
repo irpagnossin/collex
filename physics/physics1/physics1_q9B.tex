@@ -1,0 +1,47 @@
+\begin{question}
+	Nas festas da minha família, sempre há várias crianças correndo para lá e para cá, desviando dos adultos.
+	Certa vez, Joãozinho (sempre ele!), enquanto corria a \measure{3.50}{m/s}, colidiu com as nádegas da tia Jerônima; um exemplo perfeito de colisão elástica.
+	A tia Jerônima estava parada, conversando com os outros adultos, e sua massa é de \measure{150}{kg}.
+	A de Joãozinho, por outro lado, é de \measure{9.00}{kg}.
+	Com que velocidade Joãozinho foi jogado para o sentido oposto?
+
+	\begin{answer}
+		\measure{3.10}{m/s}
+	\end{answer}
+
+	\begin{solution}
+		Primeiramente, vamos dar nome às grandezas relevantes: chamemos de $m$ a massa do Joãozinho e de $M$, a da tia Jerônima.
+		Imagine Joãozinho correndo da direita para a esquerda, \emph{antes} da colisão, com velocidade $v_a$.
+		\emph{Depois} a colisão, a tia Jerônima é arremessada com velocidade $V$ para a esquerda e o Joãozinho, com velocidade $v_d$, para a direita.
+
+		Considere que o sentido positivo para medir as velocidades aponte para a direita.
+		Então, antes da colisão, o momento linear do sistema Joãozinho-Jerônima é $-mv_a$ (a tia Jerônima não contribui, pois no sistema de referência fixo ao piso, sua velocidade é nula antes da colisão).
+		Após a colisão, o momento linear é $-MV+mv_d$.
+		Podemos utilizar o princípio de conservação do momento linear na direação horizontal, pois nessa direção as forças envolvidas na colisão são internas ao sistema Joãozinho-Jerônima.
+		Dito de outra forma, as únicas forças envolvidas são aquelas oriundas do contato do Joãozinho com a Jerônima.
+		Por isso, podemos afirmar que $-mv_a = -MV + mv_d$, de onde podemos escrever:
+		\begin{equation*}
+			v_d = \frac{MV-mv_a}{m}.
+		\end{equation*}
+
+		Isso não é suficiente para resolver o problema, pois não conhecemos $V$.
+		Porém, sabemos também que a colisão foi elástica, de modo que também a energia cinética é conservada.
+		Antes da colisão, a energia cinética do sistema Joãozinho-Jerônima é $\frac{1}{2}mv_a^2$; depois, é $\frac{1}{2}MV^2 + \frac{1}{2}mv_d^2$.
+		Então, $\frac{1}{2}mv_a^2 = \frac{1}{2}MV^2 + \frac{1}{2}mv_d^2$.
+		Trazendo para cá a expressão de $v_d$ que obtivemos há pouco e reorganizando a expressão de modo a isolar $V$, concluimos que
+		\begin{equation*}
+			V = \frac{2m}{M+m}v_a.
+		\end{equation*}
+		Note que agora conseguimos escrever $V$ em termos de parâmetros que conhecemos.
+		Em seguida, levamos essa expressão de $V$ na de $v_d$, o que nos permite concluir que
+		\begin{equation*}
+			v_d = \frac{M-m}{M+m}v_a,
+		\end{equation*}
+		que é a velocidade que nos interessa.
+
+		Finalmente, como $m = \measure{9.00}{kg}$, $M = \measure{150}{kg}$ e $v_a = \measure{3.50}{m/s}$, obtemos:
+		\begin{equation*}
+			v_d = \frac{150 - 9}{150 + 9} \cdot 3,5 = \measure{3.10}{m/s}.
+		\end{equation*}
+	\end{solution}
+\end{question}

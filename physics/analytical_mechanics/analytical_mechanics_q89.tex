@@ -1,0 +1,38 @@
+\begin{question}
+    Ainda sobre o cenário da conta presa a um arame parabólico, podemos agora determinar $F_x$.
+    Para isso, usamos a expressão
+    \begin{equation}\label{eq:work}
+      \delta W = F_x\,\delta x + F_y\,\delta y + F_z\,\delta z,
+    \end{equation}
+    que relaciona o trabalho de $\vec F$ defronte um deslocamento virtual genérico.
+
+    Imagine um deslocamento $\delta x > 0$.
+    Como $x$ é perpendicular à gravidade, não há trabalho associado a esse deslocamento.
+    Entretanto, devido à equação de vínculo $z = ax^2$, um deslocamento assim causa um deslocamento $\delta z > 0$ (para cima) paralelo à força da gravidade.
+    Consequentemente, a força da gravidade (magnitude $mg$), que opõe-se a esse deslocamento, realiza trabalho $-mg\,\delta z$ (atenção para o sinal negativo, que decorre do fato de que a força da gravidade aponta no sentido oposto ao deslocamento $\delta z$).
+
+    Agora, imagine um deslocamento $\delta y > 0$.
+    Mas isso não pode acontecer, devido à equação de vínculo $y = 0$.
+    Logo, a gravidade não realiza trabalho sobre a conta devido a um deslocamento virtual $\delta y$.
+
+    E como não há outras variáveis a considerar, somamos as contribuições de $\delta x$ e $\delta y$ para o trabalho para obter:
+    \begin{equation}
+      \delta W = -mg\,\delta z.
+    \end{equation}
+
+    Mas como vimos na questão anterior, $\delta z$ depende de $\delta x$, de modo que podemos reescrever a expressão acima em termos de $\delta x$ e, por comparação com a equação \eqref{eq:work}, concluímos que:
+    \begin{enumerate}
+      \item $F_x = -2magx$ \rightanswer
+      \item $F_x = F\cos\theta$
+      \item $F_x = 0$
+      \item $F_z = mg$
+      \item $F_z = -mg$
+    \end{enumerate}
+
+    \begin{solution}
+      Na questão anterior, vimos que $\delta z = 2ax\,\delta x$.
+      Então, $\delta W = -mg\,\delta z = -2magx\,\delta x$.
+      Comparando essa expressão com \eqref{eq:work}, identificamos $F_x = -2magx$.
+      Perceba que isso \emph{não} significa que haja uma força paralela a $x$ (de fato, não há).
+    \end{solution}
+\end{question}

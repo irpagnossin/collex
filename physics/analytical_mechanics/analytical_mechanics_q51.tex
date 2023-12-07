@@ -1,0 +1,27 @@
+\begin{question}
+    O elemento de comprimento $ds$ pode ser expresso, em coordenadas esféricas $(\rho, \phi, \theta)$, assim: $ds^2 = d\rho^2 + \rho^2 d\phi^2 + (\rho\sin\phi)^2 d\theta^2$.
+    Selecione a(s) alternativa(s) que representa(m) corretamente as componentes do tensor de métrica:
+    \begin{enumerate}
+      \item $g_{\rho\theta} = 0$ \rightanswer
+      \item $g_{\phi\phi} = \rho^2$ \rightanswer
+      \item $g_{\theta\theta} = \rho^2 \sin^2 \phi$ \rightanswer
+      \item $g_{\theta \rho} = \rho^2$
+      \item $g_{\theta\phi} = d\theta^2$
+      \item $g_{\phi\theta} = d\theta^2$
+    \end{enumerate}
+
+    \begin{solution}
+      Procedamos como na questão anterior: o fator que multiplica $d\rho^2$ é 1, então $g_{\rho\rho} = 1$;
+      o fator que multiplica $d\phi^2$ é $\rho^2$, então $g_{\phi\phi} = \rho^2$;
+      o fator que multiplica $d\theta^2$ é $(\rho\sin\phi)^2$, então $g_{\theta\theta} = (\rho\sin\phi)^2$.
+      E como não há termos cruzados do tipo $dr d\theta$, $d\theta dz$ \etc, $g_{ij} = 0$ para todos os $i \ne j$.
+      Resumindo,
+      \begin{equation*}
+        g = \begin{pmatrix}
+          1 &      0   &                0 \\
+          0 & \rho^2 &                  0 \\
+          0 &      0   & \rho^2\sin^2\phi
+        \end{pmatrix}.
+      \end{equation*}
+    \end{solution}
+\end{question}

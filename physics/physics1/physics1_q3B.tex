@@ -1,0 +1,106 @@
+\begin{question}
+	Considere a situação ilustrada abaixo, em que $m_1 = \measure{1}{kg}$, $m_2 = \measure{3}{kg}$ e $M = \measure{5}{kg}$.
+	Considere ainda que o atrito entre as superfícies são desprezíveis e que a aceleração da gravidade é de \measure{10}{m/s^2}.
+
+	\centeredfigure{0.5\textwidth}{20181029_204849}
+
+	\begin{enumerate}
+		\item Desenhe o diagrama de corpo livre do bloco $m_2$.
+		\item Qual é a intensidade da força $F$ que você deve aplicar de modo que os blocos permaneçam estacionários com relação ao carro?
+	\end{enumerate}
+	\begin{compactdesc}
+		\item[Dica:] note que é a tensão no cabo a responsável por acelerar o bloco $m_1$.
+		\item[Dica:] veja abaixo o diagrama de corpo livre do bloco de massa $M$.
+
+		\centeredfigure{0.3\textwidth}{20181029_213957}
+	\end{compactdesc}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item \raisebox{-\height}{\includegraphics[width=0.2\textwidth]{20181029_214000}}
+			\item \measure{240}{N}
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item Veja o próximo item.
+			\item A dificuldade nesta questão está em desenhar corretamente os diagramas de corpo livre (DCL), abaixo.
+			Uma vez feito isso, basta manipular as equações do movimento visando escrever $F$ em termos dos parâmetros conhecidos.
+		
+			\smallskip
+
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Bloco $m_1$:
+
+				\centeredfigure{0.5\textwidth}{20181029_214004}
+
+				\begin{align}
+					&\text{Horizontal:}& T &= m_1 a \label{eq:m1x}\\
+					&\text{Vertical:}& P_1 = m_1 g &= N_1 \label{eq:m1y}
+				\end{align}
+
+				{\scriptsize $N_1$ é a força normal aplicada pelo bloco $M$ sobre o bloco $m_1$ e $T$ é a tensão (tração) no cabo, responsável por impor a esse bloco a aceleração $a$, na direção horizontal. $P_1 = m_1 g$ é a força-peso, aplicada no centro de massa (CM) de $m_1$.}
+			\end{minipage}\hfill
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Bloco $m_2$:
+
+				\centeredfigure{0.5\textwidth}{20181029_214000}
+
+				\begin{align}
+					&\text{Vertical:}& N_2 &= m_2 a \label{eq:m2x} \\
+					&\text{Vertical:}& P_2 = m_2 g &= T \label{eq:m2y}
+				\end{align}
+
+				{\scriptsize $N_2$ é a força normal aplicada pelo bloco $M$ sobre o bloco $m_2$, responsável por impor a ele a aceleração $a$, também na direção horizontal.}
+			\end{minipage}\hfill
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Bloco $M$:
+
+				\centeredfigure{0.5\textwidth}{20181029_213957}
+
+				\begin{align}
+					&\text{Horizontal:}& F - N_2 &= Ma \label{eq:Mx} \\
+					&\text{Vertical:}& P_M + N_1 &= N_M \label{eq:My}
+				\end{align}
+
+				{\scriptsize Aqui, $N_1$ é a \emph{reação} da força normal mencionada no caso do bloco $m_1$. Ou seja, é a força, de igual intensidade e direção, mas sentido oposto, que o bloco $m_1$ aplica sobre $M$. Situação análoga vale para $N_2$. $P_M = Mg$ é a força-peso e $N_N$ é a força normal exercida pelo piso no bloco $M$.}
+			\end{minipage}
+
+			\smallskip
+
+			Antes de prosseguirmos, duas observações são necessárias:
+			\begin{compactitem}
+				\item A condição de que os blocos estão em repouso entre si foi imposta quando (i) impusemos a mesma aceleração horizontal $a$ para $m_1$, $m_2$ e $M$ (equações \ref{eq:m1x}, \ref{eq:m2x} e \ref{eq:Mx}), bem como (ii) garantimos que o bloco $m_2$ não se mova na vertical (equação \ref{eq:m2y}).
+				\item Note que a força responsável por impor a $m_1$ a aceleração $a$ é a tensão (tração) no cabo.
+				Já no bloco $m_2$, é de $N_2$ esse papel; e no caso de $M$, é $F - N_2$.
+			\end{compactitem}
+
+			Agora podemos manipular as equações de movimento, visando escrever $F$ em função dos parâmetros conhecidos.
+			Comecemos levando a equação \ref{eq:m1x} na \eqref{eq:m2y}, o que nos dá
+			\begin{equation}\label{eq:a}
+				m_2 g = m_1 a
+					\Rightarrow
+				a = \frac{m_2}{m_1}g.
+			\end{equation}
+
+			Em seguida, levamos \eqref{eq:a} em \eqref{eq:m2x}:
+			\begin{equation}\label{eq:N2}
+				N_2 = m_2 \frac{m_2}{m_1}g = \frac{m_2^2}{m_1}g.
+			\end{equation}
+
+			Finalmente, levamos \eqref{eq:a} e \eqref{eq:N2} em \eqref{eq:Mx}:
+			\begin{equation*}
+				F - \frac{m^2}{m_1}g = M\frac{m_2}{m_1}g
+					\Rightarrow
+				F = \frac{m_2}{m_1}\left(M + m_2\right)g.
+			\end{equation*}
+
+			Agora resta apenas usar os valores informados no enunciado para concluir que $F = \measure{240}{N}$.
+
+		\end{enumerate}
+	\end{solution}
+\end{question}

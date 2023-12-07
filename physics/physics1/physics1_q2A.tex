@@ -1,0 +1,88 @@
+\begin{question}
+	Considere a situação ilustrada abaixo, em que o bloco $A$ pesa \measure{900}{N}, o coeficiente de atrito estático entre o bloco e a superfície da mesa é $\sqrt{3}/3$ e $\theta = \measure{30}{\degree}$.
+
+	\centeredfigure{0.4\textwidth}{20181027_205249}
+
+	\begin{enumerate}
+		\item Determine o \emph{peso} máximo que bloco $B$ pode ter de modo que o sistema continue em equilíbrio.
+		\item Isso seria possível se não houvesse atrito entre o bloco $A$ e a mesa?
+		Explique.
+	\end{enumerate}
+
+	\begin{compactdesc}
+		\item[Dados:] $\sin(\measure{30}{\degree}) = 1/2$ e $\cos(\measure{30}{\degree}) = \sqrt{3}/2$.
+	\end{compactdesc}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item \measure{300}{N}.
+			Considere parcialmente válido (20\% de penalidade) se for dado como resposta a \emph{massa} do bloco $B$, algo próximo de \measure{30}{kg}, dependendo do valor escolhido para a aceleração da gravidade.
+			\item Não: sem a força de atrito entre o bloco $A$ e a mesa, não haveria como equilibrar a força aplicada pelo cabo nesse bloco.
+			Consequentemente, a força resultante na direção horizontal seria não nula e, pela segunda lei de Newton, ele inevitavelmente sofreria aceleração, abandonando o estado de equilíbrio.
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item As figuras abaixo ilustram os diagramas de corpo livre (DLC) dos blocos $A$ e $B$ e do ponto de encontro dos cabos, bem como as equações advindas da segunda lei de Newton, aplicada em cada um deles, nas direções horizontal e vertical.
+
+			\bigskip
+
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Bloco $A$:
+
+				\centeredfigure{0.6\textwidth}{20181027_205255}
+
+				\begin{align}
+					&\text{Horizontal:}& T_A - F_a &= 0 \label{eq:Ax}\\
+					&\text{Vertical:}& N &= P_A \label{eq:Ay}
+				\end{align}
+			\end{minipage}\hfill
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Bloco $B$:
+
+				\centeredfigure{0.4\textwidth}{20181027_205312}
+
+				\begin{align}
+					&\text{Vertical:}& T_B - P_B &= 0 \label{eq:By}
+				\end{align}
+			\end{minipage}\hfill
+			\begin{minipage}[t]{0.3\textwidth}
+				\noindent
+				Ponto de encontro:
+
+				\centeredfigure{0.6\textwidth}{20181027_205308}
+
+				\begin{align}
+					&\text{Horizontal:}& T \cos\theta - T_A &= 0 \label{eq:Cx} \\
+					&\text{Vertical:}& T \sin\theta - T_B &= 0 \label{eq:Cy}
+				\end{align}
+			\end{minipage}
+
+			\bigskip
+			
+			No equilíbrio, todas essas equações acima são satisfeitas.
+			Então, vejamos o que podemos inferir, primeiramente, das equações do bloco $A$: começando com a \eqref{eq:Ax}, vemos que $T_A = F_a$.
+			Mas como $F_a = \mu N$, onde $\mu$ é o coeficiente de atrito estático, então $T_A = \mu N = \mu P_A$, em que usamos a \eqref{eq:Ay} na última passagem.
+
+			O caso do bloco $B$ é ainda mais simples: $T_B = P_B$.
+
+			Finalmente, as equações do ponto de encontro nos permitem afirmar que $T \sin\theta = T_B$ e que $T \cos\theta = T_A$.
+			E, dividindo a primeira equação pela segunda, podemos ainda verificar que $\tan\theta = T_B/T_A$, que é mais útil para nós, pois não estamos interessados em $T$ (tensão no segmento do cabo que conecta-se à parede).
+
+			Mas temos expressões para $T_A$ e $T_B$, que obtivemos há pouco, e, utilizando-as, obtemos $\tan\theta = P_B/(\mu P_A)$.
+			Dentre esses parâmetros, desconhecemos apenas $P_B$, que é justamente o que estamos interessados em determinar.
+			Então, reescrevendo essa expressão de modo a isolá-lo, obtemos $P_B = \mu P_A \tan\theta$.
+			E como $\mu = \sqrt{3}/3$, $P_A = \measure{900}{N}$ e $\theta = \measure{30}{\degree}$ (que dá $\tan\theta = \sin\theta/\cos\theta = 1/\sqrt{3}$), concluimos que $P_B = \measure{300}{N}$.
+
+			Mas esse é o peso \emph{máximo} de $B$?
+			Sim, pois se $P_B$ fosse maior que \measure{300}{N}, $T_B$ teria de ser maior (equação \ref{eq:By}).
+			Isso requereria que $T$ fosse maior (equação \ref{eq:Cy}), o que levaria a um valor maior para $T_A$ (equação \ref{eq:Cx}).
+			Finalmente, isso requereria que $F_a = \mu N_A$ (com $N_A = P_A$) fosse maior (equação \ref{eq:Ax}), o que não é possível, pois $\mu N_A$ é, por definição, o valor máximo que a força de atrito estático pode assumir.
+
+			\item Veja a resposta deste item, acima.
+		\end{enumerate}
+	\end{solution}
+\end{question}

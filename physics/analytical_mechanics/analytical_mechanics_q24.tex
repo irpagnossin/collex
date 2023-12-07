@@ -1,0 +1,24 @@
+\begin{question}
+    Um atirador de elite é um especialista em tiros de longa distância (o recorde atual de distância é de \measure{3.54e3}{m}).
+    Para acertar um alvo a essa distância, não basta mirá-lo: além disso, o atirador deve aplicar uma série de correções, visando compensar a ação da gravidade, do vento e até mesmo da força de Coriolis.
+    Sabendo que a velocidade do projétil espelido por uma arma dessas é de aproximadamente \measure{1.10e3}{m/s}, determine o deslocamento lateral, em centímetros, devido à aceleração de Coriolis, sofrido pelo projétil ao percorrer a distância acima.
+    Para isso, considere que o dia tem duração de 23 horas, 56 minutos e 4 segundos (este é o chamado ``dia sideral''), que o tiro foi dado sobre o \href{https://pt.wikipedia.org/wiki/Tr\%C3\%B3pico_de_Capric\%C3\%B3rnio}{trópico de capricórnio} (latitude \measure{23.4}{\degree} sul), no sentido norte (nesse caso, o projétil desvia-se para oeste) e que o projétil não perde velocidade ao longo do seu trajeto até o alvo.
+
+    \begin{answer}
+      $\measure{33.0}{cm}$
+    \end{answer}
+
+    \begin{solution}
+      A aceleração devido à força de Coriolis é expressa por $a_c = 2v'\omega \sin\theta$, onde $v'$ é a magnitude da velocidade do projétil, medida no referencial da Terra, que gira com velocidade angular $\omega$.
+      $\theta$ é o ângulo entre os vetores $\vec v'$ e $\vec\omega$.
+
+      A orientação dos vetores $\vec v'$ e $\vec\omega$ é similar à da questão anterior, de modo que a conclusão lá vale aqui, isto é, $\sin\theta = \sin\varphi$, onde $\varphi$ é a latitude.
+      Então, usando $v' = \measure{1.10e3}{m/s}$, $\omega = 2\pi/86164 \approx \measure{7.29e-5}{rad/s}$ e $\varphi = \measure{23.4}{\degree}$, obtemos $a_c \approx \measure{6.37e-2}{m/s^2}$.
+
+      Pela regra da mão direita, aplicada ao produto $\vec v'\times \vec\omega$, presente na versão vetorial da expressão para a aceleração de Coriolis, nos permite concluir que essa aceleração ocorre no sentido Leste-Oeste.
+      Podemos, então, tratar o movimento rumo ao alvo e o desvio devido à força de Coriolis como independentes, de modo que o deslocamento lateral pode ser obtido pela expressão do movimento uniformemente variado: $\half a_c t^2$, onde $t$ é o tempo de voo do projétil, durante o qual ele está sujeito à força de Coriolis.
+
+      $t = \measure{3.54e3}{m}/\measure{1.10e3}{m/s} = \measure{3.22}{s}$.
+      Então, o desvio lateral é de aproximadamente \measure{33.0}{cm}.
+    \end{solution}
+\end{question}  

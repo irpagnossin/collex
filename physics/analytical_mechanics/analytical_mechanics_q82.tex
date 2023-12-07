@@ -1,0 +1,28 @@
+\begin{question}
+    Ainda sobre o cenário da conta presa a um arame parabólico: como a conta está limitada ao arame, apenas a coordenada $x$ pode assumir valores arbitrários, enquanto $y$ e $z$ assumem valores restritos a certas regras.
+    Essas regras são as \emph{equações de vínculo}, e há duas nesse caso, responsáveis por reduzir os graus de liberdade de três para um:
+    \begin{equation*}
+      \text{Graus de liberdade} = \text{Graus de liberdade sem restrições} - \text{equações de vínculo}
+                                = 3 - 2 = 1
+    \end{equation*}
+
+    Quais alternativas abaixo representam essas \emph{duas} equações de vínculo \emph{na forma} $f(x,y,z) = C$, onde $C$ é uma constante?
+    \begin{enumerate}
+      \item $y = 0$ \rightanswer
+      \item $z - ax^2 = 0$ \rightanswer
+      \item $z > 0$
+      \item $z = ax^2$
+      \item $x = \pm \sqrt{\frac{z}{a}}$
+    \end{enumerate}
+
+    \bigskip
+    \begin{compactdesc}
+      \item[Observação:] a forma $f(q^i) = 0$ não é relevante para esse problema, mas quando você quiser utilizar as equações de vínculo em conjunção com os \emph{multiplicadores de Lagrange}, para determinar as forças de vínculo, é importante saber colocar as equações de vínculo nessa forma.
+    \end{compactdesc}
+
+    \begin{solution}
+      A primeira equação de vínculo é dada no enunciado, $z = ax^2$, que pode ser reescrita assim: $z - ax^2 = 0$.
+      Essa expressão tem a forma $f(x,y,z) = C$, com $f(x,y,z) = z - ax^2$ e $C = 0$.
+      A segunda equação de vínculo vem do fato de que a curva $z = ax^2$ pertence ao plano $xz$: disso decorre que $y = 0$, que também tem a forma $f(x,y,z) = C$, com $f(x,y,z) = y$ e $C = 0$.
+    \end{solution}
+\end{question}

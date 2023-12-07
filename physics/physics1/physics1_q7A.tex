@@ -1,0 +1,59 @@
+\begin{question}
+	Lembre-se da sua última viagem pelo terreno acidentado do sul de Minas Gerais.
+	Ao passar de carro pelo topo de um pequeno morro, que tem o perfil de uma circunferência de raio $R = \measure{150}{m}$ (figura), você nota uma sensação de perda parcial de peso.
+	Isso acontece porque para que o carro acompanhe o perfil da pista (um movimento circular naquele ponto, note), deve haver uma resultante que atue como força centrípeta.
+	Como consequência, a força normal, que é a responsável pela nossa sensação de peso, é menor do que seria numa pista plana.
+	
+	Suponha que você passe por ali a \measure{100}{km/h} e que a massa total do veículo seja de \measure{1.20e3}{kg}.
+	Nesse caso, qual é a intensidade da força normal sobre os pneus do seu veículo?
+	Considere que a aceleração da gravidade é de \measure{9.81}{m/s^2}.
+
+	\centeredfigure{0.5\textwidth}{carro_no_topo_do_morro}
+
+	\begin{compactdesc}
+		\item[Atenção:] note que a velocidade não foi dada em unidades do Sistema Internacional de Unidades.
+		\item[Dica:] note que a intensidade da força normal nesse cenário tem de ser inferior à intensidade da força-peso.
+	\end{compactdesc}
+
+	\begin{answer}
+		\measure{5.59e3}{N}
+	\end{answer}
+
+	\begin{solution}
+		As duas forças que agem no carro são: a força-peso e a força normal (figura abaixo).
+
+		\centeredfigure{0.5\textwidth}{carro_no_topo_do_morro_solucao}
+
+		Se o veículo estivesse numa pista plana, de modo que a aceleração vertical fosse nula, essas duas forças anulariam-se.
+		Porém, esse não é o caso.
+		Ao invés disso, o veículo realiza, momentaneamente, movimento circular na direação vertical.
+		Para que isso aconteça, é necessária a presença de uma aceleração centrípeta, cujo valor é $v^2/R$, onde $v$ é a velocidade do veículo no topo do morro e $R$, o raio de curvatura da pista naquele ponto.
+		Assim, a segunda lei de Newton fica assim:
+		\begin{equation*}
+			P - N = m\frac{v^2}{R},
+		\end{equation*}
+		em que consideramos o sentido vertical para baixo como positivo.
+		Desse modo, a força normal fica
+		\begin{equation*}
+			N = P - m\frac{v^2}{R}
+			  = mg - m\frac{v^2}{R}
+			  = m\left(g - \frac{v^2}{R}\right).
+		\end{equation*}
+		E como $m = \measure{1.2e3}{kg}$, $g = \measure{9.81}{m/s^2}$, $v = \measure{100}{km/h} = \measure{27.8}{m/s}$ e $R = \measure{150}{m}$, a intensidade da força normal é:
+		\begin{equation*}
+			N = 1200 \cdot \left(9,81 - \frac{27,8^2}{150}\right) = \measure{5.59e3}{N}.
+		\end{equation*}
+
+		Note que tomamos o cuidado de escrever a velocidade $v$ em \unit{m/s}:
+		\begin{equation*}
+			v = 100 \frac{\unit{km}}{\unit{h}} \cdot \frac{\measure{1000}{m}}{\measure{1}{km}} \cdot \frac{\measure{1}{h}}{\measure{3600}{s}} = \frac{100}{3.6} \unit{m/s} = \measure{27.8}{m/s}.
+		\end{equation*}
+	\end{solution}
+\end{question}
+
+\begin{comment}
+	```python
+	def exercicio_7(r, v, m, g = 9.81):
+		return(m*(g-(v/3.6)**2/r))
+	```
+\end{comment}

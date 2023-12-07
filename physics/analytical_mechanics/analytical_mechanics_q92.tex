@@ -1,0 +1,17 @@
+\begin{question}
+    Uma conta de massa $m$ encontra-se presa a um arame em formato senoidal: $z = \sin(x)$, onde $(x,y,z)$ é um sistema cartesiano de coordenadas com $x$ e $y$ horizontais e $z$ apontando para cima.
+    Determine a expressão da energia cinética.
+    \begin{enumerate}
+      \item $T = \half m (1 + \cos^2 x) \dot x^2$ \rightanswer
+      \item $T = \half m (1 + \sin^2 x) \dot x^2$
+      \item $T = \half m (\dot x^2 + \sin^2 \dot x)$
+      \item $T = \half m (\dot x^2 + \dot z^2)$
+      \item $T = \half m (\dot x^2 + \cos^2 \dot x)$
+    \end{enumerate}
+
+    \begin{solution}
+      Começamos com $T = \half m \left(\dot x^2 + \dot y^2 + \dot z^2\right)$.
+      Podemos ignorar $y$ (ou, se preferir, considerar a equação de vínculo $y = C$, da qual $\dot y = 0$) e de $z = \sin(x)$ decorre que $\dot z = \cos(x)\dot x$.
+      Então, $T = \half m \left[\dot x^2 + (\cos(x)\dot x)^2\right] = \half m (1 + \cos^2 x) \dot x^2$.
+    \end{solution}
+\end{question}

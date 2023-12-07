@@ -1,0 +1,30 @@
+\begin{question}
+    Considere o movimento de um projétil, relativamente a um eixo cartesiano de coordenadas $(x,y,z)$ no qual o eixo $z$ aponta para cima.
+    Nessa situação, as energias cinética $T$ e potencial gravitacional $U$ podem ser assim escritas em termos dessas coordenadas:
+    \begin{equation*}
+      T = \frac{1}{2}m\left(\dot x^2 + \dot y^2 + \dot z^2\right) \qquad\text{e}\qquad
+      U = mgz,
+    \end{equation*}
+    onde $m$ é a massa do projétil e $g$ é a aceleração da gravidade.
+    Assinale a(s) alternativa(s) abaixo que apresenta(m) relação(ões) verdadeira(s) sobre esse cenário:
+    \begin{enumerate}
+      \item $\pd{L}{x} = 0$ \rightanswer
+      \item $L = \frac{1}{2}m\left(\dot x^2 + \dot y^2 + \dot z^2\right) - mgz$ \rightanswer
+      \item $\pd{L}{\dot z} = m\dot z$ \rightanswer
+      \item $\frac{d}{dt}\left(\pd{L}{\dot z}\right) = m\ddot z$ \rightanswer
+      \item $\frac{d}{dt}\left(\pd{L}{\dot z}\right) = m\ddot z - mg\dot z$
+      \item $\frac{d}{dt}\left(\pd{L}{z}\right) = m\ddot z$
+    \end{enumerate}
+
+    \begin{solution}
+      \begin{align*}
+        L &:= T - U = \frac{1}{2}m\left(\dot x^2 + \dot y^2 + \dot z^2\right) - mgz \qquad &\text{item (b)}\\
+        \pd{L}{x} &= \frac{1}{2}m\left(\pd{\dot x^2}{x} + \pd{\dot y^2}{x} + \pd{\dot z^2}{x}\right) = 0 \qquad &\text{item (a)}\\
+        \pd{L}{\dot z} &= \frac{1}{2}m\left(\pd{\dot x^2}{\dot z} + \pd{\dot y^2}{\dot z} + \pd{\dot z^2}{\dot z}\right) = m\dot z \qquad &\text{item (c)}\\
+        \frac{d}{dt}\left(\pd{L}{\dot z}\right) &= \frac{d}{dt}\left(m\dot z\right) = m\ddot z \qquad &\text{itens (d) e (e)}\\
+        \frac{d}{dt}\left(\pd{L}{z}\right) &= \frac{d}{dt}\left[\frac{1}{2}m\left(\pd{\dot x^2}{z} + \pd{\dot y^2}{z} + \pd{\dot z^2}{z}\right)\right] = 0 &\text{item (f)}
+      \end{align*}
+
+      Atenção: a última expressão não faz parte da equação de Euler-Lagrange.
+    \end{solution}
+\end{question}

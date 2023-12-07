@@ -1,0 +1,33 @@
+\begin{question}
+    Ainda sobre o cenário da conta presa a um arame parabólico, como apenas $x$ é livre para assumir valores arbitrários, temos apenas uma equação de movimento (um grau de liberdade):
+    \begin{equation}
+      \frac{d}{dt}\pd{T}{\dot x} - \pd{T}{x} = F_{x}.
+    \end{equation}
+
+    O valor de $F_x$ não é tão óbvio, como pode parecer.
+    Realmente, $F_x$ pode \emph{não} ser a componente $x$ da força $\vec F$ que atua sobre a conta (nesse caso, a força gravitacional apenas).
+    
+    Uma maneira de determinar $F_x$ é avaliar o trabalho executado por $\vec F$ sobre a conta quando \emph{imaginamos} pequenas variações $\delta x$ na coordenada $x$ (por ser imaginário, $\delta x$ é chamado de \emph{deslocamento virtual}), ao mesmo tempo em que mantemos fixas as demais coordenadas: $y$ e $z$.
+
+    É importante que esses deslocamentos sejam consistentes com os vínculos presentes.
+    Por exemplo, devido à equação de vínculo $y = 0$, $\delta y = 0$.
+    Além disso, devido à equação de vínculo $z = ax^2$, $\delta z$ só pode ocorrer na presença de um $\delta x$.
+    Que expressão relaciona esses deslocamentos virtuais?
+    \begin{enumerate}
+      \item $\delta z = 2a x \,\delta x$ \rightanswer
+      \item $\delta z = a \,\delta x^2$
+      \item $\delta z = 2a \,\delta x$
+      \item $\delta z = (a\, \delta x)^2$
+      \item $\delta z = \delta x$
+    \end{enumerate}
+
+    \bigskip
+    \begin{compactdesc}
+      \item[Dica:] recorde-se, do Cálculo Diferencial, que uma pequena variação numa função $f(x)$ qualquer depende de uma pequena variação em $x$, assim: $\Delta f \approx \frac{df}{dx} \Delta x$.
+    \end{compactdesc}
+
+    \begin{solution}
+      Como $z = ax^2$, uma pequena variação $\delta x$ em $x$ causa uma pequena variação $\delta z$ em $z$, e a relação entre elas, em primeira ordem, é linear: $\delta z = \frac{dz}{dx} \delta x$.
+      Como $\frac{dz}{dx} = \frac{d}{dx}(ax^2) = 2ax$, segue imediatamente que $\delta z = 2a x \delta x$.
+    \end{solution}
+\end{question}

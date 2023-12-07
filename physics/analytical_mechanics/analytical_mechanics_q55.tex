@@ -1,0 +1,31 @@
+\begin{question}
+    O elemento de comprimento $ds$ pode ser expresso, em coordenadas afins $(q^1, q^2, q^3)$, assim: $ds^2 = (dq^1)^2 + (dq^2)^2 + (dq^3)^2 + 2\cos\alpha dq^1 dq^2 + 2 \cos\beta\, dq^1 dq^3 + 2 \cos\gamma\, dq^2 dq^3$.
+    Selecione a(s) alternativa(s) que representa(m) corretamente as componentes do tensor de métrica:
+    \begin{enumerate}
+      \item $g_{11} = 1$ \rightanswer
+      \item $g_{22} = 1$ \rightanswer
+      \item $g_{13} = \cos\beta$ \rightanswer
+      \item $g_{33} = 0$
+      \item $g_{22} = (dq^2)^2$
+      \item $g_{21} = 0$
+    \end{enumerate}
+
+    \begin{solution}
+      Procedendo como nas questões anteriores, vemos que $g_{11} = g_{22} = g_{33} = 1$.
+      A novidade aqui é que há termos cruzados $dq^1 dq^2$, $dq^1 dq^3$ e $dq^2 dq^3$.
+      O fator que multiplica $dq^1 dq^2$ é $2\cos\alpha$, então o termo $g_{12} = \cos\alpha$.
+      Perceba que $g_{22}$ é igual à \emph{metade} do fator que multiplica $dq^1 dq^2$.
+      Isso acontece porque, na verdade, $2\cos\alpha\, dq^1 dq^2$ advém da soma $\cos\alpha\, dq^1 dq^2 + \cos\alpha\, dq^2 dq^1$, que surge no produto matricial (veja a primeira questão).
+      Além disso, $g_{21} = g_{12}$ (isso é verdade para todos os elementos de $g$: $g_{ij} = g_{ji}$).
+      Analogamente, o fator que multiplica $dq^1 dq^3$ é $2 \cos\beta$, então $g_{13} = g_{31} = \cos\beta$.
+      Finalmente, o fator que multiplica $dq^2 dq^3$ é $2 \cos\gamma$, então $g_{23} = g_{32} = \cos\gamma$.
+      Resumindo,
+      \begin{equation*}
+        g = \begin{pmatrix}
+          1          & \cos\alpha & \cos\beta  \\
+          \cos\alpha & 1          & \cos\gamma \\
+          \cos\beta  & \cos\gamma & 1
+        \end{pmatrix}.
+      \end{equation*}
+    \end{solution}
+\end{question}

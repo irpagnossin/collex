@@ -1,0 +1,34 @@
+\begin{question}
+    A matriz abaixo representa que tipo de rotação (assinale uma ou mais alternativas):
+    \begin{equation*}
+      \begin{pmatrix}
+                1/2 & 0 & \sqrt{3}/2 \\
+                  0 & 1 &          0 \\
+        -\sqrt{3}/2 & 0 &        1/2
+      \end{pmatrix}
+    \end{equation*}
+
+    \begin{enumerate}
+      \item\label{item:A} Duas rotações consecutivas, cada uma de \measure{30}{\degree}, em torno do eixo $y$
+      \item\label{item:B} Uma rotação de \measure{60}{\degree} em torno do eixo $y$
+      \item Uma rotação de \measure{60}{\degree} em torno do eixo $x$
+      \item Uma rotação de \measure{30}{\degree} em torno do eixo $x$, seguida de outra, também de \measure{30}{\degree}, em torno do eixo $z$
+      \item\label{item:E} Uma rotação de \measure{90}{\degree} em torno do eixo $y$, seguida de outra, de \measure{-30}{\degree}, também em torno do eixo $y$.
+    \end{enumerate}
+
+    \begin{answer}
+      Itens (\ref{item:A}), (\ref{item:B}) e (\ref{item:E}).
+    \end{answer}
+
+    \begin{solution}
+    A matriz pode ser escrita na forma
+      $\begin{pmatrix}
+        \cos\theta  & 0 & \sin\theta \\
+        0           & 1 & 0\\
+        -\sin\theta & 0 & \cos\theta\\
+      \end{pmatrix}$ com $\theta = \measure{60}{\degree}$.
+      Por isso representa uma rotação de \measure{60}{\degree} em torno do eixo $y$ (a linha/coluna que contém o elemento unitário) [item (\ref{item:B})].
+      Ela também pode ser a representação de qualquer sequência de rotações, \emph{sempre em torno do mesmo eixo}, cuja soma dos ângulos resulte em $\measure{60}{\degree}$.
+      Por exemplo, $\measure{30}{\degree} + \measure{30}{\degree}$ [item (\ref{item:A})] ou $\measure{90}{\degree} - \measure{30}{\degree}$ [item (\ref{item:E})].
+    \end{solution}
+\end{question}

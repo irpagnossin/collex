@@ -1,0 +1,20 @@
+\begin{question}
+    Determine o momento de inércia de um cilindro oco de cobre, cuja altura é de \measure{20.0}{cm} e os raios interno e externo são \measure{10.0}{cm} e \measure{12.0}{cm}, respectivamente.
+    A densidade do cobre é de \measure{8.92e3}{kg/m^3} (cf. \href{https://www.webelements.com/copper/}{webelements.com}).
+
+    \begin{compactdesc}
+      \item[Dica:] consulte a expressão do momento de inércia numa tabela como \href{https://en.wikipedia.org/wiki/List_of_moments_of_inertia}{esta}.
+    \end{compactdesc}
+
+    \begin{answer}
+      \measure{0.301}{kg.m^2}
+    \end{answer}
+
+    \begin{solution}
+      O momento de inércia de um cilindro oco com relação ao seu eixo de simetria é dado por $I = \half m (r_1^2 + r_2^2)$ (consulte uma tabela como \href{https://en.wikipedia.org/wiki/List_of_moments_of_inertia}{esta}).
+      Já conhecemos $r_1 = \measure{0.100}{m}$ e $r_2 = \measure{0.120}{m}$, então só precisamos determinar a massa $m$.
+      Isso pode ser feito determinando o volume do cilindro oco: $V = \pi (r_2^2 - r_1^2) h$, onde $h = \measure{0.200}{m}$ é sua altura.
+      Então, $I = \half \pi \rho h (r_2^2 - r_1^2) (r_1^2 + r_2^2) = \half \pi \rho h (r_2^4 - r_1^4)$, onde $\rho = \measure{8.92e3}{kg/m^3}$ é a densidade do cobre.
+      Assim, concluimos que $I = \measure{0.301}{kg.m^2}$.
+    \end{solution}
+\end{question}

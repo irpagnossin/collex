@@ -1,0 +1,31 @@
+\begin{question}
+	Suponha que o movimento de uma partícula seja dado pela equação horária $x(t) = 4t^2 - 3$.
+	\begin{inlineenum}
+		\inlineitem Determine a expressão da velocidade e da aceleração dessa partícula em qualquer instante de tempo $t$.
+		\inlineitem Se $x$ é dado em metros (\unit{m}) e $t$, em segundos (\unit{s}), quais devem ser as unidades das constantes $4$ e $3$ presentes na expressão de $x(t)$?
+		\inlineitem Qual é a posição, velocidade e aceleração dessa partícula em $t = \measure{3}{s}$?
+	\end{inlineenum}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item $v(t) = 8t$ e $a(t) = 8$.
+			\item \measure{4}{m/s^2} e \measure{3}{m}.
+			\item Em $t = \measure{3}{s}$, $x(3) = \measure{33}{m}$, $v(3) = \measure{24}{m}$ e $a(3) = \measure{8}{m/s^2}$.
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item A equação horária da velocidade da partícula é dada pela derivada de $x(t)$ com relação ao tempo: $v(t) := \frac{dx}{dt} = 8t$.
+			Similarmente, a aceleração é a derivada de $v(t)$: $a(t) := \frac{dv}{dt} = 8$.
+			\item O lado esquerdo da equação horária $x(t)$ é dado em metros (no Sistema Internacional de Unidades).
+			Por isso, o lado direito também tem de ser dado em metros e, particularmente, cada parcela, separadamente, deve ser dada em metros.
+			Então, a constante $3$ deve ser dada em metros: \measure{3}{m}.
+			Do mesmo modo, $[4t^2] = \unit{m}$.
+			Mas $[t^2] = \unit{s^2}$, o que significa que $[4] = \unit{m/s^2}$.
+			Ou seja, \measure{4}{m/s^2}.
+			\item A posição em $t = \measure{3}{s}$ é dada por $x(3) = \measure{33}{m}$.
+			Analogamente, $v(3) = \measure{24}{m/s}$ é a velocidade e $a(3) = \measure{8}{m/s^2}$ é a aceleração.
+		\end{enumerate}
+	\end{solution}
+\end{question}

@@ -1,0 +1,23 @@
+\begin{question}
+    Considere uma partícula movendo-se num plano ao longo da trajetória dada por $q^1 \equiv r(t) = 2$ e $q^2 \equiv \theta(t) = 2t$, onde $(q^1, q^2) \equiv (r,\theta)$ é um sistema de coordenadas polar e $t$ representa o tempo.
+    Determine as componentes contra-variantes do vetor de velocidade $v^i := dq^i/dt \equiv \dot q^i$.
+    \begin{enumerate}
+      \item $v^1 = 0$ \rightanswer
+      \item $v^2 = 2$ \rightanswer
+      \item $v_1 = 0$
+      \item $v_2 = 4$
+      \item $v^1 = 2$
+    \end{enumerate}
+
+    Note que o cenário descrito nesta questão é o de uma partícula que gira em torno da origem do sistema de referência com velocidade angular constante de \measure{2}{rad/s}.
+
+    \begin{solution}
+      $q^1 = 2 \Rightarrow v^1 \equiv \dot q^1 = 0$ e $q^2 = 2t \Rightarrow v^2 \equiv \dot q^2 = 2$.
+      Além disso,
+      \begin{align*}
+        v_1 = g_{11} v^1 + g_{12} v^2 &= 1 \cdot 0 + 0 \cdot 2 = 0 \\
+        v_2 = g_{21} v^1 + g_{22} v^2 &= 0 \cdot 0 + r^2 \cdot 2  = 4.
+      \end{align*}
+      Entretanto, o enunciado solicita apenas as componentes contra-variantes (índice em cima), de modo que, embora $v_1 = 0$ e $v_2 = 4$ sejam igualdades válidas, não são alternativas corretas, pois são componentes covariantes (índice embaixo).
+    \end{solution}
+\end{question}

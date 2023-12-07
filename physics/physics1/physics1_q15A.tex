@@ -1,0 +1,41 @@
+\begin{question}
+		Um avião a serviço humanitário voa a uma altitude de \measure{845}{m} com velocidade horizontal constante de \measure{60}{m/s}.
+		No instante $t = 0$ um pacote é solto do avião, que continua o seu voo sem mudar a sua velocidade.
+
+		O vetor posição do pacote é $\vec r(t) = 60 t\hat i + (845 - 5t^2)\hat j$, em unidades do SI, conforme observado pelas pessoas em terra, imediatamente abaixo do avião em $t = 0$.
+		Em outras palavras, o sistema de referência $S$ foi escolhido de tal maneira que em $t = 0$ sua origem está no solo, com o eixo $x$ apontando no sentido de voo do avião e o eixo $y$ apontando para cima, diretamente para o avião.
+
+		Determine:
+
+		\begin{enumerate}
+			\item A expressão analítica do vetor velocidade do pacote.
+			\item As componentes horizontal ($v_x$) e vertical ($v_y$) da \emph{velocidade} do pacote ao atingir o solo (isto é, quando $y = 0$).
+			\item A equação da trajetória do pacote.
+		\end{enumerate}
+
+		\begin{answer}
+			\begin{enumerate}
+				\item $60\hat i - 10t \hat j$,
+				\item $v_x = \measure{60}{m/s}$ e $v_y = \measure{-130}{m/s}$, e
+				\item $y = 845 - \frac{x^2}{720}$, em metros.
+			\end{enumerate}
+		\end{answer}
+
+		\begin{solution}
+			\begin{enumerate}
+				\item A velocidade $\vec v(t)$ é simplesmente a derivada do vetor de posição:
+				\begin{equation*}
+					\vec v(t) := \frac{d\vec r}{dt} = \frac{d}{dt}\left[60 t\hat i + (845 - 5t^2)\hat j\right] = 60\hat i - 10t \hat j.
+				\end{equation*}
+
+				\item O instante de tempo $\tau$ em que $y = 0$ pode ser obtido a partir da componente $y(t)$ de $\vec r(t)$: $y(\tau) = (845 - 5\tau^2) = 0$, que é satisfeita quando $\tau = \measure{13}{s}$.
+				Por outro lado, da expressão de $\vec v(t)$ obtida no item anterior, identificamos que suas componentes são $v_x(t) = \measure{60}{m/s}$ e $v_y(t) = -10t$, pois $\vec v(t) = v_x(t)\hat i + v_y(t)\hat j$.
+				Então, em $t = \tau$ teremos $v_y(\tau) = -\measure{130}{m/s}$.
+
+				\item A trajetória é obtida ao eliminarmos o tempo $t$ das expressões horárias $x(t)$ e $y(t)$ para representar $y$ como uma função de $x$: $x(t) = 60 t \Rightarrow t = \frac{x}{60}$.
+				Levando esse resultado em $y(t) = 845 - 5t^2$ obtemos $y = 845 - \frac{x^2}{720}$.
+				Essa é a expressão da trajetória, com $x$ e $y$ dados em metros.
+				Note que se trata de uma parábola com concavidade negativa (pois o sistema de coordenadas escolhido tem seu eixo $y$ apontando para cima).
+			\end{enumerate}
+		\end{solution}
+	\end{question}

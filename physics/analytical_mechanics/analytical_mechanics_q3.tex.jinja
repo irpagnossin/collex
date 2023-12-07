@@ -1,0 +1,94 @@
+\begin{question}
+	Considere o mecanismo ilustrado abaixo, descrito convenientemente pelas coordenadas generalizadas $(x_1, x_2, \theta_2, \theta_3)$, em que os objetos 1 (cuja massa é $m_1$) e 2 (raio $R$ e massa $m_2$, uniformemente distribuída) estão conectados por um cabo inextensível e de massa desprezível através de uma polia de raio $R$ e massa $m_3$, uniformemente distribuída (objeto 3).
+	O objeto 2 rola pelo plano inclinado sem deslizar, assim como o cabo passa pela polia sem escorregar.
+
+	\begin{enumerate}
+		\item Determine a lagrangeana em termos apenas da coordenada $x_1$ e dos parâmetros $m_1$, $m_2$, $m_3$, $\varphi$ e $g$.
+		\item Determine a aceleração do objeto $1$ para o caso em que $m_1 = \measure{\VAR{m1}}{kg}$, $m_2 = \measure{\VAR{m2}}{kg}$, $m_3 = \measure{\VAR{m3}}{kg}$ e $\varphi = \measure{\VAR{φ}}{\degree}$.
+		Considere que a aceleração da gravidade é de \measure{\VAR{g}}{m/s^2}.		
+		\item Determine a intensidade do torque resultante sobre a polia, sabendo que $R = \measure{\VAR{r}}{m}$.
+	\end{enumerate}
+
+	\centeredfigure{0.5\textwidth}{20180804_203813}
+
+	\begin{compactdesc}
+		\item[Atenção:] nesse problema, a energia potencial gravitacional, medida a partir do nível do centro do objeto 3 (polia), no sentido vertical para baixo, é expressa por $-mgh$ (com sinal negativo), onde $h$ é a distância a partir desse nível.
+	\end{compactdesc}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item $L = \left(\half m_1 + \frac{3}{4}m_2 + \frac{1}{4}m_3\right)\dot x_1^2 + (m_1 g - m_2 g \sin\varphi)x_1$ (termos aditivos são possíveis, mas dispensáveis)
+			\item $\ddot x_1 = \measure{\VAR{answer_item_2}}{m/s^2}$
+			\item \measure{\VAR{answer_item_3}}{N.m}
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item Primeiramente, vamos determinar a energia potencial gravitacional de cada objeto.
+			Para isso, escolhemos convenientemente o nível horizontal que passa pelo centro da polia como referência para medir distâncias verticais.
+			Desse modo, a energia potencial gravitacional do objeto 1 é $U_1 = -m_1gx_1$ (o sinal é negativo porque a orientação de $x_1$ é para baixo).
+			Similarmente, $U_2 = -m_2gx_2\sin\varphi$ e $U_3 = 0$.
+
+			Em seguida, precisamos determinar a energia cinética de cada objeto: $T_1 = \half m_1 \dot x_1^2$ (apenas energia cinética de translação), $T_2 = \half m_2 \dot x_2 + \half I_2 \dot\theta_2^2$ (energia cinética de translação do centro de massa mais a eneriga cinética de rotação em torno do centro de massa) e $T_3 = \half I_3 \dot\theta_3^2$ (apenas energia cinética de rotação).
+
+			Desse modo, a lagrangeana pode ser assim escrita:
+			\begin{equation}\label{eq:lagrangeana}
+				L = T - U = \half m_1 \dot x_1^2 + \half m_2 \dot x_2 + \half I_2 \dot\theta_2^2 + \half I_3 \dot\theta_3^2 + m_1gx_1 + m_2gx_2\sin\varphi
+			\end{equation}
+
+			Agora precisamos eliminar as variáveis $x_2$, $\theta_2$ e $\theta_3$, o que pode ser feito utilizando as equações de vínculo.
+			\begin{compactdesc}
+				\item[Vínculo 1:] o cabo é inextensível.
+				Portanto, $x_1 + x_2 = C$.
+				Consequentemente, $\dot x_2 = -\dot x_1$.
+				\item[Vínculo 2:] o objeto 2 gira sem deslizar.
+				Nesse caso, $\theta_2 = -x_2/R$ (note que, quando $x_2$ cresce, $\theta_2$ decresce. Daí o sinal negativo).
+				Consequentemente, $\dot\theta_2 = -\dot x_2/R$.
+				\item[Vínculo 3:] não há deslizamento entre a polia e o cabo.
+				Nesse caso, $\theta_3 = x_1/R$.
+				Consequentemente, $\dot\theta_3 = \dot x_1/R$.				
+			\end{compactdesc}
+
+			Usando esses resultados em \eqref{eq:lagrangeana}, bem como o fato de que $I_2 = \half m_2 R^2$ e $I_3 = \half m_3 R^2$ (ambos são discos com massa uniformemente distribuída), e simplificando, obtemos o resutlado desejado:
+			\begin{equation*}
+				L = \left(\half m_1 + \frac{3}{4}m_2 + \frac{1}{4}m_3\right)\dot x_1^2 + m_1 g x_1 + m_2 g (C - x_1) \sin\varphi.
+			\end{equation*}
+
+			O termo constante, devido a $C$ (vínculo 1), é dispensável, pois desaparecerá ao derivarmos $L$ para obter as equações de Euler-Lagrante.
+			Por isso, podemos ainda escrever:
+			\begin{equation*}
+				L = \left(\half m_1 + \frac{3}{4}m_2 + \frac{1}{4}m_3\right)\dot x_1^2 + (m_1 g - m_2 g \sin\varphi)x_1.
+			\end{equation*}
+
+			\item A aceleração $\ddot x_1$ vem da equação de movimento do objeto 1, que pode ser obtida por meio da equação de Euler-Lagrange para $x_1$:
+			\begin{equation}\label{eq:euler-lagrange}
+				\frac{d}{dt}\pd{L}{\dot x_1} - \pd{L}{x_1} = 0.
+			\end{equation}
+
+			Precisamos, então, determinar cada uma das derivadas de $L$:
+			\begin{align*}
+				\pd{L}{\dot x_1} &= \left(m_1 + \frac{3}{2}m_2 + \frac{1}{2}m_3\right)\dot x_1 \quad\Rightarrow\quad
+					\frac{d}{dt}\pd{L}{\dot x_1} = \left(m_1 + \frac{3}{2}m_2 + \frac{1}{2}m_3\right)\ddot x_1 \\
+				\pd{L}{x_1} &= m_1g - m_2g\sin\varphi
+			\end{align*}
+
+			Levando esses resultados em \eqref{eq:euler-lagrange}, obtemos:
+			\begin{equation*}
+				\left(m_1 + \frac{3}{2}m_2 + \frac{1}{2}m_3\right)\ddot x_1 - m_1 g + m_2 g \sin \varphi = 0
+				\quad\Rightarrow\quad
+				\ddot x_1 = \frac{m_1 - m_2 \sin \varphi}{m_1 + \frac{3}{2}m_2 + \frac{1}{2}m_3}g
+			\end{equation*}
+
+			Finalmente, aplicando os valores de $m_1$, $m_2$, $m_3$, $\varphi$ e $g$ do enunciado, obtemos o resultado desejado: $\ddot x_1 = \measure{\VAR{answer_item_2}}{m/s^2}$.
+			Note que a aceleração é negativa.
+			Isso indica que, nesse caso, o objeto 1 está subindo (sentido em que $x_1$ reduz).
+
+			\item O torque aplicado sobre a polia está relacionado com sua aceleração angular: $\tau_3 = I_3 \ddot\theta_3$.
+			Do vínculo 3, sabemos que $\theta_3 = x_1/R$, o que implica em $\ddot\theta_3 = \ddot x_1/R$.
+			Além disso, $I_3 = \half m_3 R^2$.
+			Então, $\tau_3 = \half m_3 R \ddot x_1 = \measure{\VAR{format(torque)}}{N.m}$, onde usamos o valor de $\ddot x_1$ encontrado no item anterior (o sinal negativo indica que o torque é aplicado no sentido de reduzir $\theta_3$, o que condiz com o fato, já observado no item anterior, de que o objeto 1 está subindo: nesse caso, a polia gira no sentido horário, que é contrário à orientação de $\theta_3$ estabelecido na figura).
+			Portanto, a intensidade do torque aplicado sobre a polia é de \measure{\VAR{answer_item_3}}{N.m}.
+		\end{enumerate}
+	\end{solution}
+\end{question}

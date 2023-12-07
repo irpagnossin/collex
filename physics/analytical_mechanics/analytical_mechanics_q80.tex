@@ -1,0 +1,33 @@
+\begin{question}
+    Considere novamente o movimento de um projétil, desta vez relativamente a um sistema cilindrico de coordenadas $(r,\theta,z)$, conforme ilustrado abaixo.
+    Nessa situação, as energias cinética $T$ e potencial gravitacional $U$ podem ser assim escritas em termos dessas coordenadas:
+    \begin{equation*}
+      T = \frac{1}{2}m\left(\dot r^2 + r^2 \dot\theta^2 + \dot z^2\right) \qquad\text{e}\qquad
+      U = mgz,
+    \end{equation*}
+    onde $m$ é a massa do projétil e $g$ é a aceleração da gravidade.
+
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{20180717_195054}
+    \end{center}
+
+    Assinale a(s) alternativa(s) abaixo que apresenta(m) relação(ões) verdadeira(s) sobre esse cenário:
+    \begin{enumerate}
+      \item $\pd{L}{z} = -mg$ \rightanswer
+      \item $\pd{L}{\dot z} = m\dot z$ \rightanswer
+      \item $\frac{d}{dt}\pd{L}{\dot z} = m\ddot z$ \rightanswer
+      \item $\pd{L}{z} = m\dot z - mg$
+      \item $\pd{L}{\dot z} = m\dot z \ddot z$
+      \item $\frac{d}{dt}\pd{L}{\dot z} = m\ddot z - mg\dot z$
+    \end{enumerate}
+
+    \begin{solution}
+      Lembrando que $L = T - V = \frac{1}{2}m\left(\dot r^2 + r^2 \dot\theta^2 + \dot z^2\right) - mgz$, seguem as relações:
+      \begin{align*}
+        \pd{L}{z} &= \frac{1}{2}m\left(\pd{\dot r^2}{z} + \pd{}{z}\left(r^2 \dot\theta^2\right) + \pd{\dot z^2}{z}\right) - mg\pd{z}{z}
+            = - mg\pd{z}{z} = -mg \qquad &\text{itens (a) e (d)} \\
+        \pd{L}{\dot z} &= \frac{1}{2}m\left(\pd{\dot r^2}{\dot z} + \pd{}{\dot z}\left(r^2 \dot\theta^2\right) + \pd{\dot z^2}{\dot z}\right) - mg\pd{z}{\dot z} = \frac{1}{2}m \pd{\dot z^2}{\dot z} = m\dot z \qquad &\text{itens (b) e (e)} \\
+        \frac{d}{dt}\pd{L}{\dot z} &= \frac{d}{dt}\left(m\dot z\right) = m\ddot z \qquad &\text{itens (c) e (f)}
+      \end{align*}
+    \end{solution}
+\end{question}

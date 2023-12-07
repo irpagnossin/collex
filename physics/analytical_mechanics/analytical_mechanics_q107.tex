@@ -1,0 +1,39 @@
+\begin{question}
+  	Considere novamente o cenário do malabaris.
+  	Além das forças de vínculo, que devem ser ignoradas, a única força presente é a gravitacional, que é conservativa.
+  	Então, podemos utilizar a ``forma 1'' da equação de Lagrange,
+  	\begin{equation*}
+  		\frac{d}{dt}\pd{L}{\dot q^i} - \pd{L}{q^i} = 0,
+  	\end{equation*}
+  	onde $L = T - U$ é a função lagrangeana, para determinar as \emph{três} equações do movimento.
+  	Faça isso.
+
+  	\begin{enumerate}
+  		\item $\ddot X = 0$ \rightanswer
+  		\item $\ddot Y = -g$ \rightanswer
+  		\item $\ddot\theta = 0$ \rightanswer
+  		\item $\ddot Y = 0$
+  		\item $\dot\theta = \text{constante}$
+  		\item $\dot X = \text{constante}$
+  	\end{enumerate}
+
+    \begin{solution}
+      Utilizando $T = \half M (\dot X^2 + \dot Y^2) + \half I \dot\theta^2$ e $U = MgY$, com $M = m_1 + m_2$, que obtivemos nas duas questões anteriores, escrevemos a lagrangeana: $T := T - U = \half M (\dot X^2 + \dot Y^2) + \half I \dot\theta^2 - MgY$.
+      Em seguida determinamos as derivadas relevantes de $L$:
+      \begin{align*}
+        \pd{L}{X} &= 0
+          & \pd{L}{Y} &= -Mg
+            & \pd{L}{\theta} &= 0 \\
+        \pd{L}{\dot X} &= M\dot X
+          & \pd{L}{\dot Y} &= M\dot Y
+            & \pd{L}{\dot \theta} &= I\dot \theta \\
+        \frac{d}{dt}\pd{L}{\dot X} &= M\ddot X
+          & \frac{d}{dt}\pd{L}{\dot Y} &= M\ddot Y
+            & \frac{d}{dt}\pd{L}{\dot \theta} &= I\ddot \theta.
+      \end{align*}
+
+      Usando essas expressões nas equações de Euler-Lagrange, uma para $X$, uma para $Y$ e uma para $\theta$, obtemos as equações do movimento associadas a cada coordenada generalizada: $\ddot X = 0$, $\ddot Y = -g$ e $\ddot \theta = 0$.
+      Note a presença da constante do movimento $M\dot X$ (momento linear), devido a $\pd{L}{X} = 0$.
+      Idem para $I\dot\theta$ (momento angular), devido a $\pd{L}{\theta} = 0$.
+    \end{solution}
+\end{question}

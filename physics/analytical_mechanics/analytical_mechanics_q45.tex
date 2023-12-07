@@ -1,0 +1,25 @@
+\begin{question}\label{q:cilindro-desce-plano}
+    Um cilindro de alumínio, de massa $m$ e raio $R$, é liberado do topo de um plano inclinado (\measure{10}{\degree} com relação à horizontal).
+    Determine a aceleração do centro de massa desse cilindro, sabendo que o atrito estático entre o cilindro e o plano é suficiente para que ele gire sem escorregar.
+    Considere que a aceleração da gravidade é de \measure{9.81}{m/s^2}.
+
+    \begin{answer}
+      \measure{1.13}{m/s^2}
+    \end{answer}
+    
+    \begin{solution}
+      A figura abaixo ilustra as forças que atuam sobre o cilindro.
+      A partir dela, a segunda lei de Newton para a translação do centro de massa nos dá: $N - mg \cos\theta = 0$ (na direção perpendicular ao plano inclinado) e $mg \sin\theta - F = ma$ (paralelamente ao plano inclinado), onde $\vec N$ é a força normal, $|\vec P| = mg$ é a força peso ($m$ é a massa do cilindro e $g$, a aceleração da gravidade), $\theta$ é o ângulo de inclinação do plano, medido com relação à horizontal, e $a$ é a aceleração procurada.
+
+      \centeredfigure{0.4\textwidth}{20180821_211250}
+
+      Além disso, a segunda lei de Newton para a rotação do cilindro em torno de seu centro de massa dá: $rF = I\alpha$, onde $r$ é o raio de cilindro, $\vec F$ é a força de atrito, responsável por fazer o cilindro girar, e $\alpha$ é a aceleração angular.
+      Perceba que $\vec P$ não exerce torque é aplicada diretamente no centro de massa, e que $\vec N$ também não exercem torque, pois sua linha de atuação passa pelo centro de massa (\ie, o braço de alavanca é zero).
+
+      Como o cilindro rola sem deslizar, as acelerações linear ($a$) e angular ($\alpha$) estão relacionadas: $a = r\alpha$ (``condição de não deslizamento'').
+      Usando essa condição na segunda lei de Newton para a rotação, obtemos $F = Ia/r^2$.
+      Levando esse resultado à segunda lei de Newton para a translação, e simplificando, obtemos $a = mg\sin\theta/(m + I/r^2)$.
+      Como $I = \half m r^2$ (momento de inércia de um cilindro), concluimos que $a = \frac{2}{3} g \sin\theta$.
+      Usando aí os valores apresentados no enunciado, obtemos $a = \measure{1.13}{m/s^2}$.
+    \end{solution}
+\end{question}

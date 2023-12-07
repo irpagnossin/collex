@@ -1,0 +1,25 @@
+\begin{question}
+    Considere a seguinte curva em coordenadas esféricas: $(\tau, \arcsin \frac{1}{\tau}, \sqrt{\tau^2 - 1})$, com $\tau \in \mathbb{R}$.
+    Determine o comprimento do arco $1 \le \tau \le 2$.
+
+    \begin{answer}
+      2,45
+    \end{answer}
+
+    \begin{solution}
+      $q^1 = \tau \Rightarrow dq^1/d\tau = 1$, $q^2 = \arcsin \frac{1}{\tau} \Rightarrow dq^2/d\tau = -1/(\tau \sqrt{\tau^2 - 1})$ e $q^3 = \sqrt{\tau^2 - 1} \Rightarrow dq^3/d\tau = \tau/\sqrt{\tau^2 - 1}$.
+      Para as coordenadas esféricas, $g_{11} = 1$, $g_{22} = (q^1)^2 = \tau^2$ e $g_{33} = (q^1 \sin q^2)^2 = 1$, em que a última igualdade em $g_{22}$ e $g_{33}$ só valem sobre a curva, pois ali $q^1 = \tau$ e $q^2 = \arcsin \frac{1}{\tau}$.
+      Além disso, $g_{ij} = 0$ para $i \ne j$, o que simplifica bastante os cálculos:
+      \begin{equation*}
+        \sum_{i=1}^3\sum_{j=1}^3 g_{ij} \frac{dx^i}{d\tau} \frac{dx^i}{d\tau} =
+          g_{11} \left(\frac{dq^1}{d\tau}\right)^2 + g_{22} \left(\frac{dx^2}{d\tau}\right)^2 + g_{33} \left(\frac{dx^3}{d\tau}\right)^2 =
+          1 + \tau^2 \left(-\frac{\tau}{\sqrt{\tau^2 - 1}}\right)^2 + \left(\frac{\tau}{\sqrt{\tau^2 - 1}}\right)^2 =
+          \frac{2\tau^2}{\tau^2 - 1}.
+      \end{equation*}
+
+      Assim,
+      \begin{equation*}
+        L = \int_1^2 d\tau \sqrt{\left|\frac{2\tau^2}{\tau^2 - 1}\right|} = \sqrt{2} \int_1^2 \frac{\tau\,d\tau}{\sqrt{\tau^2 - 1}} = \sqrt{6}.
+      \end{equation*}
+    \end{solution}
+\end{question}

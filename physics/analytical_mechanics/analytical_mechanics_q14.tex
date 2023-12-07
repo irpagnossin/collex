@@ -1,0 +1,41 @@
+\begin{question}
+    Um automóvel move-se à velocidade \(\vec v_A = -120\hat i\) \unit{km/h} ao passar por uma poça de óleo na pista.
+    Nesse momento, os pneus perdem momentaneamente o contato com a pista e, como consequência, giram em falso.
+    \begin{enumerate}
+      \item Determine o \emph{vetor} velocidade angular da roda, sabendo que o ponto mais inferior dela tem velocidade linear de \(-24,3\,\hat i\) \unit{m/s}.
+      \item Determine o \emph{vetor} velocidade linear do topo do pneu.
+      \item Determine o \emph{vetor} velocidade linear do ponto mais à direita do pneu.
+      %\item Sabendo-se que para este mesmo instante o motorista tira os pés do acelerador, produzindo uma desaceleração linear do centro de massa de \(3\hat i\) (\unit{m/s^2}), assim como uma uma desaceleração angular da roda de \(2\hat k\) (\unit{rad/s^2}), determine o vetor de aceleração total no ponto \(C\)
+    \end{enumerate}
+
+    \paragraph{Dados:}
+    \begin{compactitem}
+      \item o raio da roda é de \measure{0,45}{m}.
+      \item imagine que $\hat i$ aponte para a direita, $\hat j$ aponte para cima e $\hat k$, para você (saindo da tela).
+    \end{compactitem}
+
+    \begin{answer}
+      \begin{enumerate}
+        \item $20,0\hat k$ \unit{rad/s}
+        \item $-42,3\hat i$ \unit{m/s}
+        \item $33,3\hat i - 9,00\hat j$ \unit{m/s}
+        %\item $-177\hat i -0,90\hat j$ \unit{m/s^2}
+      \end{enumerate}
+    \end{answer}
+
+    \begin{solution}
+      \begin{enumerate}
+        \item O centro da roda move-se a $\measure{120}{km/h} \approx \measure{33,3}{m/s}$ (com relação ao solo).
+        Então, a velocidade do ponto que toca o chão, relativamente ao centro da roda, é de $33,3 - 24,3 = \measure{9}{m/s}$ para a direita ($9\hat i\unit{m/s}$).
+        Como o raio da roda é de \measure{0.45}{m}, então a velocidade angular da roda é $v/R = \measure{20.0}{rad/s}$.
+        A roda gira no sentido anti-horário.
+        Então, pela regra da mão direita, $\vec \omega$ é paralelo a $\hat k$.
+        Ou seja, $\vec \omega = 20.0\hat k\,\unit{rad/s}$.
+        \item A velocidade do ponto superior da roda é igual à soma da velocidade do centro da roda, relativamente ao solo, com a velocidade linear de qualquer ponto na superfície do pneu, que já determinamos ser \measure{9.00}{m/s}.
+        Então, $33,3 + 9 = \measure{42,3}{m/s}$, para a esquerda, no sentido de $-\hat i$.
+        Então, a velocidade é $-42,3\hat i$ \unit{m/s}.
+        \item A velocidade do ponto mais à direita, relativamente ao centro da roda, é $9\hat j$.
+        Então, a velocidade resultante é $-33,3\hat i + 9,00\hat j$.
+      \end{enumerate}
+    \end{solution}
+\end{question}

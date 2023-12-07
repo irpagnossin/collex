@@ -1,0 +1,28 @@
+\begin{question}
+    Um estudante de engenharia, viajando na caçamba de uma caminhonete por uma estrada horizontal, passa seu tempo brincando de jogar uma bolinha para cima e, em seguida, pegá-la antes que ela caia no assoalho do veículo.
+    Nesse processo, o estudante percebe que, durante as frenagens que precedem os pedágios, jogar a bolinha verticalmente não surte o efeito desejado: ao invés de regressar para sua mão, a bolinha cai mais à frente do veículo.
+    Para compensar esse efeito, ele deve jogar a bolinha de maneira oblíqua, para trás.
+    Ao perceber que esse efeito se deve à presença de uma força de inércia (haja vista que a caminhonete está desacelerando), o estudante incrementa sua diversão com um pouco de cálculo, determinando a relação entre o ângulo, com relação à vertical, segundo o qual ele deve jogar a bolinha para que ela retorne para sua mão, e a aceleração do veículo.
+    Após estabelecer essa relação, o estudante observou que era necessário jogar a bolinha obliquamente para trás, \measure{30}{\degree} com relação à vertical.
+    Finalmente, com base nessa medida, ele estimou a (des)aceleração da caminhonete.
+    Qual foi o valor que ele obteve?
+    Considere que a aceleração da gravidade é de \measure{9,81}{m/s^2} e ignore a resistência do ar e o fato de que é proibido viajar assim.
+
+    \begin{answer}
+      $\measure{5,66}{m/s^2}$
+    \end{answer}
+
+    \begin{solution}
+      No referencial (não-inercial) da caminhonete, o diagrama de forças sobre a bolinha é esse:
+
+      \centeredfigure{0.4\textwidth}{20180816_200504}
+
+      Nessa ilustração, a caminhonete viaja da direita para a esquerda e sofre uma aceleração para a direita (de modo a reduzir sua velocidade ao aproximar da praça de pedágio).
+
+      Analisando a figura, concluimos que a resultante de forças é diagonal, formando um ângulo $\theta$ com a horizontal.
+      Por outro lado, podemos atirar a bolinha para cima de modo que sua velocidade inicial $\vec v_0'$ forme um ângulo $\phi$ com a horizontal.
+      Se nossa intenção é que a bolinha volte para as mãos do estudante, precisamos escolher $\phi = \theta$.
+      Mas podemos afirmar, analisando o diagrama, que $\tan\theta = |mg|/|-mA|=g/A = \tan\phi \Rightarrow A = g/\tan\phi$, onde $g$ é a aceleração da gravidade e $A$ é a aceleração da caminhonete (\ie, do referencial não-inercial).
+      Usando $g = \measure{9,81}{m/s^2}$ e $\phi = \measure{60}{\degree}$ (o ângulo dado no enunciado é medido a partir da vertical), concluímos que $A \approx \measure{5,66}{m/s^2}$.
+    \end{solution}
+\end{question}

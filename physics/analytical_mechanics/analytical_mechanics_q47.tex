@@ -1,0 +1,30 @@
+\begin{question}
+    Uma pequena esfera homogênea, de raio \measure{2}{cm}, rola sem deslizar por uma mesa horizontal, com velocidade linear de \measure{50.0}{cm/s}, e sobe por uma rampa.
+    Qual é a altura máxima que o centro de massa dessa esfera, medida a partir do nível da mesa, atinge antes de regressar?
+    A aceleração da gravidade é de \measure{9.81}{m/s^2}.
+
+    \begin{answer}
+      \measure{3.78}{cm} (100\% do valor do item) ou \measure{1.78}{cm} (80\% do valor do item).
+    \end{answer}
+    
+    \begin{solution}
+      Considere a figura abaixo, que ilustra as duas situações: inicial ($A$) e final ($B$).
+
+      \centeredfigure{0.7\textwidth}{20180821_214855}
+      
+      A energia mecânica é a soma das energias (i) cinética de translação do centro de massa, (ii) cinética de rotação em torno do centro de massa e (iii) potencial gravitacional.
+      
+      Em $A$ temos essas três formas de energia, então: $E_A = \half m v^2 + \half I \omega^2 + mgr$, onde $m$, $r$ e $I = \frac{2}{5} mr^2$ são a massa, o raio e o momento de inércia da esfera, respectivamente.
+      $v$ é a velocidade de translação do centro de massa, $\omega$ é a velocidade angular de rotação e $g$ é a aceleração da gravidade.
+      Note que, nessa expressão, escolhemos, conveninentemente, medir a energia potencial gravitacional a partir do nível da mesa.
+
+      Na situação final $B$, a esfera está parada (não gira nem desloca-se), de modo que a energia está toda na forma potencial gravitacional: $E_B = mgh$, onde $h$ é a altura que caracteriza essa situação (veja a figura).
+
+      Como não há deslizamento, $v = \omega r$.
+      Além disso, por esse mesmo motivo a força de atrito, responsável por fazer girar a esfera, não realiza trabalho.
+      Consequentemente, a energia é conservada (pois a força gravitacional é conservativa).
+      Então, $E_A = E_B$.
+      Usando as expressões anteriores para a energia mecânica em $A$ e $B$ e resolvendo para $h$, concluimos que $h = r + 7v^2/(10g)$.
+      Ou seja, $h = \measure{3.78}{cm}$.
+    \end{solution}
+\end{question}

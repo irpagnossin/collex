@@ -1,0 +1,14 @@
+\begin{question}
+    Considere que o rotor principal de um helicóptero seja composto por três pás, cada uma delas com comprimento $l = \measure{5.00}{m}$, largura $w = \measure{15.0}{cm}$, espessura desprezível (quando comparada com $l$ e $w$) e massa $m = \measure{50.0}{kg}$ (distribuída uniformemente), unidas pelas respectivas extremidades.
+    Determine o momento de inércia desse rotor, sabendo que o momento de inércia com relação ao centro de massa de uma placa retangular delgada de massa $m$, comprimento $l$ e largura $w$ é dada por $I = m(l^2+w^2)/12$.
+
+    \begin{answer}
+      \measure{1.25e3}{kg.m^2}
+    \end{answer}
+
+    \begin{solution}
+      Usando o teorema dos eixos paralelos, podemos afirmar que o momento de inércia de cada pá, com relação à sua extremidade (à distância $l/2$ do centro de massa), é $I_{\text{pá}} = m(l^2+w^2)/12 + ml^2/4 = m(\frac{1}{3} l^2 + w^2)$.
+      Como há três pás, o momento de inércia do rotor é $I = 3I_{\text{pá}} = m(l^2 + 3w^2)$.
+      Usando os valores apresentados no enunciado, concluimos que $I = \measure{1.25e3}{kg.m^2}$.
+    \end{solution}
+\end{question}

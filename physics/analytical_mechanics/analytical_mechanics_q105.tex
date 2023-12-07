@@ -1,0 +1,29 @@
+\begin{question}
+  	A figura abaixo ilustra como podemos modelar um malabaris como uma composição de dois objetos, de massas $m_1$ e $m_2$.
+  	Imagine que esse malabaris é livre para girar, em torno de seu centro de massa, no plano $xy$.
+  	Determine a expressão da energia cinética em termos das coordendadas $(X,Y,\theta)$, onde $X$ e $Y$ são as coordenadas cartesianas do centro de massa e $\theta$ é o ângulo do eixo $AB$, medido a partir da horizontal.
+
+		\begin{center}
+    	\includegraphics[width=0.4\textwidth]{20180719_152951}
+    \end{center}
+
+  	\begin{enumerate}
+  		\item $T = \half (m_1 + m_2) (\dot X^2 + \dot Y^2) + \half I \dot\theta^2$ \rightanswer
+  		\item $T = \half m_1 (\dot x_1^2 + \dot y_1^2) + \half m_2 (\dot x_2^2 + \dot y_2^2)$
+  		\item $T = \half (m_1 + m_2) (\dot X^2 + \dot Y^2)$
+  		\item $T = \half m_1 (\dot x_1^2 + \dot y_1^2) + \half m_2 \left[(\dot x_1 - \ell \sin\theta \dot\theta)^2 + (\dot y_1 - \ell \cos\theta \dot\theta)^2\right]$
+  		\item $T = \half I \dot\theta^2$
+  	\end{enumerate}
+
+  	\bigskip
+  	\begin{compactdesc}
+  		\item[Dica:] lembre-se de considerar o momento de inércia $I = m_1\ell_1^2 + m_2\ell_2^2$ em torno do centro de massa.
+  	\end{compactdesc}
+
+    \begin{solution}
+      A energia cinética é composta por duas parcelas: a energia cinética de translação do centro de massa ($T_t$) e a energia cinética de rotação em torno do centro de massa ($T_r$).
+      $T_t = \half M (\dot X^2 + \dot Y^2)$, onde $M = m_1 + m_2$ é a massa do sistema.
+      Por outro lado, $T_r = \half I \dot\theta^2$, onde $I$ é o momento de inércia.
+      Então, $T = \half (m_1 + m_2) (\dot X^2 + \dot Y^2) + \half I \dot\theta^2$.
+    \end{solution}
+\end{question}

@@ -1,0 +1,74 @@
+\begin{question}
+	\newcommand\HEIGHT{\measure{3.00}{m}}
+	\newcommand\MASS{\measure{5.00}{kg}}
+	\newcommand\FORCE{\measure{256}{N}}
+	\newcommand\DURATION{\measure{0,150}{s}}
+	\newcommand\GRAVITY{\measure{9.81}{m/s^2}}
+
+	A jaqueira é uma árvore trazida da Índia pelos portugueses e cultivada na região amazônica e ao longo da costa brasileira.
+	Seu fruto, a jaca, é enorme e pesado: sua massa varia de três a quinze quilogramas e há registros de frutos com massa de até sessenta quilogramas!
+	Imagine que uma jaca de \MASS\ solte-se do cacho, a \HEIGHT\ de altura, e atinja o pé do Paulo, que estava ali por perto, talvez tentando apanhar essa jaca.
+	\begin{enumerate}
+		\item Qual foi a velocidade com que a jaca atingiu o pé do Paulo?
+		Explique como chegou a essa conclusão.
+		\item Qual foi a variação do momento linear da jaca durante a colisão com o pé do Paulo?
+		%\item Explique porque a intensidade média da força exercida pela jaca sobre o pé do Paulo é de \FORCE, sabendo que a colisão durou \DURATION.
+	\end{enumerate}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item \measure{7.67}{m/s}
+			\item \measure{38.4}{kg.m/s} ou \measure{-38.4}{kg.m/s} (o sinal não é importante aqui)
+			%\item Veja a solução.
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item Durante a queda livre da jaca, a única força sobre ela é a gravitacional.
+			Como esta é uma força conservativa, podemos utilizar o princípio da conservação da energia mecânica para determinar a velocidade da jaca imediatamente antes dela atingir o pé do Paulo: no cacho, a jaca tem energia potencial gravitacional $mgh$, mas nenhuma energia cinética, pois ela está parada.
+			Por isso, a energia mecânica nessa situação pode ser expressa por $mgh$, onde $m$ é a massa da jaca, $h$ é a altura dela e $g$, a aceleração da gravidade.
+			Por outro lado, imediatamente \emph{antes} de atingir o pé do Paulo, a jaca tem enercia cinética $\frac{1}{2}mv^2$, onde $v$ é a velocidade procurada, e nenhuma energia potencial gravitacional.
+			E como a energia mecânica a mesma, no cacho e logo antes de atingir o pé do Paulo, então $mgh = \frac{1}{2}mv^2$, o que nos leva a concluir que $v = \sqrt{2gh}$.
+			Assim, como $g = \GRAVITY$ e $h = \HEIGHT$, então $v = \sqrt{2 \cdot 9.81 \cdot 3} = \measure{7.67}{m/s}$.
+
+			\item Imediatamente antes de atingir o pé do Paulo, o momento linear da jaca é $mv$ e, após a colisão, é nulo.
+			Portanto, a variação é de $\Delta p = 0 - mv = -mv$.
+			Assim, como $m = \MASS$ e $v = \measure{7.67}{m/s}$ (item anterior), então $\Delta p = -5 \cdot 7,67 = -\measure{38,4}{kg.m/s}$.
+
+			%\item Como $F = \frac{dp}{dt}$, podemos dizer que $\langle F\rangle = \frac{\Delta p}{\Delta t}$, onde $\Delta p$ é a variação do momento linear durante a colisão, que dura $\Delta t$.
+			%Podemos demonstrar esse resultado formalmente da seguinte maneira:
+			%\begin{align*}
+			%	F &= \frac{dp}{dt} \\
+			%	\int_{\tau_0}^{\tau_1} F\,dt       &= \int_{\tau_0}^{\tau_1} \frac{dp}{dt}\,dt \\
+			%	                                   &= p(\tau_1) - p(\tau_0) = \Delta p \\
+			%	\langle F\rangle (\tau_1 - \tau_0) &= \\
+			%	\langle F\rangle \Delta t          &=
+			%\end{align*}
+			%onde $\tau_0$ e $\tau_1$ são os instantes inicial e final da colisão.
+			%Da segunda para a terceira linha, utilizamos o teorema fundamental do Cálculo e, da terceira para a quarta, o teorema do valor médio para integrais.
+			%Finalmente, utilizando $\Delta p = \measure{38,4}{kg.m/s}$ (item anterior) e $\Delta t = \DURATION$, concluimos que $\langle F\rangle = 38,4/0,15 = \measure{256}{N}$.
+		\end{enumerate}
+	\end{solution}
+\end{question}
+
+\begin{comment}
+
+```python
+from math import sqrt
+
+# Item (a)
+def question_10A_a(h, m, dt, g = 9.81):
+	return sqrt(2*g*h)
+
+# Item (b)
+def question_10A_b(h, m, dt, g = 9.81):
+	v = question_10A_a(h, m, dt, g)
+	return(-m*v)
+
+# Item (c)
+def question_10A_c(h, m, dt, g = 9.81):
+	dp = question_10A_b(h, m, dt, g)
+	return(dp/dt)
+```
+\end{comment}

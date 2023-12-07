@@ -1,0 +1,22 @@
+\begin{question}
+    Considere novamente o cenário da conta presa a um arame senoidal $z = \sin(x)$.
+    Utilize a ``forma 1'' da equação de Lagrange para determinar a equação de movimento da conta.
+    \begin{enumerate}
+      \item $(1 + \cos^2 x)\ddot x - \sin x\cos x \dot x^2 + g\cos x = 0$ \rightanswer
+      \item $(1 + \cos^2 x)\ddot x + \sin x\cos x \dot x^2 + g\cos x = 0$
+      \item $(1 + \cos^2 x)\ddot x - 2\sin x\cos x \dot x^2 + g\cos x = 0$
+      \item $(1 + \cos^2 x)\ddot x - 2\sin x\cos x \dot x^2 + g\cos x = 0$
+    \end{enumerate}
+
+    \begin{solution}
+      Das duas questões anteriores, temos que $L := T - U = \half m (1 + \cos^2 x) \dot x^2 - mg\sin(x)$.
+      Em seguida, determinamos as derivadas relevantes:
+      \begin{align*}
+        \pd{L}{x} &= -m\sin x\cos x \dot x^2 - mg \cos x\\
+        \pd{L}{\dot x} &= m\dot x + m\cos^2 x\dot x \\
+        \frac{d}{dt}\pd{L}{\dot x} &= m\ddot x - 2m\sin x\cos x\dot x^2 + m\cos^2 x\ddot x
+      \end{align*}
+
+      Finalmente, usamos essas expressões na equação de Euler-Lagrante e simplificamos para obter a equação de movimento: $(1 + \cos^2 x)\ddot x - \sin x\cos x \dot x^2 + g\cos x = 0$.
+    \end{solution}
+\end{question}

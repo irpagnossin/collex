@@ -1,0 +1,40 @@
+\begin{question}
+    Um disco de massa \measure{0.500}{kg}, uniformemente distribuída, e raio \measure{5.00}{cm} desliza ao longo de uma mesa de ar com velocidade de \measure{2.00}{m/s} (\ie, ele desliza sem atrito), rumo a um outro disco, idêntico ao primeiro, conforme ilustrado abaixo.
+    \begin{enumerate}
+      \item Determine o momento angular do primeiro disco, com relação ao centro do segundo disco.
+      \item Determine o momento angular do sistema composto pelos dois discos, com relação ao centro de massa esse sistema.
+      \item O primeiro disco, ao colidir com o segundo, adere a ele devido à ação de uma cola instantânea colocada nas bordas do disco, de modo que o sistema passa a girar com velocidade angular constante $\omega$ em torno do centro de massa.
+      Determine essa velocidade angular.
+    \end{enumerate}
+
+    \paragraph{Dica:} essa questão é similar à anterior, exceto que nesse caso o centro de massa não está em repouso.
+
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{20180710_225749}
+    \end{center}
+
+    \begin{answer}
+      \begin{enumerate}
+        \item \measure{1.00e-1}{kg.m^2/s} (a unidade \unit{J.s} também é correta)
+        \item \measure{5.00e-2}{kg.m^2/s}
+        \item \measure{13.3}{rad/s}
+      \end{enumerate}
+    \end{answer}
+    
+    \begin{solution}
+      \begin{enumerate}
+        \item O primeiro disco aproxima-se do segundo com um parâmetro de impacto de $d = \measure{10.0}{cm}$ (``parâmetro de impacto'' é o nome comumente dado à distância entre os centros de massa de cada disco, perpendicularmente ao movimento).
+        Então, imediatamente antes de a colisão ocorrer, os vetores de posição e de velocidade são perpendiculares.
+        Logo, $L = mdv = \measure{1.00e-1}{kg.m^2/s}$, onde usamos $m = \measure{0.500}{kg}$ e $v = \measure{2.00}{m/s}$.
+        \item O centro de massa move-se à metade da velocidade do disco 1, o que significa que, com relação a ele, o primeiro disco tem velocidade $\vec v_1' = v/2\hat i$ e o segundo, $\vec v_2' = -v/2\hat j$.
+        A distância entre o centro de massa do sistema e o centro de massa do primeiro disco, perpendicularmente a $\vec v_1'$, é simplesmente o raio do disco, $r$.
+        Então, $\vec L_1 = -mr\frac{v}{2}\hat k$.
+        O mesmo vale para o segundo disco: $\vec L_2 = -mr\frac{v}{2}\hat k$.
+        Logo, $\vec L = \vec L_1 + \vec L_2 = -mrv\hat k \Rightarrow L = \measure{5.00e-2}{kg.m^2/s}$.
+        \item Após a colisão, os dois discos giram como se fossem um só objeto cujo momento de inércia é $I$, com o qual podemos escrever $L = I\omega$, onde $\omega$ é a velocidade angular dessa rotação.
+        $I = \half mr^2 + mr^2 = \frac{3}{2}mr^2$, em que usamos a expressão $\half m r^2$ para o momento de inércia de um disco homogêneo, com relação ao seu eixo de simetria, e aplicamos o teorema dos eixos paralelos para determinar o momento de inércia com relação a um eixo na periferia, distante $r$ do centro (\ie, o ponto de adesão entre os dois discos).
+        Mas como não há forças externas, também não há torques externos e, consequentemente, o momento angular com relação ao centro de massa do sistema é conservado.
+        Dito de outra forma, podemos afirmar que $mrv = \frac{3}{2}mr^2\omega \Rightarrow \omega = 2v/(3r) = \measure{13.3}{rad/s}$.
+      \end{enumerate}
+    \end{solution}
+\end{question}

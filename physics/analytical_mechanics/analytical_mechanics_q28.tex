@@ -1,0 +1,22 @@
+\begin{question}
+    Determine o momento de inércia de um aro (um anel fino) de raio \measure{2.00}{m} e massa \measure{0.500}{kg}.
+    \begin{answer}
+      \measure{2.00}{kg.m^2}
+    \end{answer}
+
+    \begin{solution}
+      Considere o elemento de comprimento $dl$ desse aro, ao qual podemos associar um elemento de massa $dm = \lambda\, dl$, onde $\lambda = m /(2\pi r)$ é a densidade linear de massa do aro, $m$ é sua massa e $r$, seu raio.
+      Todos os elementos $dm$ desse aro estão à distância $r$ do eixo de interesse, que passa pelo centro, de modo que o elemento de momento de inércia é simplesmente $dI = r^2\,dm$.
+      Assim,
+      \begin{equation*}
+        dI = r^2\, dm
+          \Rightarrow
+        \int dI = r^2 \int dm
+          \Rightarrow
+        I = r^2 \lambda \int_0^{2\pi r} dl
+          = r^2 \lambda 2 \pi r
+          = m r^2,
+      \end{equation*}
+      onde usamos $\lambda = m /(2\pi r)$ na última passagem. Agora, usando $r = \measure{2.00}{m}$ e $m = \measure{0.500}{kg}$, obtemos $I = \measure{2.00}{kg.m^2}$
+    \end{solution}
+\end{question}

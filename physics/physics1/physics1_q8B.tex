@@ -1,0 +1,47 @@
+\begin{question}
+	Lembre-se da sua última viagem pelo terreno acidentado do sul de Minas Gerais.
+	Ao passar de carro pelo topo de um pequeno morro, que tem o perfil de uma circunferência de raio $R = \measure{130}{m}$ (figura), você nota uma sensação de perda parcial de peso.
+	Isso acontece porque para que o carro acompanhe o perfil da pista (um movimento circular naquele ponto, note), deve haver uma resultante que atue como força centrípeta.
+	Como consequência, a força normal, que é a responsável pela nossa sensação de peso, é menor do que seria numa pista plana.
+	Sabendo disso, com que volocidade você deve passar no próximo morro (suponha que ele tenha o mesmo raio) para que você tenha a sensação de ausência de peso?
+	Considere que a aceleração da gravidade é de \measure{9.81}{m/s^2}.
+
+	\centeredfigure{0.5\textwidth}{carro_no_topo_do_morro}
+
+	\begin{answer}
+		\measure{35.7}{m/s} ou \measure{128}{km/h}
+	\end{answer}
+
+	\begin{solution}
+		As duas forças que agem no carro são: a força-peso e a força normal (figura abaixo).
+
+		\centeredfigure{0.5\textwidth}{carro_no_topo_do_morro_solucao}
+
+		Se o veículo estivesse numa pista plana, de modo que a aceleração vertical fosse nula, essas duas forças anulariam-se.
+		Porém, esse não é o caso.
+		Ao invés disso, o veículo realiza, momentaneamente, movimento circular na direação vertical.
+		Para que isso aconteça, é necessária a presença de uma aceleração centrípeta, cujo valor é $v^2/R$, onde $v$ é a velocidade do veículo no topo do morro e $R$, o raio de curvatura da pista naquele ponto.
+		Assim, a segunda lei de Newton fica assim:
+		\begin{equation*}
+			P - N = m\frac{v^2}{R},
+		\end{equation*}
+		em que consideramos o sentido vertical para baixo como positivo.
+
+		Estamos interessados na situação em que temos a sensação de \emph{ausência} de peso.
+		Isso acontece quando a força normal é nula: $N = 0$.
+		Então,
+		\begin{align*}
+			P  &= m\frac{v^2}{R} \\
+			mg &= \\
+			g  &= \frac{v^2}{R} \\
+			gR &= v^2 \\
+			\sqrt{gR} &= v,
+		\end{align*}
+		ou seja, a velocidade para a qual temos a sensação de ausência de peso é dada por $v = \sqrt{gR}$.
+		E como $g = \measure{9.81}{m/s^2}$ e $R = \measure{130}{m}$, essa velocidade é:
+		\begin{equation*}
+			v = \sqrt{9,81 \cdot 130} = \measure{35.7}{m/s}
+		\end{equation*}
+		ou, se preferir, $v = \measure{128}{km/h}$.
+	\end{solution}
+\end{question}

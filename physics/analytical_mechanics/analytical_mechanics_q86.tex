@@ -1,0 +1,30 @@
+\begin{question}\label{q:eq-movimento}
+    Ainda sobre o cenário da conta presa a um arame parabólico, qual é a equação de movimento da conta, obtida ao aplicar a equação de Lagrange,
+    \begin{equation*}
+      \frac{d}{dt}\pd{L}{\dot x} - \pd{L}{x} = 0?
+    \end{equation*}
+
+    \begin{enumerate}
+      \item $m\ddot x(1 + 4a^2x^2) + 4ma^2 x \dot x^2 + 2mgax = 0$ \rightanswer
+      \item $m\ddot x(1 + 4a^2x^2) - 4ma^2 x \dot x^2 + 2mgax = 0$
+      \item $4ma^2\dot x^3 + 8ma^2x^2\dot x^2 - 2mag\dot x - 4ma^2x\dot x^2 + 2magx = 0$
+      \item $m(1+4a^2x^2)(\ddot x^2 + \dot x\dddot x) + 8ma^2x\dot x^2 \ddot x - 4ma^2 x \dot x^2 + 2mgax = 0 $
+      \item $m(1+4a^2x^2)(\ddot x^2 + \dot x\dddot x) - 4ma^2 x \dot x^2 + 2mgax = 0 $
+    \end{enumerate}
+
+    \begin{solution}
+      Como há apenas um grau de liberdade, há apenas uma equação de Euler-Lagrange, da qual obtemos a equação do movimento.
+      Para isso, precisamos determinar as derivadas de $L$ pertinentes à equação:
+      \begin{align}
+        \pd{L}{x} &= \half m \dot x^2 \pd{}{x}\left(1 + 4a^2 x^2\right) - mga^2\pd{x^2}{x} = 
+          \half m \dot x^2 \left(8a^2 x\right) - mga^2(2x) = 4ma^2x\dot x^2 - 2magx \label{eq:U}\\
+        \pd{L}{\dot x} &= \half m \pd{\dot x^2}{\dot x} (1 + 4a^2 x^2) - \pd{}{\dot x}\left(mga^2x^2\right) = 
+          \half m (2\dot x) (1 + 4a^2 x^2) = m (1 + 4a^2 x^2) \dot x \nonumber\\
+        \frac{d}{dt}\pd{L}{\dot x} &= \frac{d}{dt}\left[m (1 + 4a^2 x^2) \dot x\right] =
+          m \dot x \frac{d}{dt}\left(1 + 4a^2 x^2\right) + m (1 + 4a^2 x^2) \frac{d\dot x}{dt}
+            = 8ma^2x\dot x^2 + m (1 + 4a^2x^2)\ddot x \label{eq:T}
+      \end{align}
+
+      Finalmente, usando os resultados \eqref{eq:U} e \eqref{eq:T} na equação de Euler-Lagrange apresentada no enunciado, obtemos a equação de movimento associada à variável $x$: $m\ddot x(1 + 4a^2x^2) + 4ma^2 x \dot x^2 + 2mgax = 0$.
+    \end{solution}
+\end{question}

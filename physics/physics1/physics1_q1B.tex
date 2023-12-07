@@ -1,0 +1,31 @@
+\begin{question}
+	Suponha que o movimento de uma partícula seja dado pela equação horária $x(t) = 10 - t^2 - 2t^3$.
+	\begin{inlineenum}
+		\inlineitem Determine a expressão da velocidade e da aceleração dessa partícula em qualquer instante de tempo $t$.
+		\inlineitem Se $x$ é dado em metros (\unit{m}) e $t$, em segundos (\unit{s}), quais devem ser as unidades das constantes $10$ e $2$ presentes na expressão de $x(t)$?
+		\inlineitem Qual é a posição, velocidade e aceleração dessa partícula em $t = \measure{1}{s}$?
+	\end{inlineenum}
+
+	\begin{answer}
+		\begin{enumerate}
+			\item $v(t) = -2t - 6t^2$ e $a(t) = -2 - 12t$.
+			\item \measure{10}{m} e \measure{2}{m/s^3}
+			\item Em $t = \measure{1}{s}$, $x(1) = \measure{7}{m}$, $v(1) = \measure{-8}{m}$ e $a(1) = \measure{-14}{m/s^2}$.
+		\end{enumerate}
+	\end{answer}
+
+	\begin{solution}
+		\begin{enumerate}
+			\item A equação horária da velocidade da partícula é dada pela derivada de $x(t)$ com relação ao tempo: $v(t) := \frac{dx}{dt} = -2t - 6t^2$.
+			Similarmente, a aceleração é a derivada de $v(t)$: $a(t) := \frac{dv}{dt} = -2 - 12t$.
+			\item O lado esquerdo da equação horária $x(t)$ é dado em metros.
+			Por isso, o lado direito também tem de ser dado em metros e, particularmente, cada parcela, separadamente, deve ser dada em metros.
+			Então, a constante $10$ deve ser dada em metros: \measure{10}{m}.
+			Do mesmo modo, $[2t^3] = \unit{m}$.
+			Mas $[t^3] = \unit{s^3}$, o que significa que $[2] = \unit{m/s^3}$.
+			Ou seja, \measure{2}{m/s^3}.
+			\item A posição em $t = \measure{1}{s}$ é dada por $x(1) = \measure{7}{m}$.
+			Analogamente, $v(1) = \measure{-8}{m/s}$ é a velocidade e $a(1) = \measure{-14}{m/s^2}$ é a aceleração.
+		\end{enumerate}
+	\end{solution}
+\end{question}

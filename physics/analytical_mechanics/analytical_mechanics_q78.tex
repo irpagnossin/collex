@@ -1,0 +1,27 @@
+\begin{question}
+    Considere os dois objetos ilustrados abaixo, conectados por uma mola e livres para mover no plano $xy$.
+    Quantos são os graus de liberdade?
+
+    \begin{center}
+      \includegraphics[width=0.4\textwidth]{20180719_193333}
+    \end{center}
+
+    \begin{enumerate}
+      \item 0
+      \item 1
+      \item 2
+      \item 3
+      \item 4 \rightanswer
+    \end{enumerate}
+
+    \begin{solution}
+      Imagine o que podemos fazer com esse sistema: podemos movê-lo horizontalmente (\eg, coordenada $x$ do centro de massa) e verticalmente (coordenada $y$), podemos ainda girá-lo em torno do centro (coordenada $\theta$, digamos) e, finalmente, podemos alterar a distância entre os objetos, sem mover o centro de massa (coordenada $d$).
+      Então, $(x,y,\theta,d)$ é um conjunto de quatro coordenadas generalizadas que é capaz de descrever a configuração desse sistema.
+      Portanto, há quatro graus de liberdade.
+
+      Outra estratégia é a seguinte: como cada objeto tem $N = 2$ graus de liberdade (pois estão no plano $xy$), o \emph{sistema} tem $2N = 4$ graus de liberdade.
+      Note que, embora haja uma mola conectando os dois objetos, ela não impõe uma restrição à distância entre os dois objetos.
+      Ou seja, não há equações de vínculo.
+      Note que se houvesse uma barra rígida ligando os dois objetos, ao invés da mola, teríamos uma equação de vínculo e, por isso, um grau de liberdade a menos.
+    \end{solution}
+\end{question}

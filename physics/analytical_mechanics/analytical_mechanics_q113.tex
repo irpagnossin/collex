@@ -1,0 +1,44 @@
+\begin{question}
+  	Existe uma ``forma 3'' da equação de Lagrange, muito útil quando nosso objetivo é determinar as forças de vínculo:
+  	\begin{equation*}
+  		\frac{d}{dt}\pd{L}{\dot q^i} - \pd{L}{q^i} = \sum_{j = 1}^{n} \lambda_i \pd{f_j}{q^i},
+  	\end{equation*}
+  	onde $f_j$ são as $n$ equações de vínculo na forma $f_j(q^i) = \text{constante}$.
+  	$\lambda_i$ são os \emph{multiplicadores de Lagrange}, um para cada equação de vínculo (note que a somatória ocorre nas equações de vínculo, de modo que se houver $n$ delas, haverá $n$ parcelas do tipo $\lambda_i \pd{f_j}{q^i}$).
+
+  	O procedimento é o seguinte:
+  	\begin{compactenum}[(i)]
+  		\item Utilize a ``forma 1'' ou ``forma 2'', em termos apenas das variáveis livres, para determinar as equações de movimento, como fizemos até agora.
+  		\item Escreva as equações de vínculo na forma $f_j(q^i) = \text{constante}$.
+  		\item Utilize a ``forma 3'' (ou ``forma 4'', abaixo) em termos de todas as variáveis do sistema (\ie, sem aplicar as equações de vínculo) para determinar as equações de movimento.
+  		\item Utilize as soluções do primeiro passo nas equações do passo anterior para determinar os $\lambda_j$.
+  		\item Identifique $Q_i = \sum_{j = 1}^{n} \lambda_i \pd{f_j}{q^i}$ como a força generalizada de vínculo conjugada à variável $q^i$.
+  	\end{compactenum}
+
+  	Vamos aplicar esse procedimento no caso da questão \ref{q:atwood} (máquina de Atwood sem rotação).
+  	O primeiro passo já foi feito naquela questão.
+  	O segundo passo é escrever as equações de vínculo na forma $f_j(q^i) = \text{constante}$.
+  	Escolha a alternativa que representa esse resultado.
+
+  	\begin{enumerate}
+  		\item $f_1(z_1, z_ 2) = z_1 + z_2$ \rightanswer
+  		\item $f_1(z_1, z_ 2) = C - z_2$
+  		\item $f_1(z_1, z_ 2) = C - z_1$
+  		\item $f_1(z_1, z_ 2) = C$
+  		\item $f_1(z_1, z_ 2) = z_1 - z_2$
+  	\end{enumerate}
+
+  	\bigskip
+  	\begin{compactdesc}
+  		\item[Observação:] caso você esteja trabalhando com a ``forma 2'' da equação de Euler-Lagrante (aquela que usa $T$ ao invés de $L$), é possível escrever uma ``forma 4'', assim:
+  		\begin{equation*}
+  			\frac{d}{dt}\pd{T}{\dot q^i} - \pd{T}{q^i} = F_i + \sum_{j = 1}^{n} \lambda_i \pd{f_j}{q^i}.
+  		\end{equation*}
+  	\end{compactdesc}
+
+    \begin{solution}
+      Na máquina de Atwood, o comprimento do cabo que liga $m_1$ com $m_2$ não muda.
+      Por isso, $z_1 + z_2 = C$, onde $C$ é uma constante.
+      Essa equação já está na forma $f(z_1, z_2) = C$, com $f(z_1, z_2) = z_1 + z_2$.
+    \end{solution}
+\end{question}

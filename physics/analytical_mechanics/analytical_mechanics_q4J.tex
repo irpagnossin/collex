@@ -1,0 +1,19 @@
+\begin{question}
+	No último domingo, papai Fulano levou seus filhos, Sicrano e Beltrano, para passear no carrossel do parque.
+	Enquanto curtia o passeio ao lado de Beltrano (cada volta durava \measure{25.0}{s}), que estava num dos carros de bombeiro, a \measure{9.00}{m} de distância do centro, ele notou que Sicrano estava escorregando do cavalo, que localizava-se um pouco mais à frente (veja a figura).
+	Ao mover-se para ajudá-lo, a \measure{2.00}{m/s} (medido com relação à plataforma girante do carrossel), Fulano sentiu uma força estranha que o desviava de seu objetivo.
+	Determine a intensidade e o sentido dessa força, sabendo que Fulano tem massa de \measure{100}{kg}.
+
+	\centeredfigure{0.5\textwidth}{20180804_213553}
+
+	\begin{answer}
+		\measure{100}{N} no sentido radial, para fora.
+	\end{answer}
+
+	\begin{solution}
+		Como a ``força estranha'' aparece quando Fulano \emph{se move}, trata-se da força de Coriolis (a outra candidata, a força centrífuga, depende da posição de Fulano no carrossel, não da velocidade), cuja expressão é $\vec F = 2m\vec v' \times \vec \omega$, onde $m = \measure{80}{kg}$ é a massa do Fulano, $\vec v'$ é sua velocidade, medida no referencial que gira juntamente com o carrossel, e $\vec\omega$ é a velocidade angular do carrossel com relação a um sistema inercial (o chão, por exemplo).
+
+		Analisando a situação, vemos que o vetor velocidade angular aponta para cima ($\vec\omega = \omega\hat k$: regra da mão direita para a representação vetorial de rotação). $\omega$ pode ser obtida da informação sobre o período $T = \measure{25.0}{s}$ da rotação: $\omega = 2\pi/T = 2\pi/25 = \measure{0.251}{rad/s}$. Por outro lado, $\vec v' = \measure{2.00}{m/s}$ é tangencial, sentido do movimento do carrossel ($\vec v' = v'\hat \phi$).
+		Desse modo, concluímos que a força de Coriolis é radial, para fora do centro do carrossel: $\vec F = 2m(v'\hat \phi)\times(\omega \hat k) = 2mv'\omega \hat r$. E desse modo calculamos a intensidade da força de Coriolis: $F = 2mv'\omega = \measure{100}{N}$.
+	\end{solution}
+\end{question}
