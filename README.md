@@ -14,6 +14,8 @@ Alguns dos exemplos estão escritos em LaTeX. Para compilá-los você precisará
 - `texlive-latexextra`
 - `texlive-mathscience`
 
+Além desses pacotes, você precisará também do pacote [irpagnossin-latex](https://github.com/irpagnossin/irpagnossin-latex).
+
 # Python
 Algumas questões estão parametrizadas, permitindo a criação de várias questões diferentes a partir do mesmo enunciado. Elas estão escritas como um template Jinja para o Python. Por exemplo, a questão `physics/analytical_mechanics/analytical_mechanics_q3.tex.jinja`. Use o arquivo Python homônimo, isto é, `analytical_mechanics_q3.py`, para gerar o arquivo `.tex` correspondente:
 ```bash
