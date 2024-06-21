@@ -1,0 +1,10 @@
+name: estatistica
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyter=1.0.0
+  - numpy=1.23.5
+  - plotly=5.22.0
+  - scipy=1.11.4
+  - statsmodels=0.14.2
